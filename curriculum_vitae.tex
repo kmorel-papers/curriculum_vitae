@@ -6,7 +6,6 @@
 
 \documentclass{article}
 
-\usepackage[TextAligned]{currvita}
 \usepackage{url}
 
 % Resize the paper for smaller margins
@@ -49,105 +48,110 @@
   }
 \end{center}
 
-  \begin{cv}{Curriculum Vitae}
-    \setlength{\cvlabelwidth}{.25in}
-    \renewcommand*{\cvlabelfont}{\textsf}
 
-    \begin{cvlist}{Education}
-      \item[Doctor of Philosophy] Computer Science, University of New
-        Mexico, Albuquerque, NM, July 2004.
-      \item[Master of Science] Computer Science, University of New Mexico,
-        Albuquerque, NM, May 2000.
-      \item[Bachelor of Science] Computer Science, New Mexico Institute of
-        Mining and Technology, Socorro, NM, May 1997.
-      \item[Bachelor of Science] Electrical Engineering, New Mexico
-        Institute of Mining and Technology, Socorro, NM, May 1997.
-    \end{cvlist}
+\section*{Education}
 
-    \begin{cvlist}{Work Experience}
-    \item[Sandia National Laboratories (Albuquerque, NM)]\hfill\\
-      2013-- Principal Member of Technical Staff, Scalable Analysis and Visualization\\
-      2004--2013 Senior Member of Technical Staff, Scalable Analysis and Visualization\\
-      2000-2003 Member of Technical Staff, Data Analysis and Visualization\\
-      1999-2000 Member of Technical Staff, Distributed Systems Research\\
-      1997-1999 Limited Term Employee, Computer Applications for Manufacturing\\
-      1995-1997 Student Intern, Mechanical Process Engineering\\
-    \end{cvlist}
+\begin{tabular}{l}
+  Doctor of Philosophy, Computer Science, University of New Mexico, July 2004 \\
+  Master of Science, Computer Science, University of New Mexico, May 2000 \\
+  Bachelor of Science, Computer Science, New Mexico Institute of Mining and Technology, May 1997 \\
+  Bachelor of Science, Electrical Engineering, New Mexico Institute of Mining and Technology, May 1997 \\
+\end{tabular}
 
-    % Note: Funding for PI for total of project (where applicable) whereas
-    % co-PI just reports funding for our institution.
 
-    \begin{cvlist}{Research Experience (Professional)}
-    \item[ECP/VTK-m]\hfill 2017--Present\\
-      Updating scientific visualization algorithms in the VTK-m framework for efficient visualization on multi- and many-core processor devices.\\
-      DOE Office of Science Exascale Computing Project\\
-      Role: PI\\
-      Total funding: \$9.7M %(\$4.3M FY17-FY19, \$5.4M FY20-FY23)
-    \item[ATDM Scalable Visualization]\hfill 2016--Present\\
-      Visualization support for mission-specific science applications for the Advanced Technology Development and Mitigation (ATDM) program.\\
-      DOE NNSA ASC Program\\
-      Role: PI\\
-      Funding: \$800K/year
-    \item[XVis: Visualization for the Extreme-Scale Scientific-Computation Ecosystem]\hfill 2014--2017\\
-      Providing the foundational research for visualization software for scientific discovery with exascale computing. This work was foundational to start software projects like \mbox{VTK-m} and provide improvements to in situ libraries like Catalyst.
-      DOE Office of Science ASCR Program\\
-      Role: PI \\
-      Total funding: \$4M
-    \item[SciDAC Scalable Data Analysis and Visualization Institute]\hfill 2013--2017\\
-      Provide technical solutions in the data management, analysis, and
-      visualization regimes that are broadly applicable in the
-      computational science community for the DOE Office of Science SciDAC program.\\
-      DOE Office of Science SciDAC Program\\
-      Role: Co-PI\\
-      Funding: \$875K
-    \item[Data Analysis at Extreme (Dax)]\hfill 2010--2014\\
-      Creating a framework for visualization on exascale processors. Dax was one of the precursors to \mbox{VTK-m}.\\
-      DOE Office of Science ASCR Program\\
-      Role: PI\\
-      Total Funding: \$1.5M
-    \item[SciDAC Institute for Ultrascale Visualization]\hfill 2006--2012\\
-      Addressed visualization challenges for the DOE Scientific Discovery through Advanced Computing effort.
-      DOE Office of Science SciDAC Program\\
-      Role: Co-PI\\
-      Funding: \$900K
-    \item[ParaView Development Lead]\hfill 2006--Present\\
-      Lead the ASC funded development effort for ParaView, a large-scale
-      general visualization solution. Today, ParaView is downloaded hundreds of thousands of times each year.\\
-      DOE NNSA ASC Program\\
-      Role: PI\\
-      Funding: \$1.6M/year % Taken from 7656/08.01 support budget for 2020
-    %% \item[Scalable Visualization]\hfill 8/99--Present \\
-    %%   Researched, developed, and deployed visualization algorithms designed
-    %%   for scalability in parallel environments.
-    \item[Massive Graph Visualization]\hfill 2005--2007 \\
-      Explored techniques for visualizing providing information in large
-      graph structures.\\
-      Sandia Laboratories LDRD Program\\
-      Role: PI\\
-      Funding: \$1.4M
-    %% \item[Volume Rendering] Sandia National Laboratories, 8/03--8/07 \\
-    %%   Researched and developed unstructured grid volume rendering codes for
-    %%   rendering more accurate images in less time.  This includes utilizing
-    %%   both CPU and GPU processors as well as employing parallel algorithms.
-    \item[Scalable Rendering]\hfill 1999--2005 \\
-      Researched and developed parallel rendering codes targeted at performing scientific visualization on cluster computers.  Software targeted for very large inputs and/or to very large displays.\\
-      DOE NNSA ASC Program\\
-      Role: Key personnel
-    \item[Product Realization Environment]\hfill 1996--1999 \\
-      Developed and deployed a CORBA-based middleware tool for distributing
-      and connecting scientific modeling and simulation codes.\\
-      DOE NNSA ASC Program\\
-      Role: Key personnel
-    \end{cvlist}
+\section*{Employment}
 
-    \begin{cvlist}{Research Experience (Academic)}
-    \item[Doctoral Research]\hfill University of New Mexico, 8/01--8/04 \\
-      Conceived novel mathematical analysis to direct volume rendering
-      light transport equation that enables real time display of highly
-      accurate, linearly interpolated unstructured volumes.
-    \end{cvlist}
+\begin{description}
+\item[Sandia National Laboratories (Albuquerque, NM)]\hfill\\
+  2013-- Principal Member of Technical Staff, Scalable Analysis and Visualization\\
+  2004--2013 Senior Member of Technical Staff, Scalable Analysis and Visualization\\
+  2000-2003 Member of Technical Staff, Data Analysis and Visualization\\
+  1999-2000 Member of Technical Staff, Distributed Systems Research\\
+  1997-1999 Limited Term Employee, Computer Applications for Manufacturing\\
+  1995-1997 Student Intern, Mechanical Process Engineering
+\end{description}
 
-    \begin{cvlist}{Publications}
+
+\section*{Research Experience (Professional)}
+% Note: Funding for PI for total of project (where applicable) whereas co-PI just reports funding for our institution.
+
+\begin{description}
+\item[ECP/VTK-m]\hfill 2017--Present\\
+  Updating scientific visualization algorithms in the VTK-m framework for efficient visualization on multi- and many-core processor devices.\\
+  DOE Office of Science Exascale Computing Project\\
+  Role: PI\\
+  Total funding: \$9.7M %(\$4.3M FY17-FY19, \$5.4M FY20-FY23)
+\item[ATDM Scalable Visualization]\hfill 2016--Present\\
+  Visualization support for mission-specific science applications for the Advanced Technology Development and Mitigation (ATDM) program.\\
+  DOE NNSA ASC Program\\
+  Role: PI\\
+  Funding: \$800K/year
+\item[XVis: Visualization for the Extreme-Scale Scientific-Computation Ecosystem]\hfill 2014--2017\\
+  Providing the foundational research for visualization software for scientific discovery with exascale computing. This work was foundational to start software projects like \mbox{VTK-m} and provide improvements to in situ libraries like Catalyst. \\
+  DOE Office of Science ASCR Program\\
+  Role: PI \\
+  Total funding: \$4M
+\item[SciDAC Scalable Data Analysis and Visualization Institute]\hfill 2013--2017\\
+  Provide technical solutions in the data management, analysis, and
+  visualization regimes that are broadly applicable in the
+  computational science community for the DOE Office of Science SciDAC program.\\
+  DOE Office of Science SciDAC Program\\
+  Role: Co-PI\\
+  Funding: \$875K
+\item[Data Analysis at Extreme (Dax)]\hfill 2010--2014\\
+  Creating a framework for visualization on exascale processors. Dax was one of the precursors to \mbox{VTK-m}.\\
+  DOE Office of Science ASCR Program\\
+  Role: PI\\
+  Total Funding: \$1.5M
+\item[SciDAC Institute for Ultrascale Visualization]\hfill 2006--2012\\
+  Addressed visualization challenges for the DOE Scientific Discovery through Advanced Computing effort.\\
+  DOE Office of Science SciDAC Program\\
+  Role: Co-PI\\
+  Funding: \$900K
+\item[ParaView Development Lead]\hfill 2006--Present\\
+  Lead the ASC funded development effort for ParaView, a large-scale
+  general visualization solution. Today, ParaView is downloaded hundreds of thousands of times each year.\\
+  DOE NNSA ASC Program\\
+  Role: PI\\
+  Funding: \$1.6M/year % Taken from 7656/08.01 support budget for 2020
+  %% \item[Scalable Visualization]\hfill 8/99--Present \\
+  %%   Researched, developed, and deployed visualization algorithms designed
+  %%   for scalability in parallel environments.
+\item[Massive Graph Visualization]\hfill 2005--2007 \\
+  Explored techniques for visualizing providing information in large
+  graph structures.\\
+  Sandia Laboratories LDRD Program\\
+  Role: PI\\
+  Funding: \$1.4M
+  %% \item[Volume Rendering] Sandia National Laboratories, 8/03--8/07 \\
+  %%   Researched and developed unstructured grid volume rendering codes for
+  %%   rendering more accurate images in less time.  This includes utilizing
+  %%   both CPU and GPU processors as well as employing parallel algorithms.
+\item[Scalable Rendering]\hfill 1999--2005 \\
+  Researched and developed parallel rendering codes targeted at performing scientific visualization on cluster computers.  Software targeted for very large inputs and/or to very large displays.\\
+  DOE NNSA ASC Program\\
+  Role: Key personnel
+\item[Product Realization Environment]\hfill 1996--1999 \\
+  Developed and deployed a CORBA-based middleware tool for distributing
+  and connecting scientific modeling and simulation codes.\\
+  DOE NNSA ASC Program\\
+  Role: Key personnel
+\end{description}
+
+
+\section*{Research Experience (Academic)}
+
+\begin{description}
+\item[Doctoral Research]\hfill University of New Mexico, 8/01--8/04 \\
+  Conceived novel mathematical analysis to direct volume rendering
+  light transport equation that enables real time display of highly
+  accurate, linearly interpolated unstructured volumes.
+\end{description}
+
+
+\section*{Publications}
+
+    \begin{description}
     \item[XVis: Visualization for the Extreme-Scale Scientific Computation]~\\ Ecosystem, Final Report.
       Kenneth Moreland, David Pugmire, David Rogers, Hank Childs, Kwan-Liu Ma, and Berk Geveci.
       Technical Report SAND 2019-9297, Sandia National Laboratories.
@@ -413,9 +417,12 @@
       Pavlakos, Vasily Lewis, and Kenneth Moreland.  \emph{IEEE Computer
         Graphics and Applications}, volume 21, number 4, pages 62--70,
       July/August 2001.
-    \end{cvlist}
+    \end{description}
 
-    \begin{cvlist}{Presentations}
+
+\section*{Presentations}
+    
+    \begin{description}
     \item[What's New in ParaView.]
       Kenneth Moreland.
       \emph{DOE Computer Graphics Forum}, April 28, 2020.
@@ -543,99 +550,103 @@
     \item[Big Data, Big Displays, and Cluster-Driven Interactive
       Visualization.] Kenneth Moreland. \emph{Workshop on Commodity-Based
       Visualization Clusters}, October 2002.
-    \end{cvlist}
+    \end{description}
 
-    \begin{cvlist}{Panels}
+
+\section*{Panels}
+
+    \begin{description}
     \item[How Ubiquitous Parallel Devices Affect Visualization.]
       \emph{Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)}, 2020
     \item[Color Mapping in Vis: Perspectives on Optimal Solutions.]
       \emph{IEEE Visualization}, October 2015.
-    \end{cvlist}
+    \end{description}
 
-    \begin{cvlist}{Professional Activities}
-    \item[Institute of Electrical and Electronic Engineers (IEEE)]
-      Member since 1995.
-    \item[Association for Computing Machinery (ACM)]  Member since 1998.
-    \item[Steering Committee Member]~\\
-      \begin{itemize}
-      \item
-        IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2020.
-      \item
-        International Symposium on Visual Computing (ISVC): 2020.
-      \end{itemize}
-    \item[Event Chair/Co-Chair]~\\
-      \begin{itemize}
-      \item
-        IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2018, 2019.
-      \item
-        In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV): 2019.
-      \item
-        Scientific Visualization \& Data Analytics Showcase, Supercomputing: 2018.
-      \item
-        VisLies: 2013, 2015, 2016, 2017, 2018, 2019.
-      \end{itemize}
-    \item[Program Chair/Co-Chair]~\\
-      \begin{itemize}
-      \item
-        In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV): 2017, 2018.
-      \item
-        IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2016, 2017.
-      \item
-        Eurographics Symposium on Parallel Graphics and Visualization (EGPGV): 2013.
-      \end{itemize}
-    \item[Program Committee Member]~\\
-      \begin{itemize}
-      \item
-        IEEE Scientific Visualization: 2014, 2015, 2016, 2017, 2019, 2020.
-      \item
-        International Symposium on Visual Computing (ISVC): 2013, 2014, 2019, 2020.
-      \item
-        Eurographics Symposium on Parallel Graphics and Visualization (EGPGV): 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2019, 2020.
-      \item
-        VisGap: 2020.
-      \item
-        EuroVis: 2016, 2017, 2018.
-      \item
-        Symposium on Visualization: 2017.
-      \item
-        Scientific Visualization \& Data Analytics Showcase, Supercomputing: 2017.
-      \item
-        IEEE Cluster: 2015, 2016.
-      \item
-        Visualization in High Performance Computing: 2015.
-      \item
-        Large Data Analysis and Visualization (LDAV): 2011, 2013, 2014.
-      \item
-        Ultrascale Visualization: 2013, 2014.
-      \item
-        International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing): 2012, 2013.
-      \item
-        Big Data Analytics: Challenges and Opportunities: 2012, 2013.
-      \item
-        Visualization Infrastructure \& Systems Technology: 2014.
-      \end{itemize}
-    \item[Review Panels]~\\
-      \begin{itemize}
-      \item
-        NSF IIS Division: 2012, 2014, 2015, 2016, 2018.
-      \item
-        DOE SBIR Phase II: 2012, 2014.
-      \item
-        DOE ECRP: 2009, 2013.
-      \item
-        DOE ASCR: 2009, 2010, 2011, 2013.
-      \item
-        DOE SBIR Phase I: 2010, 2011.
-      \end{itemize}
-    \item[Miscellaneous]~\\
-      \begin{itemize}
-      \item
-        Guest Editor, \emph{Parallel Computing}: 2019.
-      \item
-        VIS Doctoral Colloquium Panelist: 2017.
-      \end{itemize}
-    \end{cvlist}
 
-  \end{cv}
+\section*{Professional Activities}
+
+\begin{description}
+\item[Institute of Electrical and Electronic Engineers (IEEE)]
+  Member since 1995.
+\item[Association for Computing Machinery (ACM)]  Member since 1998.
+\item[Steering Committee Member]~
+  \begin{itemize}
+  \item
+    IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2020.
+  \item
+    International Symposium on Visual Computing (ISVC): 2020.
+  \end{itemize}
+\item[Event Chair/Co-Chair]~
+  \begin{itemize}
+  \item
+    IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2018, 2019.
+  \item
+    In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV): 2019.
+  \item
+    Scientific Visualization \& Data Analytics Showcase, Supercomputing: 2018.
+  \item
+    VisLies: 2013, 2015, 2016, 2017, 2018, 2019.
+  \end{itemize}
+\item[Program Chair/Co-Chair]~
+  \begin{itemize}
+  \item
+    In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV): 2017, 2018.
+  \item
+    IEEE Symposium on Large Data Analysis and Visualization (LDAV): 2016, 2017.
+  \item
+    Eurographics Symposium on Parallel Graphics and Visualization (EGPGV): 2013.
+  \end{itemize}
+\item[Program Committee Member]~
+  \begin{itemize}
+  \item
+    IEEE Scientific Visualization: 2014, 2015, 2016, 2017, 2019, 2020.
+  \item
+    International Symposium on Visual Computing (ISVC): 2013, 2014, 2019, 2020.
+  \item
+    Eurographics Symposium on Parallel Graphics and Visualization (EGPGV): 2009, 2010, 2011, 2012, 2013, 2015, 2016, 2017, 2019, 2020.
+  \item
+    VisGap: 2020.
+  \item
+    EuroVis: 2016, 2017, 2018.
+  \item
+    Symposium on Visualization: 2017.
+  \item
+    Scientific Visualization \& Data Analytics Showcase, Supercomputing: 2017.
+  \item
+    IEEE Cluster: 2015, 2016.
+  \item
+    Visualization in High Performance Computing: 2015.
+  \item
+    Large Data Analysis and Visualization (LDAV): 2011, 2013, 2014.
+  \item
+    Ultrascale Visualization: 2013, 2014.
+  \item
+    International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing): 2012, 2013.
+  \item
+    Big Data Analytics: Challenges and Opportunities: 2012, 2013.
+  \item
+    Visualization Infrastructure \& Systems Technology: 2014.
+  \end{itemize}
+\item[Review Panels]~
+  \begin{itemize}
+  \item
+    NSF IIS Division: 2012, 2014, 2015, 2016, 2018.
+  \item
+    DOE SBIR Phase II: 2012, 2014.
+  \item
+    DOE ECRP: 2009, 2013.
+  \item
+    DOE ASCR: 2009, 2010, 2011, 2013.
+  \item
+    DOE SBIR Phase I: 2010, 2011.
+  \end{itemize}
+\item[Miscellaneous]~
+  \begin{itemize}
+  \item
+    Guest Editor, \emph{Parallel Computing}: 2019.
+  \item
+    VIS Doctoral Colloquium Panelist: 2017.
+  \end{itemize}
+\end{description}
 
 \end{document}
