@@ -9,6 +9,13 @@
 \usepackage[TextAligned]{currvita}
 \usepackage{url}
 
+% Resize the paper for smaller margins
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
 \usepackage{enumitem}
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
 
@@ -20,8 +27,6 @@
 \sloppy
 
 \begin{document}
-
-  \raggedright
 
   \begin{cv}{Curriculum Vitae}
     \setlength{\cvlabelwidth}{.25in}
