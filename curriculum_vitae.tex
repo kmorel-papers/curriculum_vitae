@@ -15,8 +15,26 @@
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+\usepackage[resetlabels]{multibib}
+\newcites{phd,journal,workshop,nopeer,poster}{%
+  Ph.D. Thesis,%
+  Journal and Conference Papers,%
+  {Symposium, Workshop, and Invited Papers},%
+  Technical Reports and other Non Peer Reviewed,%
+  Posters%
+}
+
+
+% Change the references to use subsections
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{%
+  \subsection*{\refname}
+  \addcontentsline{toc}{subsection}{\refname}
+}{}{}
+
 
 %TIMESTAMP=`%B %e, %Y'
 \date{August 31, 2020}
@@ -72,7 +90,7 @@
 \end{description}
 
 
-\section*{Research Experience (Professional)}
+\section*{Research Experience}
 % Note: Funding for PI for total of project (where applicable) whereas co-PI just reports funding for our institution.
 
 \begin{description}
@@ -139,428 +157,237 @@
 \end{description}
 
 
-\section*{Research Experience (Academic)}
-
-\begin{description}
-\item[Doctoral Research]\hfill University of New Mexico, 8/01--8/04 \\
-  Conceived novel mathematical analysis to direct volume rendering
-  light transport equation that enables real time display of highly
-  accurate, linearly interpolated unstructured volumes.
-\end{description}
-
-
 \section*{Publications}
 
-    \begin{description}
-    \item[XVis: Visualization for the Extreme-Scale Scientific Computation]~\\ Ecosystem, Final Report.
-      Kenneth Moreland, David Pugmire, David Rogers, Hank Childs, Kwan-Liu Ma, and Berk Geveci.
-      Technical Report SAND 2019-9297, Sandia National Laboratories.
-      August 2019.
-    \item[Efficient Point Merging Using Data Parallel Techniques.]
-      Abhishek Yenpure, Hank Childs, and Kenneth Moreland.
-      In \emph{Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)}.
-      June 2019.
-      DOI~10.2312/pgv.20191112.
-    \item[In Situ Visualization for Computational Science (Dagstuhl Seminar 18271).]
-      Janine C. Bennett, Hank Childs, Christoph Garth, Bernd Hentschel, et al.
-      Dagstuhl Reports, pg 1--43.
-      2019.
-      DOI~10.4230/DagRep.8.7.1.
-    \item[Comparing Binary-Swap Algorithms for Odd Factors of Processes.]
-      Kenneth Moreland.
-      In \emph{Proceedings of the 8th IEEE Symposium on Large Data Analysis and Visualization (LDAV)}.
-      October 2018.
-      DOI~10.1109/LDAV.2018.8739210.
-    \item[The future of scientific workflows.]
-      Ewa Deelman, Tom Peterka, Ilkay Altintas, Christopher D Carothers, Kerstin Kleese van Dam, Kenneth Moreland, Manish Parashar, Lavanya Ramakrishnan, Michela Taufer, and Jeffrey Vetter.
-      \emph{International Journal of High Performance Computing Applications}, 32(1), January 2018, pg 159--175.
-      DOI~10.1177/1094342017704893.
-    \item[In Situ Visualization for Computational Science]
-      (Dagstuhl Seminar 18271).
-      Janine C. Bennett, Hank Childs, Christoph Garth, and Bernd Hentschel.
-      Dagstuhl Reports, 2019, pg 1--43. DOI 10.4230/DagRep.8.7.1.
-    \item[A Need for Better Management of Heterogenous HPC Resources.]
-      Kenneth Moreland and Chuck Atkins.
-      Technical Report SAND2018-5743R, Sandia National Laboratories, 2018.
-    \item[The future of scientific workflows.]
-      Ewa Deelman, Tom Peterka, Ilkay Altintas, Christopher D Carothers, Kerstin Kleese van Dam, Kenneth Moreland, Manish Parashar, Lavanya Ramakrishnan, Michela Taufer, and Jeffrey Vetter.
-      \emph{International Journal of High Performance Computing Applications}, 32(1), January 2018, pg 159--175.
-      DOI~10.1177/1094342017704893.
-    \item[Techniques for Data-Parallel Searching for Duplicate Elements.]
-      Brenton Lessley, Kenneth Moreland, Matthew Larsen, and Hank Childs.
-      In \emph{IEEE Symposium on Large Data Analysis and Visualization (LDAV)}, October 2017.
-      DOI~10.1109/LDAV.2017.8231845.
-    \item[Isosurface Visualization Miniapplication.]
-      Daniel Bourgeois, Michael Wolf, and Kenneth Moreland.
-      In \emph{Center for Computing Research Summer Proceedings 2017}.
-      Technical Report SAND2018-2780O, Sandia National Laboratories, 2018, pg 135--142. 
-    \item[Optimizing Multi-Image Sort-Last Parallel Rendering.]
-      Matthew Larsen, Kenneth Moreland, Chris R. Johnson, and Hank Childs.
-      In \emph{IEEE Symposium on Large-Scale Data Analysis and Visualization (LDAV)}, October 2016.
-      DOI~10.1109/LDAV.2016.7874308.
-    \item[Advanced Scientific Computing Research Exascale Requirements Review.]
-      Jeffrey Vetter, Ann Almgren, Phil DeMar, et al.
-      September 2016.
-      DOI~10.2172/1375638.
-    \item[In Situ Methods, Infrastructures, and Applications on High Performance]~\\ Computing Platforms.
-      Andrew C. Bauer, Hasan Abbasi, James Ahrens, Hank Childs, Berk Geveci, Scott Klasky, Kenneth Moreland, Patrick O'Leary, Venkatram Vishwanath, Brad Whitlock, and E. Wes Bethel.
-      \emph{Computer Graphics Forum}, 32(3), June 2016, pg 577--597.
-      DOI~10.1111/cgf.12930.
-    \item[VTK-m: Accelerating the Visualization Toolkit for Massively Threaded]~\\ Architectures.
-      Kenneth Moreland, Christopher Sewell, William Usher, Li-ta Lo, Jeremy Meredith, David Pugmire, James Kress, Hendrik Schroots, Kwan-Liu Ma, Hank Childs, Matthew Larsen, Chun-Ming Chen, Robert Maynard, and Berk Geveci.
-      \emph{IEEE Computer Graphics and Applications}, 36(3), May/June 2016, pg 48--58.
-      DOI~10.1109/MCG.2016.48.
-    \item[The Tensions of In Situ Visualization.]
-      Kenneth Moreland.
-      \emph{IEEE Computer Graphics and Applications}, 36(2), March/April, 2016, pg. 5--9.
-      DOI~10.1109/MCG.2016.35.
-    \item[Why We Use Bad Color Maps and What You Can Do About It.]
-      Kenneth Moreland.
-      In \emph{Proceedings of Human Vision and Electronic Imaging (HVEI)}, February 2016.
-      DOI~10.2352/ISSN.2470-1173.2016.16.HVEI-133.
-    \item[ParaView Catalyst: Enabling In Situ Data Analysis and Visualization.]
-      Utkarsh Ayachit, Andrew Bauer, Berk Geveci, Patrick O'Leary, Kenneth Moreland, Nathan Fabian, Jeffrey Mauldin.
-      In \emph{Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization (ISAV 2015)}, November 2015, pp. 25--29.
-      DOI~10.1145/2828612.2828624.
-    \item[Formal Metrics for Large-Scale Parallel Performance.]
-      Kenneth Moreland and Ron Oldfield.
-      In \emph{High Performance Computing}, July 2015.
-      DOI~10.1007/978-3-319-20119-1\_34.
-    \item[The Future of Scientific]~\\ Workflows: Report of the DOE NGNS/CS Scientific Workflows Workshop.
-      Ewa Deelman, Tom Peterka, et al.
-      April 2015.
-      \url{https://science.energy.gov/~/media/ascr/pdf/programdocuments/docs/workflows_final_report.pdf}.
-    \item[Visualization for Exascale: Portable Performance is Critical.]
-      Kenneth Moreland, Matthew Larsen, and Hank Childs.
-      In \emph{Supercomputing Frontiers and Innovations}, 2(3), 2015.
-      DOI~10.14529/jsfi150306.
-    \item[Implementing Parallel Algorithms Using the Dax Toolkit.]
-      Hendrik Schroots and Kenneth Moreland.
-      In \emph{CR Summer Proceedings 2014}, Tech Report SAND 2015-3829 O, December 2014, pg 197--207.
-    \item[Finely-Threaded History-Based Topology Computation.] Robert
-      Miller, Kenneth Moreland, and Kwan-Liu Ma. In \emph{Eurographics
-        Symposium on Parallel Graphics and Visualization}, June 2014. pg.
-      41--48. DOI~10.2312/pgv.20141083.
-    \item[Evaluation of Methods to Integrate Analysis into a Large-Scale
-      Shock] Physics Code. Ron Oldfield, Kenneth Moreland, Nathan Fabian,
-      and David Rogers. In \emph{Proceedings of the 28th ACM international
-        conference on Supercomputing (ICS'14)}, pg. 83--92, June 2014.
-      DOI~10.1145/2597652.2597668.
-    \item[A Pervasive Parallel Framework for Visualization: Final Report
-      for FWP] 10-014707. Kenneth Moreland. Tech Report SAND 2014-0047,
-      Sandia National Laboratories, January 2014.
-    \item[A Classification of Scientific Visualization Algorithms for
-      Massive] Threading. Kenneth Moreland, Berk Geveci, Kwan-Liu Ma, and
-      Robert Maynard. In \emph{Proceedings of the Ultrascale Visualization
-        Workshop}, November 2013. DOI~10.1145/2535571.2535591.
-    \item[Data Co-Processing for Extreme Scale Analysis Level II ASC
-      Milestone] (4745). David Rogers, Kenneth Moreland, Ron Oldfield, and
-      Nathan Fabian. Tech Report SAND 2013-1122, Sandia National
-      Laboratories, November 2013.
-    \item[ADIOS Visualization Schema: A First Step Towards Improving]
-      Interdisciplinary Collaboration in High Performance Computing.
-      Roselyne Tchoua, Jong Choi, Scott Klasky, Qing Liu, Jeremy Logan,
-      Kenneth Moreland, Jingqing Mu, Manish Parashar, Norbert Podhorszki,
-      David Pugmire, and Matthew Wolf. \emph{IEEE International Conference
-        on eScience}. October 2013, pg. 27--34.
-      DOI~10.1109/eScience.2013.24.
-    \item[Research Challenges for Visualization Software.] Hank Childs, Berk
-      Geveci, Will Schroeder, Jeremy Meredith, Kenneth Moreland,
-      Christopher Sewell, Torsten Kuhlen, and E. Wes Bethel. \emph{IEEE
-        Computer}, Volume 46, Number 5, May 2013, pg. 34--42.
-      DOI~10.1109/MC.2013.179.
-    \item[A Survey of Visualization Pipelines.] Kenneth
-      Moreland. \emph{IEEE Transactions on Visualization and Computer
-        Graphics}, Volume 19, Number 3, March 2013.
-      DOI~10.1109/TVCG.2012.133.
-    \item[Enabling Production-Quality Scientific-Discovery Tools with Data
-      and] Execution Models. Kenneth Moreland, Jeremy Meredith, and Berk
-      Geveci. \emph{Tech Report} SAND 2012-10796P, Sandia National
-      Laboratories, December 2012.
-    \item[Flexible Analysis Software for Emerging Architectures.] Kenneth
-      Moreland, Brad King, Robert Maynard, and Kwan-Liu Ma. In
-      \emph{Petascale Data Analytics: Challenges and Opportunities
-        (PDAC-12)}, November 2012.
-    \item[The SDAV Software Frameworks for Visualization and Analysis on]~\\
-      Next-Generation Multi-Core and Many-Core Architectures. Christopher
-      Sewell, Jeremy Meredith, Kenneth Moreland, Tom Peterka, Dave DeMarle,
-      La-ta Lo, James Ahrens, Robert Maynard, and Berk Geveci. In
-      \emph{Ultrascale Visualization Workshop}, November 2012.
-    \item[Oh, \$\#*@!  Exascale!  The Effect of Emerging Architectures on
-      Scientific] Discovery.  Kenneth Moreland.  In \emph{Ultrascale
-      Visualization Workshop}, November 2012.
-    \item[Redirecting Research in Large-Format Displays for Visualization.]
-      Kenneth Moreland. In \emph{Proceedings of the IEEE Symposium on
-        Large-Scale Data Anaysis and Visualization}, pages 91--95, October
-      2012. DOI~10.1109/LDAV.2012.6378981.
-    \item[An Image Compositing Solution at Scale.] Kenneth Moreland, Wesley
-      Kendall, Tom Peterka, and Jian Huang. In \emph{Proceedings of 2011
-        International Conference for High Performance Computing,
-        Networking, Storage and Analysis (SC '11)}. November
-      2011. DOI~10.1145/2063384.2063417.
-    \item[Examples of \emph{In Transit} Visualization.] Kenneth Moreland,
-      Ron Oldfield, Pat Marion, Sebastien Jourdain, Norbert Podhorszki,
-      Venkatram Vishwanath, Nathan Fabian, Ciprian Docan, Manish Parashar,
-      Mark Hereld, Michael E. Papka, and Scott Klasky. In \emph{Petascale
-        Data Analytics: Challenges and Opportunities (PDAC-11)}, November
-      2011. DOI~10.1145/2110205.2110207.
-    \item[Dax Toolkit: A Proposed Framework for Data Analysis and
-      Visualization at] Extreme Scale. Kenneth Moreland, Utkarsh Ayachit,
-      Berk Geveci, and Kwan-Liu Ma. In \emph{IEEE Symposium on Large-Scale
-        Data Analysis and Visualization (LDAV)}, pp. 97--104, October
-      2011. DOI~10.1109/LDAV.2011.6092323.
-    \item[The ParaView Coprocessing Library: A Scalable, General Purpose
-      \emph{In Situ}] Visualization Library. Nathan Fabian, Kenneth
-      Moreland, David Thompson, Andrew C. Bauer, Pat Marion, Berk Geveci,
-      Michel Rasquin, and Kenneth E. Jansen. In \emph{IEEE Symposium on
-        Large-Scale Data Analysis and Visualization (LDAV)}, pages 89--96,
-      October 2011. DOI~10.1109/LDAV.2011.6092322.
-    \item[IceT Users' Guide and Reference.] Kenneth Moreland. \emph{Tech
-      Report} SAND 2011-5011, Sandia National Laboratories, August 2011.
-    \item[In Situ Data Processing for Extreme Scale Computing.] Scott
-      Klasky, et al. In \emph{Proceedings of SciDAC 2011}, July 2011.
-    \item[Scientific Discovery at the Exascale: Report from the DOE ASCR
-      2011] Workshop on Exascale Data Management, Analysis, and
-      Visualization. Sean Ahern, et al. February 2011.
-    \item[Visualization on Supercomputing Platform Level II ASC Milestone]
-      (3537-1B) Results from Sandia. Kenneth Moreland, Nathan Fabian, Pat
-      Marion, and Berk Geveci. \emph{Tech Report} SAND 2010-6118, Sandia
-      National Laboratories, September 2010.
-    \item[Diverging Color Maps for Scientific Visualization.] Kenneth
-      Moreland. In \emph{Proceedings of the 5th International Symposium on
-        Visual Computing}, December 2009. DOI~10.1007/978-3-642-10520-3\_9.
-    \item[Scalable Analysis Tools for Sensitivity Analysis and UQ (3160)
-      Results.] Lisa Ice, Nathan Fabian, Kenneth D Moreland, Janine
-      C. Bennett, David C. Thompson, David B. Karelitz, and W. Alan
-      Scott. \emph{Tech Report} SAND 2009-6032, Sandia National
-      Laboratories, September 2009.
-    \item[Next-Generation Visualization Technologies: Enabling Discoveries
-      at]~\\ Extreme Scale. Kwan-Liu Ma, Chaoli Wang, Hongfeng Yu, Kenneth
-      Moreland, Jian Huang, and Rob Ross. \emph{SciDAC Review}. Issue 12,
-      pages 12--21, Spring 2009.
-    \item[Design Issues for Performing In Situ Analysis of Simulation
-      Data.] David Thompson, Nathan D. Fabian, Kenneth D. Moreland, and
-      Lisa G. Ice. \emph{Tech Report} SAND 2009-2014, Sandia National
-      Laboratories, April 2009.
-    \item[Analysis of Fragmentation in Shock Physics Simulation.] Kenneth
-      Moreland, C. Charles Law, Lisa Ice, and David Karelitz. In
-      \emph{Proceedings of the 2008 Workshop on Ultrascale Visualization},
-      pages 40--46, November 2008. DOI~10.1109/ULTRAVIS.2008.5154062.
-    \item[Visualization and parallel I/O at extreme scale.] R~B~Ross,
-      T~Peterka, H-W~Shen, Y~Hong, K-L~Ma, H~Yu, and
-      K~Moreland. \emph{Journal of Physics: Conference Series}, Volume 125,
-      Number 012099, 2008. DOI~10.1088/1742-6596/125/1/012099.
-    \item[Post-Processing V\&V Level II ASC Milestone (2843) Results.] David
-      B. Karelitz, Lisa Ice, Jason Wilke, Stephen W. Attaway, and Kenneth
-      Moreland. \emph{Tech Report} SAND 2008-6183, Sandia National
-      Laboratories, September 2008.
-    \item[Large Scale Visualization on the Cray XT3 Using ParaView.]
-      Kenneth Moreland, David Rogers, John Greenfield, Berk Geveci, Patrick
-      Marion, Alexander Neundorf, and Kent Eschenberg. In \emph{Cray User
-        Group 2008}.
-    \item[Time Dependent Processing in a Parallel Pipeline Architecture.]
-      John Biddiscombe, Berk Geveci, Ken Martin, Kenneth Moreland, and
-      David Thompson.  \emph{IEEE Transactions on Visualization and
-        Computer Graphics}, Volume 12, Number 6, pages 1376--1383,
-      November/December 2007.  DOI~10.1109/TVCG.2007.70600.
-    \item[Intelligence Analysis Using Titan.] Patricia Crossno, Brian
-      Wylie, Andrew Wilson, John Greenfield, Eric Stanton, Timothy Shead,
-      Lisa Ice, Kenneth Moreland, Jeffrey Baumes, Berk Geveci. In
-      \emph{IEEE Symposium on Visual Analytics Science and Technology
-        2007}. October 2007.
-    \item[Ultra-Scale Visualization: Research and Education.] Kwan-Liu Ma,
-      Robert Ross, Jian Huang, Greg Humphreys, Nelson Max, Kenneth
-      Moreland, John D. Owens, and Han-Wei Shen. \emph{Journal of Physics:
-        Conference Series}, Volume 78, Number 012088,
-      2007. DOI~10.1088/1742-6596/78/1/012088.
-    \item[Massive Graph Visualization: LDRD Final Report.] Kenneth Moreland
-      and Brian Wylie.  \emph{Tech Report} SAND 2007-6307, October 2007.
-    \item[Post-Processing V\&V Level II ASC Milestone (2360) Results.]
-      David B. Karelitz, Elmer (Alfonso) Chavez, V. Gregory Weirs, Timothy
-      M. Shead, Kenneth D. Moreland, Thomas A. Brunner, and Timothy
-      G. Trucano.  \emph{Tech Report} SAND 2007-6006, September 2007.
-    \item[Parallel Unstructured Volume Rendering in ParaView.] Kenneth
-      Moreland, Lisa Avila, and Lee Ann Fisk.  In \emph{Visualization and
-        Data Analysis 2007, Proceedings of SPIE-IS\&T Electronic Imaging},
-      pages 64950F-1--12, January 2007.
-    \item[Using Ghost Cells in Parallel Filters.] Kenneth Moreland.
-      \emph{Kitware Source}, Issue 1, pages 3--4, July 2006.
-    \item[Remote Large Data Visualization in the ParaView Framework.] Andy
-      Cedilnik, Berk Geveci, Kenneth Moreland, James Ahrens, and Jean
-      Favre.  In \emph{Eurographics Parallel Graphics and Visualization
-        2006}, pages 163--170, May 2006.
-    \item[The ParaView Guide.] Amy Henderson Squillacote.  Kitware
-      Inc., ISBN~1-930934-17-3, 2006. (contributed chapters)
-    \item[A Fast High Accuracy Volume Renderer for Unstructured Data.]
-      Kenneth Moreland and Edward Angel.  In \emph{Proceedings of the
-        IEEE/SIGGRAPH Symposium on Volume Visualization}, pages 9--16,
-      October 2004.
-    \item[Fast High Accuracy Volume Rendering.] Kenneth Moreland.  PhD
-      thesis, University of New Mexico, July 2004.
-    \item Kenneth Moreland and David Thompson.  ``From Cluster to Wall
-      with VTK.''  In \emph{Proceedings of IEEE 2003 Symposium on
-      Parallel and Large-Data Visualization and Graphics}, pages 25--31,
-      October 2003.
-    \item[The FFT on a GPU.] Kenneth Moreland and Edward Angel.  In
-      \emph{Proceedings of SIGGRAPH/Eurographics Workshop on Graphics
-        Hardware 2003}, pages 112--119, July 2003.
-    \item[Tetrahedral Projection using Vertex Shaders.] Brian Wylie,
-      Kenneth Moreland, Lee Ann Fisk, and Patricia Crossno.  In
-      \emph{Proceedings of the IEEE Symposium on Volume Visualization and
-        Graphics 2002}, pages 7--12, October 2002.
-    \item[Sort-Last Parallel Rendering for Viewing Extremely Large Data
-      Sets on]~\\ Tile Displays. Kenneth Moreland, Brian Wylie, and
-      Constantine Pavlakos.  In \emph{Proceedings of the IEEE Symposium on
-        Parallel and Large-Data Visualization and Graphics}, pages 85--92,
-      October 2001.
-    \item[Scalable Rendering on PC Clusters.] Brian Wylie, Constantine
-      Pavlakos, Vasily Lewis, and Kenneth Moreland.  \emph{IEEE Computer
-        Graphics and Applications}, volume 21, number 4, pages 62--70,
-      July/August 2001.
-    \end{description}
+% https://scholar.google.com/citations?user=vklmjtEAAAAJ&hl=en
+Google Scholar Statistics [citations: 3258, h-index: 26, i10-index: 48]
+
+\nocitephd{Moreland2004}
+\bibliographystylephd{plainyr-rev}
+\bibliographyphd{publications}
+
+\nocitejournal{Deelman2018}
+\nocitejournal{Bauer2016}
+\nocitejournal{Moreland2016:VTKm}
+\nocitejournal{Moreland2016:VisView}
+\nocitejournal{Moreland2015:ISC}
+\nocitejournal{Oldfield2014}
+\nocitejournal{Tchoua2013}
+\nocitejournal{Childs2013}
+\nocitejournal{Moreland2013:TVCG}
+\nocitejournal{Moreland2011:SC}
+\nocitejournal{Biddiscombe2007}
+\nocitejournal{Wylie2001}
+\bibliographystylejournal{plainyr-rev}
+\bibliographyjournal{publications}
+
+\nociteworkshop{Yenpure2019}
+\nociteworkshop{Moreland2018}
+\nociteworkshop{Lessley2017:Duplicate}
+\nociteworkshop{Larsen2016}
+\nociteworkshop{Moreland2016:HVEI}
+\nociteworkshop{Ayachit2015}
+\nociteworkshop{Moreland2015:SFI}
+\nociteworkshop{Miller2014}
+\nociteworkshop{Moreland2013:UltraVis}
+\nociteworkshop{Moreland2012:PDAC}
+\nociteworkshop{Moreland2012:LDAV}
+\nociteworkshop{Moreland2011:PDAC}
+\nociteworkshop{Moreland2011:LDAV}
+\nociteworkshop{Fabian2011}
+\nociteworkshop{Klasky2011}
+\nociteworkshop{Moreland2009}
+\nociteworkshop{Ma2009:SciDACReview}
+\nociteworkshop{Ross2008}
+\nociteworkshop{Ma2007}
+\nociteworkshop{Moreland2007}
+\nociteworkshop{Cedilnik2006}
+\nociteworkshop{Moreland2004}
+\nociteworkshop{Moreland2003}
+\nociteworkshop{Moreland2003:FFT}
+\nociteworkshop{Wylie2002}
+\nociteworkshop{Moreland2001}
+\bibliographystyleworkshop{plainyr-rev}
+\bibliographyworkshop{publications}
+
+\nocitenopeer{Bennett2019}
+\nocitenopeer{Moreland2019:XVis}
+\nocitenopeer{Moreland2018:HPCManage}
+\nocitenopeer{Bourgeois2018}
+\nocitenopeer{ExascaleASCRReport}
+\nocitenopeer{Workflows2015}
+\nocitenopeer{Schroots2014}
+\nocitenopeer{Moreland2014:DaxFinal}
+\nocitenopeer{Rogers2013}
+\nocitenopeer{Moreland2012:TR}
+\nocitenopeer{Moreland2012:Ultravis}
+\nocitenopeer{Sewell2012}
+\nocitenopeer{Barrett2012}
+\nocitenopeer{IceT}
+\nocitenopeer{ScientificDiscoveryExascale2011}
+\nocitenopeer{Moreland2010:TR}
+\nocitenopeer{Ice2009}
+\nocitenopeer{Thompson2009}
+\nocitenopeer{Moreland2008:UltraVis}
+\nocitenopeer{Karelitz2008}
+\nocitenopeer{Moreland2008:CUG}
+\nocitenopeer{Crossno2007}
+\nocitenopeer{Moreland2007:TR}
+\nocitenopeer{Karelitz2007}
+\nocitenopeer{Moreland2006:KWS}
+\nocitenopeer{ParaViewGuide}
+\bibliographystylenopeer{plainyr-rev}
+\bibliographynopeer{publications}
+
+\nociteposter{Maynard2013:poster}
+\nociteposter{Moreland2011:poster}
+\nociteposter{Peterka2010:poster}
+\nociteposter{Moreland2008:poster}
+\bibliographystyleposter{plainyr-rev}
+\bibliographyposter{publications}
 
 
-\section*{Presentations}
-    
-    \begin{description}
-    \item[What's New in ParaView.]
-      Kenneth Moreland.
-      \emph{DOE Computer Graphics Forum}, April 28, 2020.
-    \item[VTK-m Update.]
-      Kenneth Moreland.
-      \emph{DOE Computer Graphics Forum}, April 28, 2020.
-    \item[In Situ Visualization and Analysis with Ascent: Using VTK-m.]
-      Kenneth Moreland.
-      \emph{ECP Annual Meeting} Tutorial, February 4, 2020.
-    \item[VTK-m -- A ToolKit for Scientific Visualization on Many-Core Processors.]
-      Hank Childs, Kenneth Moreland, David Pugmire, Robert Maynard.
-      \emph{IEEE VIS} Tutorial, October 2019.
-    \item[Vis Capabilities at Sandia.]
-      Kenneth Moreland.
-      Informal Review for 1540 Production Codes, June 10, 2019
-    \item[What's New in ParaView.]
-      Kenneth Moreland.
-      \emph{DOE Computer Graphics Forum}, April 23, 2019.
-    \item[VTK-m Update.]
-      Kenneth Moreland.
-      \emph{DOE Computer Graphics Forum}, April 23, 2019.
-    \item[In Situ Visualization and Analysis with Ascent: Using VTK-m.]
-      Kenneth Moreland.
-      ECP Annual Meeting Tutorial, January 17, 2019.
-    \item[Building Better Plots.]
-      Kenneth Moreland.
-      CCR Summer Seminar Talk, July 2018.
-    \item[A Brief History of Interactive Visualization.]
-      Kenneth Moreland.
-      University of Stuttgart Colloquium, June 29, 2018.
-    \item[Preparations for Exascale Visualization at DOE.]
-      Kenneth Moreland.
-      \emph{ISC High Performance}, June 25, 2018.
-    \item[The Crazy Future of Vis.]
-      Kenneth Moreland, \emph{DOE Computer Graphics Forum}, Panel: 10-year Prognostication and How Do We Get There?, April 25, 2018.
-    \item[What's New in ParaView.]
-      Kenneth Moreland, \emph{DOE Computer Graphics Forum}, April 24, 2018.
-    \item[VTK-m Update.]
-      Kenneth Moreland, \emph{DOE Computer Graphics Forum}, April 24, 2018.
-    \item[VTK-m: Visualization on Modern Processors.]
-      Kenneth Moreland, Kitware Booth, \emph{SC17}, November 15, 2017.
-    \item[Large Scale Visualization with ParaView.]
-      Kenneth Moreland, W. Alan Scott, David E. DeMarle, Joe Insley, John Patchett, and Jon Woodring.
-      Tutorial \emph{Supercomputing 2017}, November 14, 2017.
-    \item[Why You Don't Want to do In Situ Visualization, and Why You Have To.]
-      Kenneth Moreland, \emph{Computational Science Seminar Series}, Sandia National Laboratories, October 31, 2017.
-    \item[High Performance Visualization in the Many-Core Era.]
-      Kenneth Moreland, \emph{Computing@PNNL Seminar}, August 2017.
-    \item[Why You Don't Want to do In Situ Visualization, and Why You Have To.]
-      Kenneth Moreland.
-      \emph{ISC Workshop on In Situ Visualization}, June 2017.
-    \item[The Many Faces and Solutions of In Situ Visualization.]
-      Kenneth Moreland.
-      \emph{ISC Workshop on Visualization at Scale}, June 2017.
-    \item[Making Better Plots.]
-      Kenneth Moreland.
-      Sandia Post-Doc Workshop, February 20, 2017.
-    \item[VTK-m: Building a Visualization Toolkit for Massively Threaded]~\\ Architectures.
-      Kenneth Moreland.
-      \emph{Ultrascale Visualization Workshop}, November 17, 2015.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland, W.
-      Alan Scott. Tutorial \emph{International Conference on Supercomputing
-        (ICS)}, November 2015.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland, W.
-      Alan Scott, Sabastien Jourdain, David DeMarle, Robert Maynard, Li-Ta
-      Lo, and Joseph Insley. Tutorial \emph{Supercomputing 2014}, November
-      2014.
-    \item[Dax: A Massively Threaded Visualization and Analysis Toolkit for
-      Extreme] Scale. \emph{GPU Technology Conference}. March 2014.
-    \item[Approaching Production In Situ Visualization for Extreme Scale
-      Analysis.] \emph{$16^{\mathrm{th}}$ SIAM Conference on Parallel
-      Processing for Scientific Computing}. February 2014.
-    \item[15 Years of Large-Scale Scientific Visualization.] University of
-      Oregon colloquium. January 2014.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland, W.
-      Alan Scott, David DeMarle, and Li-Ta Lo. Tutorial
-      \emph{Supercomputing 2013}, November 2013.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland,
-      W. Alan Scott, Nathan Fabian, Utkarsh Ayachit, and Robert
-      Maynard. Tutorial \emph{Supercomputing 2012}, November 2012.
-    \item[Next-Generation Capabilities for Large-Scale Scientific
-      Visualization.] Kenneth Moreland, Nathan Fabian, Berk Geveci, Utkarsh
-      Ayachit, and James Ahrens. \emph{Massively Parallel, Scalable
-        Algorithms and Softwares for Scientific Applications, 15th SIAM
-        Conference on Parallel Processing for Scientific Computing},
-      February 2012.
-    \item[Flexible In Situ with ParaView.] Kenneth Moreland, Nathan Fabian,
-      Scott Klasky, and Berk Geveci. \emph{2011 Workshop on Ultrascale
-        Visualization}, November 2011.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland,
-      W. Alan Scott, Nathan Fabian, Jeffrey Mauldin, Andrew C. Bauer,
-      Robert Maynard, and Scott Klasky. Tutorial \emph{Supercomputing
-        2011}, November 2011.
-    \item[Large-Scale Interactive Visualization with ParaView.] Kenneth
-      Moreland. \emph{2nd International Conference on Computational
-        Engineering}, October 2011.
-    \item[Large Scale Visualization with ParaView.] Kenneth
-      Moreland. Tutorial \emph{SciDAC 2011}, July 2011.
-    \item[In-Situ Visualization with the ParaView Coprocessing Library.]
-      Kenneth Moreland, Andrew Bauer, Pat Marion, and Nathan
-      Fabian. Tutorial \emph{Supercomputing 2010}, November 2010.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland,
-      Andrew Bauer. Tutorial \emph{SciDAC 2010}, July 2010.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland, John
-      Greenfield, W. Alan Scott, Utkarsh Ayachit, and Berk Geveci. Tutorial
-      \emph{Supercomputing 2009}, November 2009.
-    \item[Parallel Distributed-Memory Visualization with ParaView.] Kenenth
-      Moreland and David DeMarle. Tutorial \emph{IEEE Cluster 2009}, August
-      2009.
-    \item[Large Scale Visualization with ParaView.] Kenneth Moreland, John
-      Greenfield, W. Alan Scott, Utkarsh Ayachit, Berk Geveci, and David
-      DeMarle. Tutorial \emph{Supercomputing 2008}, November 2008.
-    \item[Advanced ParaView Visualization.] Kenneth Moreland, Utkarsh
-      Ayachit, Timothy Shead, John Biddiscombe, and David
-      Thompson. Tutorial \emph{IEEE Visualization 2008}, October 2008.
-    \item[Large Scale Visualization with ParaView 3.] Kenneth Moreland and
-      John Greenfield. Tutorial Supercomputing 2007, November 2007.
-    \item[Parallel Visualization with ParaView.] Kenneth Moreland and Berk
-      Geveci. Tutorial \emph{Supercomputing 2005}, November 2005.
-    \item[Large Scale Visualization with Cluster Computing.] Kenneth
-      Moreland. \emph{Linux Cluster Institute Workshop}, October 2004.
-    \item[Big Data, Big Displays, and Cluster-Driven Interactive
-      Visualization.] Kenneth Moreland. Colloquium, University of New
-      Mexico, November 2002.
-    \item[Big Data, Big Displays, and Cluster-Driven Interactive
-      Visualization.] Kenneth Moreland. \emph{Workshop on Commodity-Based
-      Visualization Clusters}, October 2002.
-    \end{description}
+\subsection*{Presentations}
+
+\begin{enumerate}[label={[\arabic*]}]
+\item What's New in ParaView.
+  Kenneth Moreland.
+  \emph{DOE Computer Graphics Forum}, April 28, 2020.
+\item VTK-m Update.
+  Kenneth Moreland.
+  \emph{DOE Computer Graphics Forum}, April 28, 2020.
+\item In Situ Visualization and Analysis with Ascent: Using VTK-m.
+  Kenneth Moreland.
+  \emph{ECP Annual Meeting} Tutorial, February 4, 2020.
+\item VTK-m -- A ToolKit for Scientific Visualization on Many-Core Processors.
+  Hank Childs, Kenneth Moreland, David Pugmire, Robert Maynard.
+  \emph{IEEE VIS} Tutorial, October 2019.
+\item Vis Capabilities at Sandia.
+  Kenneth Moreland.
+  Informal Review for 1540 Production Codes, June 10, 2019
+\item What's New in ParaView.
+  Kenneth Moreland.
+  \emph{DOE Computer Graphics Forum}, April 23, 2019.
+\item VTK-m Update.
+  Kenneth Moreland.
+  \emph{DOE Computer Graphics Forum}, April 23, 2019.
+\item In Situ Visualization and Analysis with Ascent: Using VTK-m.
+  Kenneth Moreland.
+  ECP Annual Meeting Tutorial, January 17, 2019.
+\item Building Better Plots.
+  Kenneth Moreland.
+  CCR Summer Seminar Talk, July 2018.
+\item A Brief History of Interactive Visualization.
+  Kenneth Moreland.
+  University of Stuttgart Colloquium, June 29, 2018.
+\item Preparations for Exascale Visualization at DOE.
+  Kenneth Moreland.
+  \emph{ISC High Performance}, June 25, 2018.
+\item The Crazy Future of Vis.
+  Kenneth Moreland, \emph{DOE Computer Graphics Forum}, Panel: 10-year Prognostication and How Do We Get There?, April 25, 2018.
+\item What's New in ParaView.
+  Kenneth Moreland, \emph{DOE Computer Graphics Forum}, April 24, 2018.
+\item VTK-m Update.
+  Kenneth Moreland, \emph{DOE Computer Graphics Forum}, April 24, 2018.
+\item VTK-m: Visualization on Modern Processors.
+  Kenneth Moreland, Kitware Booth, \emph{SC17}, November 15, 2017.
+\item Large Scale Visualization with ParaView.
+  Kenneth Moreland, W. Alan Scott, David E. DeMarle, Joe Insley, John Patchett, and Jon Woodring.
+  Tutorial \emph{Supercomputing 2017}, November 14, 2017.
+\item Why You Don't Want to do In Situ Visualization, and Why You Have To.
+  Kenneth Moreland, \emph{Computational Science Seminar Series}, Sandia National Laboratories, October 31, 2017.
+\item High Performance Visualization in the Many-Core Era.
+  Kenneth Moreland, \emph{Computing@PNNL Seminar}, August 2017.
+\item Why You Don't Want to do In Situ Visualization, and Why You Have To.
+  Kenneth Moreland.
+  \emph{ISC Workshop on In Situ Visualization}, June 2017.
+\item The Many Faces and Solutions of In Situ Visualization.
+  Kenneth Moreland.
+  \emph{ISC Workshop on Visualization at Scale}, June 2017.
+\item Making Better Plots.
+  Kenneth Moreland.
+  Sandia Post-Doc Workshop, February 20, 2017.
+\item VTK-m: Building a Visualization Toolkit for Massively Threaded]~\\ Architectures.
+  Kenneth Moreland.
+  \emph{Ultrascale Visualization Workshop}, November 17, 2015.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland, W.
+  Alan Scott. Tutorial \emph{International Conference on Supercomputing
+    (ICS)}, November 2015.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland, W.
+  Alan Scott, Sabastien Jourdain, David DeMarle, Robert Maynard, Li-Ta
+  Lo, and Joseph Insley. Tutorial \emph{Supercomputing 2014}, November
+  2014.
+\item Dax: A Massively Threaded Visualization and Analysis Toolkit for
+  Extreme] Scale. \emph{GPU Technology Conference}. March 2014.
+\item Approaching Production In Situ Visualization for Extreme Scale
+  Analysis.] \emph{$16^{\mathrm{th}}$ SIAM Conference on Parallel
+  Processing for Scientific Computing}. February 2014.
+\item 15 Years of Large-Scale Scientific Visualization.] University of
+  Oregon colloquium. January 2014.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland, W.
+  Alan Scott, David DeMarle, and Li-Ta Lo. Tutorial
+  \emph{Supercomputing 2013}, November 2013.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland,
+  W. Alan Scott, Nathan Fabian, Utkarsh Ayachit, and Robert
+  Maynard. Tutorial \emph{Supercomputing 2012}, November 2012.
+\item Next-Generation Capabilities for Large-Scale Scientific
+  Visualization.] Kenneth Moreland, Nathan Fabian, Berk Geveci, Utkarsh
+  Ayachit, and James Ahrens. \emph{Massively Parallel, Scalable
+    Algorithms and Softwares for Scientific Applications, 15th SIAM
+    Conference on Parallel Processing for Scientific Computing},
+  February 2012.
+\item Flexible In Situ with ParaView.] Kenneth Moreland, Nathan Fabian,
+  Scott Klasky, and Berk Geveci. \emph{2011 Workshop on Ultrascale
+    Visualization}, November 2011.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland,
+  W. Alan Scott, Nathan Fabian, Jeffrey Mauldin, Andrew C. Bauer,
+  Robert Maynard, and Scott Klasky. Tutorial \emph{Supercomputing
+    2011}, November 2011.
+\item Large-Scale Interactive Visualization with ParaView.] Kenneth
+  Moreland. \emph{2nd International Conference on Computational
+    Engineering}, October 2011.
+\item Large Scale Visualization with ParaView.] Kenneth
+  Moreland. Tutorial \emph{SciDAC 2011}, July 2011.
+\item In-Situ Visualization with the ParaView Coprocessing Library.
+  Kenneth Moreland, Andrew Bauer, Pat Marion, and Nathan
+  Fabian. Tutorial \emph{Supercomputing 2010}, November 2010.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland,
+  Andrew Bauer. Tutorial \emph{SciDAC 2010}, July 2010.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland, John
+  Greenfield, W. Alan Scott, Utkarsh Ayachit, and Berk Geveci. Tutorial
+  \emph{Supercomputing 2009}, November 2009.
+\item Parallel Distributed-Memory Visualization with ParaView.] Kenenth
+  Moreland and David DeMarle. Tutorial \emph{IEEE Cluster 2009}, August
+  2009.
+\item Large Scale Visualization with ParaView.] Kenneth Moreland, John
+  Greenfield, W. Alan Scott, Utkarsh Ayachit, Berk Geveci, and David
+  DeMarle. Tutorial \emph{Supercomputing 2008}, November 2008.
+\item Advanced ParaView Visualization.] Kenneth Moreland, Utkarsh
+  Ayachit, Timothy Shead, John Biddiscombe, and David
+  Thompson. Tutorial \emph{IEEE Visualization 2008}, October 2008.
+\item Large Scale Visualization with ParaView 3.] Kenneth Moreland and
+  John Greenfield. Tutorial Supercomputing 2007, November 2007.
+\item Parallel Visualization with ParaView.] Kenneth Moreland and Berk
+  Geveci. Tutorial \emph{Supercomputing 2005}, November 2005.
+\item Large Scale Visualization with Cluster Computing.] Kenneth
+  Moreland. \emph{Linux Cluster Institute Workshop}, October 2004.
+\item Big Data, Big Displays, and Cluster-Driven Interactive
+  Visualization.] Kenneth Moreland. Colloquium, University of New
+  Mexico, November 2002.
+\item Big Data, Big Displays, and Cluster-Driven Interactive
+  Visualization.] Kenneth Moreland. \emph{Workshop on Commodity-Based
+  Visualization Clusters}, October 2002.
+\end{enumerate}
 
 
-\section*{Panels}
+\subsection*{Panels}
 
-    \begin{description}
-    \item[How Ubiquitous Parallel Devices Affect Visualization.]
-      \emph{Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)}, 2020
-    \item[Color Mapping in Vis: Perspectives on Optimal Solutions.]
-      \emph{IEEE Visualization}, October 2015.
-    \end{description}
+\begin{enumerate}[label={[\arabic*]}]
+\item How Ubiquitous Parallel Devices Affect Visualization.
+  \emph{Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)}, 2020
+\item Color Mapping in Vis: Perspectives on Optimal Solutions.
+  \emph{IEEE Visualization}, October 2015.
+\end{enumerate}
 
 
 \section*{Professional Activities}

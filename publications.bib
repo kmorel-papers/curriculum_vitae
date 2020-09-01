@@ -1,0 +1,943 @@
+% Encoding: UTF-8
+
+@Misc{ASCACSummaryReport2010,
+  author       = {Steve Ashby and others},
+  title        = {The Opportunities and Challenges of Exascale Computing},
+  howpublished = {Summary Report of the Advanced Scientific Computing Advisory Committee (ASCAC) Subcommittee},
+  month        = {Fall},
+  year         = {2010},
+  comment      = {A workshop report prediciting the nature of an Exascale machine.  A reasonable source to pull some numbers comparing petascale to exascale machines (a la slide of doom).  See [Moreland2011:LDAV] for a usage.
+
+Declares a real need for science in going to exascale (Executive Summary findings).
+
+Also declares multicore-friendly algorithms as an important algorithmic challenge (S 5.5.1) and the difficulty in updating our exiting code base to the new architecture (S 5.6.4).},
+  url          = {http://science.energy.gov/~/media/ascr/ascac/pdf/reports/exascale_subcommittee_report.pdf},
+}
+
+@InBook{Ayachit2013,
+  chapter   = {The ParaView Visualization Application},
+  pages     = {383--400},
+  title     = {High Performance Visualization: Enabling Extreme Scale Insight},
+  publisher = {CRC Press},
+  year      = {2013},
+  author    = {Utkarsh Ayachit and Berk Geveci and Kenneth Moreland and John Patchett and Jim Ahrens},
+  editor    = {E. Wes Bethel and Hank Childs and Charles Hansen},
+  isbn      = {978-1-4398-7572-8},
+  comment   = {A brief overview of ParaView, its parallel processing, its interface, its scripting, it's plugin ability, it's 'coprocessing' abilities (what we called in situ before catalyst), it's early web abilities, and some examples in use.},
+}
+
+@InProceedings{Ayachit2015,
+  author    = {Utkarsh Ayachit and Andrew Bauer and Berk Geveci and Patrick O'Leary and Kenneth Moreland and Nathan Fabian and Jeffrey Mauldin},
+  title     = {ParaView Catalyst: Enabling In Situ Data Analysis and Visualization},
+  booktitle = {Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization (ISAV 2015)},
+  year      = {2015},
+  pages     = {25--29},
+  month     = {November},
+  abstract  = {Computer simulations are growing in sophistication and producing results of ever greater fidelity. This trend has been enabled by advances in numerical methods and increasing computing power. Yet these advances come with several costs including massive increases in data size, difficulties examining output data, challenges in configuring simulation runs, and difficulty debugging running codes. Interactive visualization tools, like ParaView, have been used for post-processing of simulation results. However, the increasing data sizes, and limited storage and bandwidth make high fidelity post-processing impractical. In situ analysis is recognized as one of the ways to address these challenges. In situ analysis moves some of the post-processing tasks in line with the simulation code thus short circuiting the need to communicate the data between the simulation and analysis via storage. ParaView Catalyst is a data processing and visualization library that enables in situ analysis and visualization. Built on and designed to interoperate with the standard visualization toolkit VTK and the ParaView application, Catalyst enables simulations to intelligently perform analysis, generate relevant output data, and visualize results concurrent with a running simulation. In this paper, we provide an overview of the Catalyst framework and some of the success stories.},
+  comment   = {A paper describing the Catalyst in situ library. Although this paper is short, it has a nice description of Catalyst along with several examples.},
+  doi       = {10.1145/2828612.2828624},
+}
+
+@Article{Bauer2016,
+  author   = {Andrew C. Bauer and Hasan Abbasi and James Ahrens and Hank Childs and Berk Geveci and Scott Klasky and Kenneth Moreland and Patrick O'Leary and Venkatram Vishwanath and Brad Whitlock and E. Wes Bethel},
+  title    = {In Situ Methods, Infrastructures, and Applications on High Performance Computing Platforms},
+  journal  = {Computer Graphics Forum},
+  year     = {2016},
+  volume   = {35},
+  number   = {3},
+  pages    = {577--597},
+  month    = {June},
+  abstract = {The considerable interest in the high performance computing (HPC) community regarding analyzing and visualization data without first writing to disk, i.e., in situ processing, is due to several factors. First is an I/O cost savings, where data is analyzed /visualized while being generated, without first storing to a filesystem. Second is the potential for increased accuracy, where fine temporal sampling of transient analysis might expose some complex behavior missed in coarse temporal sampling. Third is the ability to use all available resources, CPU's and accelerators, in the computation of analysis products. This STAR paper brings together researchers, developers and practitioners using in situ methods in extreme-scale HPC with the goal to present existing methods, infrastructures, and a range of computational science and engineering applications using in situ analysis and visualization.},
+  comment  = {A State of the Art report on production in situ technologies. ParaView Catalyst and VisIt Libsim are featured as well as ADIOS and GLEAN. Multiple examples of in situ visualization are given. There are also brief descriptions of a list of existing products.},
+  doi      = {10.1111/cgf.12930},
+  url      = {https://diglib.eg.org/handle/10.1111/cgf12930},
+}
+
+@Article{Biddiscombe2007,
+  author  = {John Biddiscombe and Berk Geveci and Ken Martin and Kenneth Moreland and David Thompson},
+  title   = {Time Dependent Processing in a Parallel Pipeline Architecture},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  year    = {2007},
+  volume  = {13},
+  number  = {6},
+  pages   = {1376--1383},
+  month   = {November/December},
+  comment = {Adds extensions to the visualization pipeline (specifically VTK) that allow filters to report and control time.},
+  doi     = {10.1109/TVCG.2007.70600},
+  url     = {http://dx.doi.org/10.1109/TVCG.2007.70600},
+}
+
+@Article{Borkin2011,
+  author   = {Michelle A. Borkin and Krzysztof Z. Gajos and Amanda Peters and Dimitrios Mitsouras and Simone Melchionna and Frank J. Rybicki and Charles L. Feldman and Hanspeter Pfister},
+  journal  = {IEEE Transactions on Visualization and Computer Graphics},
+  title    = {Evaluation of Artery Visualizations for Heart Disease Diagnosis},
+  year     = {2011},
+  month    = {December},
+  number   = {12},
+  pages    = {2479--2488},
+  volume   = {17},
+  abstract = {Heart disease is the number one killer in the United States, and finding indicators of the disease at an early stage is critical for treatment and prevention. In this paper we evaluate visualization techniques that enable the diagnosis of coronary artery disease. A key physical quantity of medical interest is endothelial shear stress (ESS). Low ESS has been associated with sites of lesion formation and rapid progression of disease in the coronary arteries. Having effective visualizations of a patient's ESS data is vital for the quick and thorough non-invasive evaluation by a cardiologist. We present a task taxonomy for hemodynamics based on a formative user study with domain experts. Based on the results of this study we developed HemoVis, an interactive visualization application for heart disease diagnosis that uses a novel 2D tree diagram representation of coronary artery trees. We present the results of a formal quantitative user study with domain experts that evaluates the effect of 2D versus 3D artery representations and of color maps on identifying regions of low ESS. We show statistically significant results demonstrating that our 2D visualizations are more accurate and efficient than 3D representations, and that a perceptually appropriate color map leads to fewer diagnostic mistakes than a rainbow color map.},
+  comment  = {This paper does a perceptual study on some parameters of artery visualization using domain experts. One of the most general things tested is the color map. The study pits the rainbow color map against several forms of diverging color maps. Most of the diverging color maps are taken from color brewer with a couple adjusted for domain specific features. (None use that by [Moreland2009]).
+
+The study showed that identifying important regions was both faster and more accurate with a diverging color map than a rainbow color map by a statistically significant margin.
+
+Despite the difference in how well the subjects performed, there was no significant difference in how well the participiants felt they performed. That is, they thought they did as well with the rainbow color maps as with diverging. However, almost all the participants preferred the rainbow color map (meaning it would be their first choice, at least, before the study was concluded).},
+  doi      = {10.1109/TVCG.2011.192},
+  url      = {http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6065015},
+}
+
+@TechReport{Bourgeois2018,
+  author      = {Daniel Bourgeois and Michael Wolf and Kenneth Moreland},
+  title       = {Isosurface Visualization Miniapplication},
+  institution = {Sandia National Laboratories},
+  year        = {2018},
+  number      = {SAND2018-2780O},
+  abstract    = {Scientific simulations often make use of increasinly massive, heterogeneous high performance
+computers.  Often, the output from such simulations are too large to fit in main memory.  To cope, data
+visualization  experts  have  had  to  write  parallel  algorithms  on  top  of  complex,  large-scale  libraries.   The
+purpose of this paper is to introduce miniIsosurface,  a miniapplication that is part of the Mantevo suite
+of  miniapplications  that  implements  two  isocontouring  algorithms:   Marching  Cubes  and  Flying  Edges.
+Miniapplications are small applications that are still complex enough to study larger performance trends.
+miniIsosurface  was  explicitly  designed  to  provide  software  developers  and  data  visualization  experts  an
+avenue to explore performance characteristics before full-scale development takes place.  Implementations
+inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
+  comment     = {Describes the isosurface miniapp.},
+  url         = {https://cfwebprod.sandia.gov/cfdocs/CompResearch/docs/proceedings/ccr17.pdf#page=141},
+}
+
+@InProceedings{Cedilnik2006,
+  author    = {Andy Cedilnik and Berk Geveci and Kenneth Moreland and James Ahrens and Jean Farve},
+  title     = {Remote Large Data Visualization in the {ParaView} Framework},
+  booktitle = {Eurographics Parallel Graphics and Visualization 2006},
+  year      = {2006},
+  pages     = {163--170},
+  month     = {May},
+  comment   = {Mostly describes the client-server architecture of ParaView.  Also addresses the ParaView proxy system and how the rendering subsystem (such as IceT) is chosen.},
+}
+
+@Article{Childs2013,
+  author   = {Hank Childs and Berk Geveci and Will Schroeder and Jeremy Meredith and Kenneth Moreland and Christopher Sewell and Torsten Kuhlen and E. Wes Bethel},
+  journal  = {IEEE Computer},
+  title    = {Research Challenges for Visualization Software},
+  year     = {2013},
+  month    = {May},
+  number   = {5},
+  pages    = {34--42},
+  volume   = {46},
+  abstract = {As the visualization research community reorients its software to address up-coming challenges, it must successfully deal with diverse processor architectures, distributed systems, various data sources, massive parallelism, multiple input and output devices, and interactivity.},
+  comment  = {This article gives a high level overview of the challenges of large-scale HPC visualization in the exascale/extreme scale from a technical standpoint.  The issues raised are: Massive Parallelization, Processor Architectures and Programming Models, Application Architecture and Data Management, Data Models, Rendering, and Interaction.},
+  doi      = {10.1109/MC.2013.179},
+}
+
+@Article{Deelman2018,
+  author   = {Ewa Deelman and Tom Peterka and Ilkay Altintas and Christopher D Carothers and Kerstin Kleese van Dam and Kenneth Moreland and Manish Parashar and Lavanya Ramakrishnan and Michela Taufer and Jeffrey Vetter},
+  title    = {The future of scientific workflows},
+  journal  = {International Journal of High Performance Computing Applications},
+  year     = {2018},
+  volume   = {32},
+  number   = {1},
+  pages    = {159--175},
+  month    = jan,
+  abstract = {Today’s computational, experimental, and observational sciences rely on computations that involve many related tasks. The success of a scientific mission often hinges on the computer automation of these workflows. In April 2015, the US Department of Energy (DOE) invited a diverse group of domain and computer scientists from national laboratories supported by the Office of Science, the National Nuclear Security Administration, from industry, and from academia to review the workflow requirements of DOE’s science and national security missions, to assess the current state of the art in science workflows, to understand the impact of emerging extreme-scale computing systems on those workflows, and to develop requirements for automated workflow management in future and existing environments. This article is a summary of the opinions of over 50 leading researchers attending this workshop. We highlight use cases, computing systems, workflow needs and conclude by summarizing the remaining challenges this community sees that inhibit large-scale scientific workflows from becoming a mainstream tool for extreme-scale science},
+  comment  = {A paper providing the main details of the future of scientific workflows workshop. The full report is at [Workflows2015].},
+  doi      = {10.1177/1094342017704893},
+}
+
+@TechReport{ExascaleASCRReport,
+  author      = {Jeffrey Vetter and Ann Almgren and Phil DeMar and Katherine Riley and Katie Antypas and Deborah Bard and Richard Coffey and Eli Dart and Sudip Dosanjh and Richard Gerber and James Hack and Inder Monga and Michael E. Papka and Lauren Rotman and Tjerk Straatsma and Jack Wells and David E. Bernholdt and Wes Bethel and George Bosilca and Frank Cappello and Todd Gamblin and Salman Habib and Judy Hill and Jeffrey K. Hollingsworth and Lois Curfman McInnes and Kathryn Mohror and Shirley Moore and Ken Moreland and Rob Roser and Sameer Shende and Galen Shipman and Samuel Williams},
+  title       = {Advanced Scientific Computing Research Exascale Requirements Review},
+  institution = {An Office of Science review sponsored by Advanced Scientific Computing Research},
+  year        = {2016},
+  address     = {Rockville, Maryland},
+  month       = {September},
+  abstract    = {The widespread use of computing in the American economy would not be possible without a thoughtful, exploratory research and development (R&D) community pushing the performance edge of operating systems, computer languages, and software libraries. These are the tools and building blocks - the hammers, chisels, bricks, and mortar - of the smartphone, the cloud, and the computing services on which we rely. Engineers and scientists need ever-more specialized computing tools to discover new material properties for manufacturing, make energy generation safer and more efficient, and provide insight into the fundamentals of the universe, for example. The research division of the U.S. Department of Energy's (DOE's) Office of Advanced Scientific Computing and Research (ASCR Research) ensures that these tools and building blocks are being developed and honed to meet the extreme needs of modern science. See also http://exascaleage.org/ascr/ for additional information.},
+  comment     = {The ASCR report on a series of workshops to understand the requirements for Exascale with respect to DOE. The report includes several visualization needs.},
+  doi         = {10.2172/1375638},
+  url         = {https://www.osti.gov/biblio/1375638},
+}
+
+@TechReport{ExascaleRoadMap,
+  author      = {Jack Dongarra and Pete Beechman and others},
+  title       = {The International Exascale Software Project RoadMap},
+  institution = {University of Tennessee},
+  year        = {2010},
+  number      = {ut-cs-10-652},
+  month       = {January},
+  comment     = {A workshop report prediciting the nature of an Exascale machine.  A reasonable source to pull some numbers comparing petascale to exascale machines (a la slide of doom).  See [Moreland2011:LDAV] for a usage.},
+  url         = {http://www.cs.utk.edu/~library/TechReports/2010/ut-cs-10-652.pdf},
+}
+
+@InProceedings{Fabian2011,
+  author    = {Nathan Fabian and Kenneth Moreland and David Thompson and Andrew C. Bauer and Pat Marion and Berk Geveci and Michel Rasquin and Kenneth E. Jansen},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  title     = {The {ParaView} Coprocessing Library: A Scalable, General Purpose In Situ Visualization Library},
+  year      = {2011},
+  month     = {October},
+  pages     = {89--96},
+  abstract  = {As high performance computing approaches exascale, CPU capability far outpaces disk write speed, and in situ visualization becomes an essential part of an analyst's workflow. In this paper, we describe the ParaView Coprocessing Library, a framework for in situ visualization and analysis coprocessing. We describe how coprocessing algorithms (building on many from VTK) can be linked and executed directly from within a scientific simulation or other applications that need visualization and analysis. We also describe how the ParaView Coprocessing Library can write out partially processed, compressed, or extracted data readable by a traditional visualization application for interactive post-processing. Finally, we will demonstrate the library's scalability in a number of real-world scenarios.},
+  comment   = {Document describing the ParaView Coprocessing library that allows you to use ParaView parallel services in situ with simulations. This is an early description of the Catalyst library before it was called the Catalyst library.},
+  doi       = {10.1109/LDAV.2011.6092322},
+}
+
+@Article{Grosset2017,
+  author   = {A. V. Pascal Grosset and Manasa Prasad and Cameron Christensen and Aaron Knoll and Charles Hansen},
+  title    = {{TOD-Tree}: Task-Overlapped Direct Send Tree Image Compositing for Hybrid MPI Parallelism and GPUs},
+  journal  = {IEEE Transactions on Visualization and Computer Graphics},
+  year     = {2017},
+  volume   = {23},
+  number   = {6},
+  pages    = {1677--1690},
+  month    = jun,
+  abstract = {Modern supercomputers have thousands of nodes, each with CPUs and/or GPUs capable of several teraflops. However, the network connecting these nodes is relatively slow, on the order of gigabits per second. For time-critical workloads such as interactive visualization, the bottleneck is no longer computation but communication. In this paper, we present an image compositing algorithm that works on both CPU-only and GPU-accelerated supercomputers and focuses on communication avoidance and overlapping communication with computation at the expense of evenly balancing the workload. The algorithm has three stages: a parallel direct send stage, followed by a tree compositing stage and a gather stage. We compare our algorithm with radix-k and binary-swap from the IceT library in a hybrid OpenMP/MPI setting on the Stampede and Edison supercomputers, show strong scaling results and explain how we generally achieve better performance than these two algorithms. We developed a GPU-based image compositing algorithm where we use CUDA kernels for computation and GPU Direct RDMA for inter-node GPU communication. We tested the algorithm on the Piz Daint GPU-accelerated supercomputer and show that we achieve performance on par with CPUs. Last, we introduce a workflow in which both rendering and compositing are done on the GPU.},
+  comment  = {A sort-last parallel rendering image compositing technique that optimizes for the collection at the end of the pieces at the end of the rendering. The basic idea is that you start by collecting processes into groups of some size and then doing a direct-send within each group. This is the same as the first stage of radix-k. However, in subsequent stages processes are grouped and a reduction to one process is done rather than a direct send. That is, instead of further breaking up the image, all pieces are collected on a single process. This turns into a tree-reduce with a width equal to whatever factor picked. (There is also a means of dealing with when the number of processes does not divide evenly.) At the end of this, there will only be k pieces left on k processes. These can be gathered by sending direct messages to the destination process.
+
+Essentially, the algorithm trades compositing time for gather time. [Moreland2011:SC] proposed a similar solution, but did not take the idea as far as this paper.},
+  doi      = {10.1109/TVCG.2016.2542069},
+}
+
+@TechReport{Ice2009,
+  author      = {Lisa Ice and Nathan Fabian and Kenneth D. Moreland and Janine C. Bennett and David C. Thompson and David B. Karelitz and W. Alan Scott},
+  title       = {Scalable Analysis Tools for Sensitivity Analysis and {UQ} (3160) Results},
+  institution = {Sandia National Laboratories},
+  year        = {2009},
+  number      = {2009-6032},
+  month       = {September},
+  abstract    = {The 9/30/2009 ASC Level 2 Scalable Analysis Tools for Sensitivity Analysis and UQ (Milestone 3160) contains feature recognition capability required by the user community for certain verification and validation tasks focused around sensitivity analysis and uncertainty quantification (UQ). These feature recognition capabilities include crater detection, characterization, and analysis from CTH simulation data; the ability to call fragment and crater identification code from within a CTH simulation; and the ability to output fragments in a geometric format that includes data values over the fragments. The feature recognition capabilities were tested extensively on sample and actual simulations. In addition, a number of stretch criteria were met including the ability to visualize CTH tracer particles and the ability to visualize output from within an S3D simulation.},
+  comment     = {Milestone report for work in building algorithms that, for example, find craters in CTH data.},
+  url         = {http://www.sandia.gov/~kmorel/documents/MilestoneUQ2009.pdf},
+}
+
+@TechReport{IceT,
+  author      = {Kenneth Moreland},
+  title       = {{IceT} Users' Guide and Reference, Version 2.1},
+  institution = {Sandia National Laboratories},
+  year        = {2011},
+  number      = {SAND2011-5011},
+  month       = {August},
+  comment     = {The IceT documentation.},
+}
+
+@InProceedings{Larsen2016,
+  author    = {Matthew Larsen and Kenneth Moreland and Chris Johnson and Hank Childs},
+  title     = {Optimizing Multi-Image Sort-Last Parallel Rendering},
+  booktitle = {Proceedings of the IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2016},
+  month     = oct,
+  abstract  = {Sort-last parallel rendering can be improved by considering the rendering of multiple images at a time. Most parallel rendering algorithms consider the generation of only a single image. This makes sense when performing interactive rendering where the parameters of each rendering are not known until the previous rendering completes. However, in situ visualization often generates multiple images that do not need to be created sequentially. In this paper we present a simple and effective approach to improving parallel image generation throughput by amortizing the load and overhead among multiple image renders. Additionally, we validate our approach by conducting a performance study exploring the achievable speed-ups in a variety of image-based in situ use cases and rendering workloads. On average, our approach shows a 1.5 to 3.7 fold improvement in performance, and in some cases, shows a 10 fold improvement.},
+  comment   = {Provides some optimizations for rendering multiple images in parallel at once. The intension is to use this in situ when you are going to write several predescribed images such as for Cinema.},
+  doi       = {10.1109/LDAV.2016.7874308},
+  url       = {http://www.sci.utah.edu/publications/Lar2016a/LDAV-Paper-2016.pdf},
+}
+
+@InProceedings{Lessley2017:Duplicate,
+  author    = {Brenton Lessley and Kenneth Moreland and Matthew Larsen and Hank Childs},
+  title     = {Techniques for Data-Parallel Searching for Duplicate Elements},
+  booktitle = {IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2017},
+  month     = oct,
+  abstract  = {We study effective shared-memory, data-parallel techniques for searching for duplicate elements. We consider several data-parallel approaches, and how hash function, machine architecture, and data set can affect performance. We conclude that most choices of algorithm and hash function are problematic for general usage. However, we demonstrate that the choice of the Hash-Fight algorithm with the FNV1a hash function has consistently good performance over all configurations.},
+  comment   = {Compares the performance of identifying and extracting external faces in a mesh by using hash fighting versus sorting indices of the mesh. Hash fighting is almost always a top performer.},
+  doi       = {10.1109/LDAV.2017.8231845},
+}
+
+@Article{Ma2009:SciDACReview,
+  author  = {Kwan-Liu Ma and Chaoli Wang and Hongfeng Yu and Kenneth Moreland and Jian Huang and Rob Ross},
+  title   = {Next-Generation Visualization Technologies: Enabling Discoveries at Extreme Scale},
+  journal = {SciDAC Review},
+  year    = {2009},
+  number  = {12},
+  pages   = {12--21},
+  month   = {Spring},
+  comment = {Among other things, highlights the importance of in situ visualization for immediate, near, and far analysis needs.},
+}
+
+@InProceedings{Maynard2013,
+  author    = {Robert Maynard and Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  title     = {Optimizing Threshold for Extreme Scale Analysis},
+  booktitle = {Visualization and Data Analysis 2013, Proceedings of SPIE-IS\&T Electronic Imaging},
+  year      = {2013},
+  month     = {February},
+  abstract  = {As the HPC community starts focusing its efforts towards exascale, it becomes clear that we are looking at machines with a billion way concurrency. Although parallel computing has been at the core of the performance gains achieved until now, scaling over 1,000 times the current concurrency can be challenging. As discussed in this paper, even the smallest memory access and synchronization overheads can cause major bottlenecks at this scale. As we develop new software and adapt existing algorithms for exascale, we need to be cognizant of such pitfalls. In this paper, we document our experience with optimizing a fairly common and parallelizable visualization algorithm, threshold of cells based on scalar values, for such highly concurrent architectures. Our experiments help us identify design patterns that can be generalized for other visualization algorithms as well. We discuss our implementation within the Dax toolkit, which is a framework for data analysis and visualization at extreme scale. The Dax toolkit employs the patterns discussed here within the framework's scaffolding to make it easier for algorithm developers to write algorithms without having to worry about such scaling issues.},
+  comment   = {A reporting on some of the optimizations we did for threshold in Dax.},
+  doi       = {10.1117/12.2007320},
+  url       = {http://dx.doi.org/10.1117/12.2007320},
+}
+
+@InProceedings{Miller2014,
+  author    = {Robert Miller and Kenneth Moreland and Kwan-Liu Ma},
+  title     = {Finely-Threaded History-Based Topology Computation},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},
+  year      = {2014},
+  abstract  = {Graphics and visualization pipelines often make use of highly parallelized algorithms which transform an input mesh into an output mesh. One example is Marching Cubes, which transforms a voxel grid into a triangle mesh approximation of an isosurface. These techniques often discard the topological connectivity of the output mesh, and instead produce a 'soup' of disconnected geometric elements. Calculations that require local neighborhood, such as surface curvature, cannot be performed on such outputs without first reconstructing its topology. We present a novel method for reconstructing topological information across several kinds of mesh transformations, which we demonstrate with GPU and OpenMP implementations. Our approach makes use of input topological elements for efficient location of coincident elements in the output. We provide performance data for the technique for isosurface generation, tetrahedralization, subdivision, and dual mesh generation, and demonstrate its use in visualization pipelines containing further computations of local curvature and mesh coarsening.},
+  comment   = {A general pattern to join coincident components created independently by finely decomposed threads. The technique is demonstrated with marching cubes, cell subdivision, and face-centered tetrahedralization. The paper also demonstrates a coarsening technique for marching cubes for free.},
+  doi       = {10.2312/pgv.20141083},
+  url       = {http://www.sandia.gov/~kmorel/documents/TopologyThreading.pdf},
+}
+
+@InProceedings{Moreland2001,
+  author    = {Kenneth Moreland and Brian Wylie and Constantine Pavlakos},
+  title     = {Sort-Last Parallel Rendering for Viewing Extremely Large Data Sets on Tile Displays},
+  booktitle = {Proceedings of the IEEE 2001 Symposium on Parallel and Large-Data Visualization and Graphics},
+  year      = {2001},
+  pages     = {85--92},
+  month     = {October},
+  comment   = {Initial publication of the tiled display sort-last image compositing algorithms that form the basis for IceT.},
+}
+
+@InProceedings{Moreland2003,
+  author    = {Kenneth Moreland and David Thompson},
+  title     = {From Cluster to Wall with {VTK}},
+  booktitle = {Proceedings of IEEE Symposium on Parallel and Large-Data Visualization and Graphics},
+  year      = {2003},
+  pages     = {25--31},
+  month     = {October},
+  comment   = {Describes how to do parallel rendering in VTK using sort-last parallel rendering (specifically with IceT) and sort-first parallel rendering with Chromium.  Also much discussion on driving tiled displays.},
+}
+
+@PhdThesis{Moreland2004,
+  author   = {Kenneth Moreland},
+  school   = {University of New Mexico},
+  title    = {Fast High Accuracy Volume Rendering},
+  year     = {2004},
+  month    = jul,
+  abstract = {In computer graphics, color calculations for volumes can be significantly more computationally intensive than that for surfaces. Consequently, until now no interactive
+volume rendering system performs these calculations for even linearly interpolated
+luminance and opacity without resorting to rough approximations or a finite set of
+precomputed values.
+In this dissertation, I describe an unstructured grid volume renderer. The renderer is interactive, yet it can produce artifact free images that traditionally would
+take minutes to render. I employ a projective technique that takes advantage of the
+expanded programmability of the latest 3D graphics hardware. I analyze also an
+optical model commonly used for scientific volume rendering and derive new approximations that are exceptionally accurate but computationally feasible in real time. I
+demonstrate a system that can accurately produce a volume rendering of an unstructured grid with any piecewise linear transfer function. Furthermore, my algorithm is
+capable of rendering over 300 thousand tetrahedra per second yet is not limited by
+pre-integration techniques.},
+}
+
+@InProceedings{Moreland2007,
+  author    = {Kenneth Moreland and Lisa Avila and Lee Ann Fisk},
+  title     = {Parallel Unstructured Volume Rendering in ParaView},
+  booktitle = {Visualization and Data Analysis 2007, Proceedings of SPIE-IS\&T Electronic Imaging},
+  year      = {2007},
+  pages     = {64950F-1--12},
+  month     = {January},
+  comment   = {Performs parallel unstructured volume rendering by building a k-d tree of the geometry, redistributing the geometry based on that k-d tree and clipping by the boundaries, then using that k-d tree for visibility sorting in a sort-last image composite.},
+}
+
+@InProceedings{Moreland2008:CUG,
+  author    = {Kenneth Moreland and David Rogers and John Greenfield and Berk Geveci and Patrick Marion and Alexander Neundorf and Kent Eschenberg},
+  title     = {Large Scale Visualization on the {Cray XT3} Using ParaView},
+  booktitle = {Cray User Group},
+  year      = {2008},
+  comment   = {Porting and demonstration of running ParaView on a Cray XT3 supercomputer.},
+}
+
+@InProceedings{Moreland2008:UltraVis,
+  author    = {Kenneth Moreland and C. Charles Law and Lisa Ice and David Karelitz},
+  title     = {Analysis of Fragmentation in Shock Physics Simulation},
+  booktitle = {Proceedings of the 2008 Workshop on Ultrascale Visualization},
+  year      = {2008},
+  pages     = {40-46},
+  month     = {November},
+  comment   = {Describes extracting fragment surfaces from CTH data, which is an AMR-based Eulerian volume-fragment shock-physics code.},
+  doi       = {10.1109/ULTRAVIS.2008.5154062},
+}
+
+@InProceedings{Moreland2009,
+  author    = {Kenneth Moreland},
+  title     = {Diverging Color Maps for Scientific Visualization},
+  booktitle = {Advances in Visual Computing (Proceedings of the 5th International Symposium on Visual Computing)},
+  year      = {2009},
+  volume    = {5876},
+  pages     = {92--103},
+  month     = {December},
+  abstract  = {One of the most fundamental features of scientific visualization is the process of mapping scalar values to colors. This process allows us to view scalar fields by coloring surfaces and volumes. Unfortunately, the majority of scientific visualization tools still use a color map that is famous for its ineffectiveness: the rainbow color map. This color map, which naively sweeps through the most saturated colors, is well known for its ability to obscure data, introduce artifacts, and confuse users. Although many alternate color maps have been proposed, none have achieved widespread adoption by the visualization community for scientific visualization. This paper explores the use of diverging color maps (sometimes also called ratio, bipolar, or double-ended color maps) for use in scientific visualization, provides a diverging color map that generally performs well in scientific visualization applications, and presents an algorithm that allows users to easily generate their own customized color maps.},
+  comment   = {A paper that proposes using diverging color maps as a default for colors in scientific visualization. Also provides a technique for semi-automatically creating "rounded" color maps so as to not highlight the center point.},
+  doi       = {10.1007/978-3-642-10520-3\_9},
+  url       = {http://www.kennethmoreland.com/color-maps/},
+}
+
+@TechReport{Moreland2010,
+  author      = {Kenneth Moreland and Nathan Fabian and Pat Marion and Berk Geveci},
+  title       = {Visualization on Supercomputing Platform Level {II} {ASC} Milestone {(3537-1B)} Results from {Sandia}},
+  institution = {Sandia National Laboratories},
+  year        = {2010},
+  number      = {SAND 2010-6118},
+  month       = {September},
+  comment     = {A technical report for a project that ran ParaView on up to 8K cores.},
+}
+
+@TechReport{Moreland2011:IceT,
+  author      = {Kenneth Moreland},
+  title       = {IceT Users' Guide and Reference},
+  institution = {Sandia National Laboratories},
+  year        = {2011},
+  number      = {SAND2011-5011},
+  month       = aug,
+  abstract    = {The Image Composition Engine for Tiles (IceT) is a high-performance sort-last parallel rendering
+library.  In addition to providing accelerated rendering for a standard display, IceT provides the
+unique ability to generate images for tiled displays.  The overall resolution of the display may be
+several times larger than any viewport that may be rendered by a single machine.  This document
+is an overview of the user interface to IceT.},
+  comment     = {User's guide for IceT.},
+  url         = {http://icet.sandia.gov/_assets/documents/IceTUsersGuide-2-1.pdf},
+}
+
+@InProceedings{Moreland2011:LDAV,
+  author    = {Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  title     = {Dax Toolkit: A Proposed Framework for Data Analysis and Visualization at Extreme Scale},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  year      = {2011},
+  pages     = {97--104},
+  month     = {October},
+  comment   = {Description of the Dax toolkit, a framework for building algorithms for GPU computers and, later, exascale computers.},
+  doi       = {10.1109/LDAV.2011.6092323},
+  url       = {http://dx.doi.org/10.1109/LDAV.2011.6092323},
+}
+
+@InProceedings{Moreland2011:PDAC,
+  author    = {Kenneth Moreland and Ron Oldfield and Pat Marion and Sebastien Jourdain and Norbert Podhorszki and Venkatram Vishwanath and Nathan Fabian and Ciprian Docan and Manish Parashar and Mark Hereld and Michael E. Papka and Scott Klasky},
+  title     = {Examples of {\it In Transit} Visualization},
+  booktitle = {Petascale Data Analytics: Challenges and Opportunities (PDAC-11)},
+  year      = {2011},
+  month     = {November},
+  comment   = {A summary of several projects using the in transit method of in situ visualization.},
+}
+
+@InProceedings{Moreland2011:SC,
+  author    = {Kenneth Moreland and Wesley Kendall and Tom Peterka and Jian Huang},
+  title     = {An Image Compositing Solution at Scale},
+  booktitle = {Proceedings of 2011 International Conference for High Performance Computing, Networking, Storage and Analysis (SC '11)},
+  year      = {2011},
+  month     = {November},
+  comment   = {A compendium of optimizations for sort-last image-compositing parallel rendering including  Radix-k compositing order, image compression, image interlacing, non-powers-of-two binary swap (telescoping), and improved image collection.  All the techniques are collected in the IceT parallel rendering library and scalability is shown on a petascale machine.},
+  doi       = {10.1145/2063384.2063417},
+  url       = {http://dx.doi.org/10.1145/2063384.2063417},
+}
+
+@InProceedings{Moreland2011:SciDAC,
+  author    = {Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  title     = {Dax: Data Analysis at Extreme},
+  booktitle = {Proceedings of SciDAC 2011},
+  year      = {2011},
+  month     = {July},
+  comment   = {A breif summary paper of the Dax project.  Mostly a position statement.},
+}
+
+@InProceedings{Moreland2012:LDAV,
+  author    = {Kenneth Moreland},
+  title     = {Redirecting Research in Large-Format Displays for Visualization},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  year      = {2012},
+  pages     = {91--95},
+  month     = {October},
+  abstract  = {Large-format displays, in particular tiled displays, remain actively used and researched today after almost two decades since their conception. Many government, academic, and commercial entities have invested considerably in the construction and use of large-format displays. During this time we have developed new applications but have also discovered faulty assumptions. This position paper evaluates the most important lessons learned from early and recent research in large-format displays. Each lesson suggests a direction for future research, which generally takes the form of a more user- and application-centric focus.},
+  comment   = {A somewhat critical review of large-format displays and suggestions on how to best direct future research.},
+  doi       = {10.1109/LDAV.2012.6378981},
+  url       = {http://dx.doi.org/10.1109/LDAV.2012.6378981},
+}
+
+@InProceedings{Moreland2012:PDAC,
+  author    = {Kenneth Moreland and Brad King and Robert Maynard and Kwan-Liu Ma},
+  booktitle = {2012 SC Companion (Petascale Data Analytics: Challenges and Opportunities)},
+  title     = {Flexible Analysis Software for Emerging Architectures},
+  year      = {2012},
+  month     = {November},
+  pages     = {821--826},
+  abstract  = {We are on the threshold of a transformative change in the basic architecture of high-performance computing. The use of accelerator processors, characterized by large core counts, shared but asymmetrical memory, and heavy thread loading, is quickly becoming the norm in high performance computing. These accelerators represent significant challenges in updating our existing base of software. An intrinsic problem with this transition is a fundamental programming shift from message passing processes to much more fine thread scheduling with memory sharing. Another problem is the lack of stability in accelerator implementation; processor and compiler technology is currently changing rapidly. In this paper we describe our approach to address these two immediate problems with respect to scientific analysis and visualization algorithms. Our approach to accelerator programming forms the basis of the Dax toolkit, a framework to build data analysis and visualization algorithms applicable to exascale computing.},
+  comment   = {A high level description of the Dax toolkit and more detailed descriptions of some features that allow it to flex to different applications and algorithms.  It describes how the device adapter allows the framework to be ported across architectures, how the array handle can mange different data layouts, and meta template programming magic allows you to define different algorithm signatures in worklets.  The paper also provides some test runs of the threshold algorithm and compares that with VTK and PISTON as well as running on multiple architectures.},
+  doi       = {10.1109/SC.Companion.2012.115},
+  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.115},
+}
+
+@InProceedings{Moreland2012:Ultravis,
+  author    = {Kenneth Moreland},
+  title     = {{Oh, \$\#*@! Exascale!} {The} Effect of Emerging Architectures on Scientific Discovery},
+  booktitle = {2012 SC Companion (Proceedings of the Ultrascale Visualization Workshop)},
+  year      = {2012},
+  pages     = {224--231},
+  month     = {November},
+  abstract  = {The predictions for exascale computing are dire. Although we have benefited from a consistent supercomputer architecture design, even across manufacturers, for well over a decade, recent trends indicate that future high-performance computers will have different hardware structure and programming models to which software must adapt. This paper provides an informal discussion on the ways in which changes in high-performance computing architecture will profoundly affect the scalability of our current generation of scientific visualization and analysis codes and how we must adapt our applications, workflows, and attitudes to continue our success at exascale computing.},
+  comment   = {A position paper describing why exascale (or extreme scale) represents fundamental challenges to visualization (and other HPC applications).  It describes in most detail issues with large concurrency and capturing results information.},
+  doi       = {10.1109/SC.Companion.2012.38},
+  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.38},
+}
+
+@InBook{Moreland2013:HPV,
+  chapter   = {IceT},
+  pages     = {373--382},
+  title     = {High Performance Visualization: Enabling Extreme Scale Insight},
+  publisher = {CRC Press},
+  year      = {2013},
+  author    = {Kenneth Moreland},
+  editor    = {E. Wes Bethel and Hank Childs and Charles Hansen},
+  isbn      = {978-1-4398-7572-8},
+  comment   = {An overview of IceT and its capabilities for sort-last parallel image compositing for rendering.},
+}
+
+@Article{Moreland2013:TVCG,
+  author   = {Kenneth Moreland},
+  title    = {A Survey of Visualization Pipelines},
+  journal  = {IEEE Transactions on Visualization and Computer Graphics},
+  year     = {2013},
+  volume   = {19},
+  number   = {3},
+  pages    = {367--378},
+  month    = {March},
+  abstract = {The most common abstraction used by visualization libraries and applications today is what is known as the visualization pipeline. The visualization pipeline provides a mechanism to encapsulate algorithms and then couple them together in a variety of ways. The visualization pipeline has been in existence for over twenty years, and over this time many variations and improvements have been proposed. This paper provides a literature review of the most prevalent features of visualization pipelines and some of the most recent research directions.},
+  comment  = {A survey of research pertaining to visualization pipelines, the libraries that implement them, and the tools that use them.},
+  doi      = {10.1109/TVCG.2012.133},
+  url      = {http://dx.doi.org/10.1109/TVCG.2012.133},
+}
+
+@InProceedings{Moreland2013:UltraVis,
+  author    = {Kenneth Moreland and Berk Geveci and Kwan-Liu Ma and Robert Maynard},
+  booktitle = {Proceedings of Ultrascale Visualization Workshop},
+  title     = {A Classification of Scientific Visualization Algorithms for Massive Threading},
+  year      = {2013},
+  month     = {November},
+  abstract  = {As the number of cores in processors increase and accelerator architectures
+are becoming more common, an ever greater number of threads is required to
+achieve full processor utilization. Our current parallel scientific
+visualization codes rely on partitioning data to achieve parallel
+processing, but this approach will not scale as we approach massive
+threading in which work is distributed in such a fine level that each
+thread is responsible for a minute portion of data. In this paper we
+characterize the challenges of refactoring our current visualization
+algorithms by considering the finest portion of work each performs and
+examining the domain of input data, overlaps of output domains, and
+interdependencies among work instances. We divide our visualization
+algorithms into eight categories, each containing algorithms with the same
+interdependencies. By focusing our research efforts to solving these
+categorial challenges rather than this legion of individual algorithms, we
+can make attainable advancement for extreme computing.},
+  comment   = {Classifies all (well, most) of the filters in ParaView into catagories based on how they break up data, how they map input to output, and what collective work is done. This paper is meant to serve a basis for the worklet types implemented in Dax.},
+  doi       = {10.1145/2535571.2535591},
+  url       = {http://dx.doi.org/10.1145/2535571.2535591},
+}
+
+@InProceedings{Moreland2015:ISC,
+  author    = {Kenneth Moreland and Ron Oldfield},
+  title     = {Formal Metrics for Large-Scale Parallel Performance},
+  booktitle = {ISC High Performance},
+  year      = {2015},
+  pages     = {488--496},
+  month     = jun,
+  abstract  = {Performance measurement of parallel algorithms is well studied and well understood. However, a flaw in traditional performance metrics is that they rely on comparisons to serial performance with the same input. This comparison is convenient for theoretical complexity analysis but impossible to perform in large-scale empirical studies with data sizes far too large to run on a single serial computer. Consequently, scaling studies currently rely on ad hoc methods that, although effective, have no grounded mathematical models. In this position paper we advocate using a rate-based model that has a concrete meaning relative to speedup and efficiency and that can be used to unify strong and weak scaling studies.},
+  comment   = {Argues against using time to display the scaling behavior of large scale systems (particular for strong scaling). Instead argues the use of rate (units computed per second) as a universably comparable number. Also offers efficiency as a possible solution.},
+  doi       = {10.1007/978-3-319-20119-1_34},
+}
+
+@Article{Moreland2015:SFI,
+  author   = {Kenneth Moreland and Matthew Larsen and Hank Childs},
+  title    = {Visualization for Exascale: Portable Performance is Critical},
+  journal  = {Supercomputing Frontiers and Innovations},
+  year     = {2015},
+  volume   = {2},
+  number   = {3},
+  abstract = {Researchers face a daunting task to provide scientific visualization capabilities for exascale computing. Of the many fundamental changes we are seeing in HPC systems, one of the most profound is a reliance on new processor types optimized for execution bandwidth over latency hiding. Multiple vendors create such accelerator processors, each with significantly different features and performance characteristics. To address these visualization needs across multiple platforms, we are embracing the use of data parallel primitives that encapsulate highly efficient parallel algorithms that can be used as building blocks for conglomerate visualization algorithms. We can achieve performance portability by optimizing this small set of data parallel primitives whose tuning conveys to the conglomerates.},
+  comment  = {A short introductory paper on the benefits of using data parallel primitives to implement visualization algorithms on multi and many core processors. Also describes how these are implemented in VTK-m.},
+  doi      = {10.14529/jsfi150306},
+  url      = {http://dx.doi.org/10.14529/jsfi150306},
+}
+
+@Article{Moreland2016:VisView,
+  author   = {Kenneth Moreland},
+  title    = {The Tensions of In Situ Visualization},
+  journal  = {IEEE Computer Graphics and Applications},
+  year     = {2016},
+  volume   = {36},
+  number   = {2},
+  pages    = {5--9},
+  month    = {March/April},
+  abstract = {In situ visualization is the coupling of visualization software with a simulation or other data producer to process the data "in memory" before the data are offloaded to a storage system. Although in situ visualization provides superior analysis, it has implementation tradeoffs resulting from conflicts with some traditional expected requirements. Numerous conflicting requirements create tensions that lead to difficult implementation tradeoffs. This article takes a look at the most prevailing tensions of in situ visualization.},
+  comment  = {A visualization viewpoints article about the often conflicting requirements of in situ visualization and how compromises are made in practice.},
+  doi      = {10.1109/MCG.2016.35},
+  url      = {http://dx.doi.org/10.1109/MCG.2016.35},
+}
+
+@Article{Moreland2016:VTKm,
+  author   = {Kenneth Moreland and Christopher Sewell and William Usher and Li-Ta Lo and Jeremy Meredith and David Pugmire and James Kress and Hendrik Schroots and Kwan-Liu Ma and Hank Childs and Matthew Larsen and Chun-Ming Chen and Robert Maynard and Berk Geveci},
+  title    = {{VTK-m}: Accelerating the Visualization Toolkit for Massively Threaded Architectures},
+  journal  = {IEEE Computer Graphics and Applications},
+  year     = {2016},
+  volume   = {36},
+  number   = {3},
+  pages    = {48--58},
+  month    = {May/June},
+  abstract = {One of the most critical challenges for high-performance computing (HPC) scientific visualization is execution on massively threaded processors. Of the many fundamental changes we are seeing in HPC systems, one of the most profound is a reliance on new processor types optimized for execution bandwidth over latency hiding. Our current production scientific visualization software is not designed for these new types of architectures. To address this issue, the VTK-m framework serves as a container for algorithms, provides flexible data representation, and simplifies the design of visualization algorithms on new and future computer architecture.},
+  comment  = {The first comprehensive publication for VTK-m.},
+  doi      = {10.1109/MCG.2016.48},
+  url      = {http://dx.doi.org/10.1109/MCG.2016.48},
+}
+
+@InProceedings{Moreland2018,
+  author    = {Kenneth Moreland},
+  title     = {Comparing Binary-Swap Algorithms for Odd Factors of Processes},
+  booktitle = {Proceedings of the 8th IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2018},
+  month     = oct,
+  abstract  = {A key component of most large-scale rendering systems is a parallel image compositing algorithm, and the most commonly used compositing algorithms are binary swap and its variants. Although shown to be very efficient, one of the classic limitations of binary swap is that it only works on a number of processes that is a perfect power of 2. Multiple variations of binary swap have been independently introduced to overcome this limitation and handle process counts that have factors that are not 2. To date, few of these approaches have been directly compared against each other, making it unclear which approach is best. This paper presents a fresh implementation of each of these methods using a common software framework to make them directly comparable. These methods to run binary swap with odd factors are directly compared. The results show that some simple compositing approaches work as well or better than more complex algorithms that are more difficult to implement.},
+  comment   = {A paper that compares several versions of binary-swap. (To be honest, the main reason was to compare 2-3 swap with other versions of binary swap that use different methods for dealing with non-powers of 2.)},
+  doi       = {10.1109/LDAV.2018.8739210},
+  url       = {http://www.kennethmoreland.com/scalable-rendering/#LDAV2018},
+}
+
+@InProceedings{Oldfield2014,
+  author    = {Ron A. Oldfield and Kenneth Moreland and Nathan Fabian and David Rogers},
+  title     = {Evaluation of Methods to Integrate Analysis into a Large-Scale Shock Physics Code},
+  booktitle = {Proceedings of the 28th ACM international Conference on Supercomputing (ICS '14)},
+  year      = {2014},
+  pages     = {83--92},
+  month     = {June},
+  abstract  = {Exascale supercomputing will embody many revolutionary changes in the hardware and software of high-performance computing. For example, projected limitations in power and I/O-system performance will fundamentally change visualization and analysis workflows. A traditional post-processing workflow involves storing simulation results to disk and later retrieving them for visualization and data analysis; however, at Exascale, post-processing approaches will not be able to capture the volume or granularity of data necessary for analysis of these extreme-scale simulations. As an alternative, researchers are exploring ways to integrate analysis and simulation without using the storage system. In situ and in transit are two options, but there has not been an adequate evaluation of these approaches to identify strengths, weaknesses, and trade-offs at large scale. This paper provides a detailed performance and scaling analysis of a large-scale shock physics code using traditional post-processsing, in situ, and in transit analysis to detect material fragments from a simulated explosion.},
+  comment   = {Follow up paper for the studies given in the technical report of [Rogers2013]. A publication of our work for the ASC II milestone for large scale in situ processing with CTH.},
+  doi       = {10.1145/2597652.2597668},
+}
+
+@TechReport{ParaViewTutorial,
+  author      = {Kenneth Moreland},
+  title       = {The {ParaView} Tutorial, Version 4.4},
+  institution = {Sandia National Laboratories},
+  year        = {2015},
+  number      = {SAND2015-7813 TR},
+  comment     = {The ParaView tutorial.},
+}
+
+@TechReport{Rogers2013,
+  author      = {David Rogers and Kenneth Moreland and Ron Oldfield and Nathan Fabian},
+  title       = {Data Co-Processing for Extreme Scale Analysis Level {II} {ASC} Milestone (4745)},
+  institution = {Sandia National Laboratories},
+  year        = {2013},
+  number      = {SAND2013-1122},
+  abstract    = {Exascale supercomputing will embody many revolutionary changes in the hardware and software of high-performance computing. A particularly pressing issue is gaining insight into the science behind the exascale computations. Power and I/O speed con- straints will fundamentally change current visualization and analysis workflows. A traditional post-processing workflow involves storing simulation results to disk and later retrieving them for visualization and data analysis. However, at exascale, scien- tists and analysts will need a range of options for moving data to persistent storage, as the current offline or post-processing pipelines will not be able to capture the data necessary for data analysis of these extreme scale simulations. This Milestone explores two alternate workflows, characterized as in situ and in transit, and compares them. We find each to have its own merits and faults, and we provide information to help pick the best option for a particular use.},
+  comment     = {Our report for the ASC II milestone for large scale in situ processing with CTH. [Oldfield2014] is a follow-up publication and a better reference.},
+}
+
+@Article{Ross2008,
+  author  = {R B Ross and T Peterka and H-W Shen and Y Hong and K-L Ma and H Yu and K Moreland},
+  title   = {Visualization and parallel {I/O} at extreme scale},
+  journal = {Journal of Physics: Conference Series},
+  year    = {2008},
+  volume  = {125},
+  number  = {012099},
+  comment = {Discusses challenges of visualization at petascale and exascale.  Argues that I/O is beginning to dominate.},
+  doi     = {10.1088/1742-6596/125/1/012099},
+  url     = {http://dx.doi.org/10.1088/1742-6596/125/1/012099},
+}
+
+@InProceedings{Samsel2015,
+  author    = {Francesca Samsel and Mark Petersen and Terece Geld and Greg Abram and Joanne Wendelberger and James Ahrens},
+  booktitle = {Proceedings of the 33rd Annual ACM Conference Extended Abstracts on Human Factors in Computing Systems (CHI EA '15)},
+  title     = {Colormaps that Improve Perception of High-Resolution Ocean Data},
+  year      = {2015},
+  pages     = {703--710},
+  abstract  = {Scientists from the Climate, Ocean and Sea Ice Modeling Team (COSIM) at the Los Alamos National Laboratory (LANL) are interested in gaining a deeper understanding of three primary ocean currents: the Gulf Stream, the Kuroshio Current, and the Agulhas Current & Retroflection. To address these needs, visual artist Francesca Samsel teamed up with experts from the areas of computer science, climate science, statistics, and perceptual science. By engaging an artist specializing in color, we created colormaps that provide the ability to see greater detail in these high-resolution datasets. The new colormaps applied to the POP dataset enabled scientists to see areas of interest unclear using standard colormaps. Improvements in the perceptual range of color allowed scientists to highlight structures within specific ocean currents. Work with the COSIM team members drove development of nested colormaps which provide further detail to the scientists.},
+  comment   = {Proposes some new color maps, mostly diverging and somewhat based on [Moreland2009]. They are applied to ocean data but are also intended for wider use.
+
+The paper provides anecdotal evidence that the new color maps do a better job showing features in ocean data.
+
+There is also a perceptual study that counts how many unique colors participants can identify. It is one metric of the perceptual resolution of the color map, but does not wholy measure the efficacy. (Rainbow actually scored pretty high in this count for obvious reasons.)},
+  doi       = {10.1145/2702613.2702975},
+  url       = {http://dx.doi.org/10.1145/2702613.2702975},
+}
+
+@InProceedings{Sewell2012,
+  author    = {Christopher Sewell and Jeremy Meredith and Kenneth Moreland and Tom Peterka and Dave DeMarle and Li-Ta Lo and James Ahrens and Robert Maynard and Berk Geveci},
+  booktitle = {2012 SC Companion (Proceedings of the Ultrascale Visualization Workshop)},
+  title     = {The {SDAV} Software Frameworks for Visualization and Analysis on Next-Generation Multi-Core and Many-Core Architectures},
+  year      = {2012},
+  month     = {November},
+  pages     = {206--214},
+  abstract  = {This paper surveys the four software frameworks being developed as part of the visualization pillar of the SDAV (Scalable Data Management, Analysis, and Visualization) Institute, one of the SciDAC (Scientific Discovery through Advanced Computing) Institutes established by the ASCR (Advanced Scientific Computing Research) Program of the U.S. Department of Energy. These frameworks include EAVL (Extreme-scale Analysis and Visualization Library), DAX (Data Analysis at Extreme), DIY (Do It Yourself), and PISTON. The objective of these frameworks is to facilitate the adaptation of visualization and analysis algorithms to take advantage of the available parallelism in emerging multi-core and many-core hardware architectures, in anticipation of the need for such algorithms to be run in-situ with LCF (leadership-class facilities) simulation codes on supercomputers.},
+  comment   = {Describes four frameworks addressing large-scale HPC visualization problems.  These are EAVL, Dax, DIY, and PISTON.},
+  doi       = {10.1109/SC.Companion.2012.36},
+  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.36},
+}
+
+@InProceedings{Tchoua2013,
+  author    = {Roselyne Tchoua and Jong Choi and Scott Klasky and Qing Liu and Jeremy Logan and Kenneth Moreland and Jingqing Mu and Manish Parashar and Norbert Podhorszki and David Pugmire and Matthew Wolf},
+  booktitle = {IEEE International Conference on eScience},
+  title     = {{ADIOS} Visualization Schema: A First Step Towards Improving Interdisciplinary Collaboration in High Performance Computing},
+  year      = {2013},
+  month     = {October},
+  pages     = {27--34},
+  abstract  = {Scientific communities have benefitted from a significant increase of available computing and storage resources in the last few decades. For science projects that have access to leadership scale computing resources, the capacity to produce data has been growing exponentially. Teams working on such projects must now include, in addition to the traditional application scientists, experts in various disciplines including applied mathematicians for development of algorithms, visualization specialists for large data, and I/O specialists. Sharing of knowledge and data is becoming a requirement for scientific discovery, providing useful mechanisms to facilitate this sharing is a key challenge for e-Science. Our hypothesis is that in order to decrease the time to solution for application scientists we need to lower the barrier of entry into related computing fields. We aim at improving users' experience when interacting with a vast software ecosystem and/or huge amount of data, while maintaining focus on their primary research field. In this context we present our approach to bridge the gap between the application scientists and the visualization experts through a visualization schema as a first step and proof of concept for a new way to look at interdisciplinary collaboration among scientists dealing with big data. The key to our approach is recognizing that our users are scientists who mostly work as islands. They tend to work in very specialized environment but occasionally have to collaborate with other researchers in order to take full advantage of computing innovations and get insight from big data. We present an example of identifying the connecting elements between one of such relationships and offer a liaison schema to facilitate their collaboration.},
+  comment   = {Documents the early version of the ADIOS Visualization Schema. Describes the ADIOS input XML used to define the schema as well as the attribute strings written to the ADIOS file. (This is not a complete documentation, though.) I believe the functions have been added to the ADIOS to read/define the schema since this publication.},
+  doi       = {10.1109/eScience.2013.24},
+  url       = {http://dx.doi.org/10.1109/eScience.2013.24},
+}
+
+@TechReport{Thompson2009,
+  author      = {David Thompson and Nathan D. Fabian and Kenneth D. Moreland and Lisa G. Ice},
+  title       = {Design Issues for Performing {\textit In Situ} Analysis of Simulation Data},
+  institution = {Sandia National Laboratories},
+  year        = {2009},
+  number      = {SAND2009-2014},
+  comment     = {A theoretical analysis of the costs and benefits of in situ visualization.},
+  url         = {http://www.sandia.gov/~kmorel/documents/SAND2009-2014.pdf},
+}
+
+@Article{Wylie2001,
+  author  = {Brian Wylie and Constantine Pavlakos and Vasily Lewis and Kenneth Moreland},
+  title   = {Scalable Rendering on {PC} Clusters},
+  journal = {IEEE Computer Graphics and Applications},
+  year    = {2001},
+  volume  = {21},
+  number  = {4},
+  pages   = {62--70},
+  month   = {July/August},
+  comment = {Early article demonstrating the good scaling performance of sort-last parallel rendering.  (Does not really compare to other parallel rendering methods, although those are known to scale poorly.  You can use [Mueller1995] to argue poor scaling of sort-first.)},
+}
+
+@InProceedings{Yenpure2019,
+  author    = {Abhishek Yenpure and Hank Childs and Kenneth Moreland},
+  title     = {Efficient Point Merging Using Data Parallel Techniques},
+  booktitle = {Eurographics Symposium on Parallel Graphics and VIsualization (EGPGV)},
+  year      = {2019},
+  month     = jun,
+  abstract  = {We study the problem of merging three-dimensional points that are nearby or coincident. We introduce a fast, efficient approach that uses data parallel techniques for execution in various shared-memory environments. Our technique incorporates a heuristic for efficiently clustering spatially close points together, which is one reason our method performs well against other methods. We then compare our approach against methods of a widely-used scientific visualization library accompanied by a performance study that shows our approach works well with different kinds of parallel hardware (many-core CPUs and NVIDIA GPUs) and data sets of various sizes.},
+  comment   = {A highly parallel algorithm for grouping points by position in 3-space.},
+  doi       = {10.2312/pgv.20191112},
+  url       = {http://www.kennethmoreland.com/topology-threading#EGPGV2019},
+}
+
+@InProceedings{Moreland2016:HVEI,
+  author    = {Kenneth Moreland},
+  booktitle = {Proceedings of Human Vision and Electronic Imaging (HVEI)},
+  title     = {Why We Use Bad Color Maps and What You Can Do About It},
+  year      = {2016},
+  month     = feb,
+  abstract  = {We know the rainbow color map is terrible, and it is emphatically reviled by the visualization community, yet its use continues to persist. Why do we continue to use a this perceptual encoding with so many known flaws? Instead of focusing on why we should not use rainbow colors, this position statement explores the rational for why we do pick these colors despite their flaws. Often the decision is influenced by a lack of knowledge, but even experts that know better sometimes choose poorly. A larger issue is the expedience that we have inadvertently made the rainbow color map become. Knowing why the rainbow color map is used will help us move away from it. Education is good, but clearly not sufficient. We gain traction by making sensible color alternatives more convenient. It is not feasible to force a color map on users. Our goal is to supplant the rainbow color map as a common standard, and we will find that even those wedded to it will migrate away.},
+  doi       = {10.2352/ISSN.2470-1173.2016.16.HVEI-133},
+}
+
+@InProceedings{Klasky2011,
+  author    = {Scott Klasky and others},
+  title     = {In Situ Data Processing for Extreme Scale Computing},
+  booktitle = {Proceedings of SciDAC 2011},
+  year      = {2011},
+  month     = {July},
+  comment   = {A petascale-era paper on in situ visualization and data processing.  Actually mostly focused on in transit visualization using the ADIOS IO transport mechanism to couple codes together.},
+}
+
+@Article{Ma2007,
+  author   = {Kwan-Liu Ma and Robert Ross and Jian Huang and Greg Humphreys and Nelson Max and Kenneth Moreland and John D. Owens and Han-Wei Shen},
+  journal  = {Journal of Physics: Conference Series},
+  title    = {Ultra-Scale Visualization: Research and Education},
+  year     = {2007},
+  number   = {012088},
+  volume   = {78},
+  abstract = {Understanding the science behind large-scale simulations and high-throughput experiments requires extracting meaning from data sets of hundreds of terabytes or more. Visualization is the most intuitive means for scientists to understand data at this scale, and the most effective way to communicate their findings with others. Even though visualization technology has matured over the past twenty years, it is still limited by the extent and scale of the data that it can be applied to, and also by the functionalities that were mostly designed for single-user, single-variable, and single-space investigation. The Institute for Ultra-Scale Visualization (IUSV), funded by the DOE SciDAC-2 program, has the mission to advance visualization technologies to enable knowledge discovery and dissemination for peta-scale applications. By working with the SciDAC application projects, Centers for Enabling Technology, and other Institutes, IUSV aims to lead the research innovation that can create new visualization capabilities needed for gleaning insights from data at petascale and beyond to solve forefront scientific problems. This paper outlines what we see as some of the biggest research challenges facing the visualization community, and how we can approach education and outreach to put successful research in the hands of scientists.},
+  doi      = {10.1088/1742-6596/78/1/012088},
+}
+
+@InProceedings{Moreland2003:FFT,
+  author    = {Kenneth Moreland and Edward Angel},
+  booktitle = {SIGGRAPH/Eurographics Workshop on Graphics Hardware 2003 Proceedings},
+  title     = {{The FFT on a GPU}},
+  year      = {2003},
+  month     = jul,
+  pages     = {112--119},
+  abstract  = {The Fourier transform is a well known and widely used tool in many scientific and engineering fields. The Fourier transform is essential for many image processing techniques, including filtering, manipulation, correction, and compression. As such, the computer graphics community could benefit greatly from such a tool if it were part of the graphics pipeline. As of late, computer graphics hardware has become amazingly cheap, powerful, and flexible. This paper describes how to utilize the current generation of cards to perform the fast Fourier transform (FFT) directly on the cards. We demonstrate a system that can synthesize an image by conventional means, perform the FFT, filter the image, and finally apply the inverse FFT in well under 1 second for a 512 by 512 image. This work paves the way for performing complicated, real-time image processing as part of the rendering pipeline.},
+  comment   = {Stick a flag in the ground as the first paper to implement the FFT on a GPU.},
+}
+
+@InProceedings{Wylie2002,
+  author    = {Brian Wylie and Kenneth Moreland and Lee Ann Fisk and Patricia Crossno},
+  booktitle = {Proceedings of IEEE Volume Visualization and Graphics Symposium},
+  title     = {Tetrahedral Projection using Vertex Shaders},
+  year      = {2002},
+  month     = oct,
+  pages     = {7--12},
+  abstract  = {Projective methods for volume rendering currently represent the best approach for interactive visualization of unstructured data sets. We present a technique for tetrahedral projection using the programmable vertex shaders on current generation commodity graphics cards. The technique is based on Shirley and Tuchman's Projected Tetrahedra (PT) algorithm and allows tetrahedral elements to be volume scan converted within the graphics processing unit. Our technique requires no pre-processing of the data and no additional data structures. Our initial implementation allows interactive viewing of large unstructured datasets on a desktop personal computer.},
+  comment   = {Implementation of the GATOR algorithm. First implementation that I know of that uses programable graphics cards to directly render unstructured polyhedral elements.},
+}
+
+@Article{Bennett2019,
+  author   = {Janine C. Bennett and Hank Childs and Christoph Garth and Bernd Hentschel and others},
+  journal  = {Dagstuhl Reports},
+  title    = {In Situ Visualization for Computational Science (Dagstuhl Seminar 18271)},
+  year     = {2019},
+  issn     = {2192-5283},
+  number   = {7},
+  pages    = {1--43},
+  volume   = {8},
+  abstract = {In situ visualization, i.e., visualizing simulation data as it is generated, is an emerging processing paradigm in response to trends in the area of high-performance computing. This paradigm holds great promise in its ability to access increased spatio-temporal resolution and leverage extensive computational power. However, the paradigm is also widely viewed as limiting when it comes to exploration-oriented use cases and further will require visualization systems to become more and more complicated and constrained. Additionally, there are many open research topics with in situ visualization. The Dagstuhl seminar 18271 "In Situ Visualization for Computational Science" brought together researchers and practitioners from three communities (computational science, high-performance computing, and scientific visualization) to share interesting findings, to identify lines of open research, and to determine a medium-term research agenda that addresses the most pressing problems. This report summarizes the outcomes and findings of the seminar.},
+  comment  = {Report from the Dagstuhl seminar about in situ visualization.},
+  doi      = {10.4230/DagRep.8.7.1},
+}
+
+@TechReport{Moreland2019:XVis,
+  author      = {Kenneth Moreland and David Pugmire and David Rogers and Hank Childs and Kwan-Liu Ma and Berk Geveci},
+  institution = {Sandia National Laboratories},
+  title       = {XVis: Visualization for the Extreme-Scale Scientific Computation Ecosystem, Final Report},
+  year        = {2019},
+  month       = aug,
+  number      = {SAND 2019-9297},
+}
+
+@TechReport{Moreland2018:HPCManage,
+  author      = {Kenneth Moreland and Chuck Atkins},
+  institution = {Sandia National Laboratories},
+  title       = {A Need for Better Management of Heterogenous HPC Resources},
+  year        = {2018},
+}
+
+@Misc{Workflows2015,
+  author       = {Ewa Dellman and Tom Peterka and others},
+  title        = {The Future of Scientific Workflows},
+  howpublished = {Report of the DOE NGNS/CS Scientific Workflows Workshop},
+  month        = {April},
+  year         = {2015},
+  comment      = {Report on workshop for workflows. A shorter paper was later published in [Deelman2018].},
+  url          = {http://science.energy.gov/~/media/ascr/pdf/programdocuments/docs/workflows_final_report.pdf},
+}
+
+@TechReport{Schroots2014,
+  author      = {Hendrik Schroots and Kenneth Moreland},
+  institution = {Sandia National Laboratories},
+  title       = {Implementing Parallel Algorithms Using the Dax Toolkit},
+  year        = {2014},
+  month       = dec,
+  note        = {CR Summer Proceedings},
+  number      = {SAND 2015-3829 O},
+}
+
+@TechReport{Moreland2014:DaxFinal,
+  author      = {Kenneth Moreland},
+  institution = {Sandia National Laboratories},
+  title       = {A Pervasive Parallel Framework for Visualization: Final Report for FWP 10-014707},
+  year        = {2014},
+  month       = jan,
+  number      = {SAND 2014-0047},
+}
+
+@TechReport{Moreland2012:TR,
+  author      = {Kenneth Moreland and Jeremy Meredith and Berk Geveci},
+  institution = {Sandia National Laboratories},
+  title       = {Enabling Production-Quality Scientific-Discovery Tools with Data and Execution Models},
+  year        = {2012},
+  month       = dec,
+  number      = {SAND 2012-10796P},
+  type        = {techreport},
+}
+
+@TechReport{Barrett2012,
+  author      = {Brian Barrett and Richard Barrett and James Brandt and Ron Brightwell and Matthew Curry and Nathan Fabian and Kurt Ferreira and Ann Gentile and Scott Hemmert and Suzanne Kelly and Ruth Klundt and James Laros III and Vitus Leung and Michael Levenhagen and Gerald Lofstead and Ken Moreland and Ron Oldfield and Kevin Pedretti and Arun Rodrigues and David Thompson and Tom Tucker and Lee Ward and John Van Dyke and Courtenay Vaughan and Kyle Wheeler},
+  institution = {Sandia National Laboratories},
+  title       = {Report of Experiments and Evidence for ASC L2 Milestone 4467 - Demonstration of a Legacy Application’s Path to Exascale},
+  year        = {2012},
+  month       = mar,
+  number      = {SAND 2012-1750},
+  type        = {techreport},
+}
+
+@Misc{ScientificDiscoveryExascale2011,
+  author       = {Sean Ahern and Arie Shoshani and Kwan-Liu Ma and others},
+  title        = {Scientific Discovery at the Exascale},
+  howpublished = {Report from the DOE ASCR 2011 Workshop on Exascale Data Management, Analysis, and Visualization},
+  month        = {February},
+  year         = {2011},
+  comment      = {Workshop report on upcoming visualization challenges at exascale.  Big challenges include overcoming lower relative I/O rates through various more advanced I/O technologies such as in situ computations.  Also includes discussion on upcoming algorithmic challenges.},
+  url          = {https://science.osti.gov/-/media/ascr/pdf/program-documents/docs/Exascale-ASCR-Analysis.pdf},
+}
+
+@TechReport{Moreland2010:TR,
+  author      = {Kenneth Moreland and Nathan Fabian and Pat Marion and Berk Geveci},
+  institution = {Sandia National Laboratories},
+  title       = {Visualization on Supercomputing Platform Level II ASC Milestone (3537-1B) Results from Sandia},
+  year        = {2010},
+  month       = sep,
+  number      = {SAND 2010-6118},
+}
+
+@TechReport{Karelitz2008,
+  author      = {David B. Karelitz and Lisa Ice and Jason Wilke and Stephen W. Attaway and and Kenneth Moreland},
+  institution = {Sandia National Laboratories},
+  title       = {Post-Processing V\&V Level II ASC Milestone (2843) Results},
+  year        = {2008},
+  month       = sep,
+  number      = {SAND 2008-6183},
+}
+
+@InProceedings{Crossno2007,
+  author    = {Patricia Crossno and Brian Wylie and Andrew Wilson and John Greenfield and Eric Stanton and Timothy Shead and Lisa Ice and Kenneth Moreland and Jeffrey Baumes and Berk Geveci},
+  booktitle = {IEEE Symposium on Visual Analytics Science and Technology},
+  title     = {Intelligence Analysis Using Titan},
+  year      = {2007},
+  month     = oct,
+}
+
+@TechReport{Moreland2007:TR,
+  author      = {Kenneth Moreland and Brian Wylie},
+  institution = {Sandia National Laboratories},
+  title       = {Massive Graph Visualization: LDRD Final Report},
+  year        = {2007},
+  month       = oct,
+  number      = {SAND 2007-6307},
+  type        = {techreport},
+}
+
+@TechReport{Karelitz2007,
+  author      = {David B. Karelitz and Elmer Chavez and V. Gregory Weirs and Timothy M. Shead and Kenneth D. Moreland and Thomas A. Brunner and Timothy G. Trucano},
+  institution = {Sandia National Laboratories},
+  title       = {Post-Processing V\&V Level II ASC Milestone (2360) Results},
+  year        = {2007},
+  month       = sep,
+  number      = {SAND 2007-6006},
+  type        = {techreport},
+}
+
+@Article{Moreland2006:KWS,
+  author  = {Kenneth Moreland},
+  journal = {Kitware Source},
+  title   = {Using Ghost Cells in Parallel Filters},
+  year    = {2006},
+  month   = jul,
+  pages   = {3--4},
+}
+
+@Book{ParaViewGuide,
+  author    = {Utkarsh Ayachit},
+  publisher = {Kitware Inc.},
+  title     = {The {ParaView} Guide: A Parallel Visualization Application},
+  year      = {2015},
+  edition   = {4.3},
+  isbn      = {978-1-930934-30-6},
+  month     = {January},
+  note      = {(contributions)},
+  comment   = {Dude, its ParaView.},
+  url       = {http://www.paraview.org},
+}
+
+@InProceedings{Maynard2013:poster,
+  author    = {Robert Maynard and Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  booktitle = {Optimizing Threshold for Extreme Scale Analysis},
+  title     = {Proceedings of SPIE Visualization and Data Analysis},
+  year      = {2013},
+}
+
+@InProceedings{Moreland2011:poster,
+  author    = {Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  booktitle = {Proceedings of SciDAC},
+  title     = {Dax: Data Analysis at Extreme},
+  year      = {2011},
+}
+
+@InProceedings{Peterka2010:poster,
+  author    = {T Peterka and W Kendall and D Goodell and B Nouanesengsey and H-W Shen and J Huang and K Moreland and R Thakur and R B Ross},
+  booktitle = {Proceedings of SciDAC},
+  title     = {Performance of communication patterns for extreme-scale analysis and visualization},
+  year      = {2010},
+}
+
+@Article{Moreland2008:poster,
+  author  = {Kenneth Moreland and Daniel Lepage and David Koller and Greg Humphreys},
+  journal = {Journal of Physics: Conference Series},
+  title   = {Remote rendering for ultrascale data},
+  year    = {2008},
+  number  = {012096},
+  volume  = {125},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

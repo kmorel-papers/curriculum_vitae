@@ -10,4 +10,9 @@ MARK_AS_ADVANCED(
 
 INCLUDE(UseLATEX.cmake)
 
-ADD_LATEX_DOCUMENT(curriculum_vitae.tex)
+ADD_LATEX_DOCUMENT(curriculum_vitae.tex
+  BIBFILES publications.bib
+
+  # Because using bibunit package
+  MULTIBIB_NEWCITES phd journal workshop nopeer poster
+  )
