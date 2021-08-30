@@ -972,4 +972,16 @@ There is also a perceptual study that counts how many unique colors participants
   doi       = {10.1109/eScience.2018.00133},
 }
 
+@InProceedings{Sane2021,
+  author    = {Sudhanshu Sane and Abhishek Yenpure and Roxana Bujack and Matthew Larsen and Kenneth Moreland and Christoph Garth and Chris R. Johnson and Hank Childs},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)},
+  title     = {Scalable In Situ Computation of {Lagrangian} Representations via Local Flow Maps},
+  year      = {2021},
+  month     = jun,
+  note      = {Winner best paper},
+  abstract  = {In situ computation of Lagrangian flow maps to enable post hoc time-varying vector field analysis has recently become an active area of research. However, the current literature is largely limited to theoretical settings and lacks a solution to address scalability of the technique in distributed memory. To improve scalability, we propose and evaluate the benefits and limitations of a simple, yet novel, performance optimization. Our proposed optimization is a communication-free model resulting in local Lagrangian flow maps, requiring no message passing or synchronization between processes, intrinsically improving scalability, and thereby reducing overall execution time and alleviating the encumbrance placed on simulation codes from communication overheads. To evaluate our approach, we computed Lagrangian flow maps for four time-varying simulation vector fields and investigated how execution time and reconstruction accuracy are impacted by the number of GPUs per compute node, the total number of compute nodes, particles per rank, and storage intervals. Our study consisted of experiments computing Lagrangian flow maps with up to 67M particle trajectories over 500 cycles and used as many as 2048 GPUs across 512 compute nodes. In all, our study contributes an evaluation of a communication-free model as well as a scalability study of computing distributed Lagrangian flow maps at scale using in situ infrastructure on a modern supercomputer.},
+  comment   = {Computes the flow intervals for Lagrangian flow map representation in situ. However, to speed up the computation, all communication is disabled. Instead, when a flow interval leaves the local domain, that interval is dropped. It is then reconstructed post hoc using simple interpolation. This speeds up the computation in situ quite a bit but introduces some error.},
+  doi       = {10.2312/pgv.20211040},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
