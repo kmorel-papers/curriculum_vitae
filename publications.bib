@@ -1144,7 +1144,7 @@ can make attainable advancement for extreme computing.},
   doi       = {10.2312/pgv.20241130},
 }
 
-@InProceedings{Pugmire2024,
+@InProceedings{Pugmire2024a,
   author    = {David Pugmire and Jong Y. Choi and Scott Klasky and Kenneth Moreland and Eric Suchyta and Tushar M. Athawale and Zhe Wang and Choong-Seock Chang and Seung-Hoe Ku and Robert Hager},
   booktitle = {VisGap - The Gap between Visualization Research and Visualization Software},
   title     = {Performance Improvements of {Poincar\'{e}} Analysis for Exascale Fusion Simulations},
@@ -1185,6 +1185,54 @@ can make attainable advancement for extreme computing.},
   year      = {2024},
   month     = sep,
   doi       = {10.1109/e-Science62913.2024.10678681},
+}
+
+@InProceedings{Sisneros2024,
+  author    = {Robert Sisneros and Tushar Athawale and David Pugmire and Kenneth Moreland},
+  booktitle = {Proceedings IEEE Workshop on Uncertainty Visualization},
+  title     = {An Entropy-Based Test and Development Framework for Uncertainty Modeling in Level-Set Visualizations},
+  year      = {2024},
+  month     = oct,
+  pages     = {78--83},
+  abstract  = {We present a simple comparative framework for testing and developing uncertainty modeling in uncertain marching cubes implementations. The selection of a model to represent the probability distribution of uncertain values directly influences the memory use, run time, and accuracy of an uncertainty visualization algorithm. We use an entropy calculation directly on ensemble data to establish an expected result and then compare the entropy from various probability models, including uniform, Gaussian, histogram, and quantile models. Our results verify that models matching the distribution of the ensemble indeed match the entropy. We further show that fewer bins in nonparametric histogram models are more effective whereas large numbers of bins in quantile models approach data accuracy.},
+  comment   = {A framework for  developing and testing uncertainty algorithms by considering the probability of all Marching Cubes cases.},
+  doi       = {10.1109/UncertaintyVisualization63963.2024.00015},
+}
+
+@InProceedings{Hari2024,
+  author    = {Gautam Hari and Nrushad Joshi and Zhe Wang and Qian Gong and Dave Pugmire and Kenneth Moreland and Johnson, Chris R. and Scott Klasky and Norbert Podhorszki and Athawale, Tushar M.},
+  booktitle = {Proceedings IEEE Workshop on Uncertainty Visualization},
+  title     = {{FunM$^2$C}: A Filter for Uncertainty Visualization of Multivariate Data on Multi-Core Devices},
+  year      = {2024},
+  month     = oct,
+  pages     = {43--47},
+  abstract  = {Uncertainty visualization is an emerging research topic in data visualization because neglecting uncertainty in visualization can lead to inaccurate assessments. In this paper, we study the propagation of multivariate data uncertainty in visualization. Although there have been a few advancements in probabilistic uncertainty visualization of multivariate data, three critical challenges remain to be addressed. First, the state-of-the-art probabilistic uncertainty visualization framework is limited to bivariate data (two variables). Second, existing uncertainty visualization algorithms use computationally intensive techniques and lack support for cross-platform portability. Third, as a consequence of the computational expense, integration into production visualization tools is impractical. In this work, we address all three issues and make a threefold contribution. First, we take a step to generalize the state-of-the-art probabilistic framework for bivariate data to multivariate data with an arbitrary number of variables. Second, through utilization of VTK-m's shared-memory parallelism and cross-platform compatibility features, we demonstrate acceleration of multivariate uncertainty visualization on different many-core architectures, including OpenMP and AMD GPUs. Third, we demonstrate the integration of our algorithms with the ParaView software. We demonstrate the utility of our algorithms through experiments on multivariate simulation data with three and four variables.},
+  comment   = {Computing uncertain fiber surfaces. A limitation of this work is that the selection of multiple scalar has to be an axis-aligned space in scalar space.},
+  doi       = {10.1109/UncertaintyVisualization63963.2024.00010},
+}
+
+@InProceedings{Pugmire2024b,
+  author    = {David Pugmire and Kenneth Moreland and Tushar M. Athawale and James Hammer and Jian Huang},
+  booktitle = {Proceedings IEEE 20th International Conference on e-Science},
+  title     = {Top Research Challenges and Opportunities for Near Real-Time Extreme-Scale Visualization of Scientific Data},
+  year      = {2024},
+  month     = sep,
+  abstract  = {The rapid advancement in scientific simulations and experimental facilities has resulted in the generation of vast amounts of data at unprecedented scales. The analysis and visualization of large amounts of data is a challenge in and of itself, but the requirements for timeliness significantly magnify these difficulties. Near real-time visualization is critical to monitor and analyze the data produced by these large facilities, but current production tools are not well-suited to these requirements. In this position paper, we share our perspective on some of the challenges, and thus, opportunities for research that stand in the way of near-real-time visualization of large scientific data.},
+  doi       = {10.1109/e-Science62913.2024.10678727},
+}
+
+@Article{Athawale2025,
+  author   = {Athawale, Tushar M. and Wang, Zhe and Pugmire, David and Moreland, Kenneth and Gong, Qian and Klasky, Scott and Johnson, Chris R. and Rosen, Paul},
+  journal  = {IEEE Transactions on Visualization and Computer Graphics},
+  title    = {Uncertainty Visualization of Critical Points of {2D} Scalar Fields for Parametric and Nonparametric Probabilistic Models},
+  year     = {2025},
+  month    = jan,
+  number   = {1},
+  pages    = {108--118},
+  volume   = {31},
+  abstract = {This paper presents a novel end-to-end framework for closed-form computation and visualization of critical point uncertainty in 2D uncertain scalar fields. Critical points are fundamental topological descriptors used in the visualization and analysis of scalar fields. The uncertainty inherent in data (e.g., observational and experimental data, approximations in simulations, and compression), however, creates uncertainty regarding critical point positions. Uncertainty in critical point positions, therefore, cannot be ignored, given their impact on downstream data analysis tasks. In this work, we study uncertainty in critical points as a function of uncertainty in data modeled with probability distributions. Although Monte Carlo (MC) sampling techniques have been used in prior studies to quantify critical point uncertainty, they are often expensive and are infrequently used in production-quality visualization software. We, therefore, propose a new end-to-end framework to address these challenges that comprises a threefold contribution. First, we derive the critical point uncertainty in closed form, which is more accurate and efficient than the conventional MC sampling methods. Specifically, we provide the closed-form and semianalytical (a mix of closed-form and MC methods) solutions for parametric (e.g., uniform, Epanechnikov) and nonparametric models (e.g., histograms) with finite support. Second, we accelerate critical point probability computations using a parallel implementation with the VTK-m library, which is platform portable. Finally, we demonstrate the integration of our implementation with the ParaView software system to demonstrate near-real-time results for real datasets.},
+  comment  = {An algorithm to determine the probable location of critical points in a field with uncertainty. This is done by looking at the possible values at each point and determining the probabity of any condition that leads to a critical point in the cell. A limitation of this work is that it only works on independent values.},
+  doi      = {10.1109/TVCG.2024.3456393},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
