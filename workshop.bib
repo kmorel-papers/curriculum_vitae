@@ -1,0 +1,461 @@
+@InProceedings{Hari2024,
+  author    = {Gautam Hari and Nrushad Joshi and Zhe Wang and Qian Gong and Dave Pugmire and Kenneth Moreland and Johnson, Chris R. and Scott Klasky and Norbert Podhorszki and Athawale, Tushar M.},
+  booktitle = {Proceedings IEEE Workshop on Uncertainty Visualization},
+  title     = {{FunM$^2$C}: A Filter for Uncertainty Visualization of Multivariate Data on Multi-Core Devices},
+  year      = {2024},
+  month     = oct,
+  pages     = {43--47},
+  abstract  = {Uncertainty visualization is an emerging research topic in data visualization because neglecting uncertainty in visualization can lead to inaccurate assessments. In this paper, we study the propagation of multivariate data uncertainty in visualization. Although there have been a few advancements in probabilistic uncertainty visualization of multivariate data, three critical challenges remain to be addressed. First, the state-of-the-art probabilistic uncertainty visualization framework is limited to bivariate data (two variables). Second, existing uncertainty visualization algorithms use computationally intensive techniques and lack support for cross-platform portability. Third, as a consequence of the computational expense, integration into production visualization tools is impractical. In this work, we address all three issues and make a threefold contribution. First, we take a step to generalize the state-of-the-art probabilistic framework for bivariate data to multivariate data with an arbitrary number of variables. Second, through utilization of VTK-m's shared-memory parallelism and cross-platform compatibility features, we demonstrate acceleration of multivariate uncertainty visualization on different many-core architectures, including OpenMP and AMD GPUs. Third, we demonstrate the integration of our algorithms with the ParaView software. We demonstrate the utility of our algorithms through experiments on multivariate simulation data with three and four variables.},
+  comment   = {Computing uncertain fiber surfaces. A limitation of this work is that the selection of multiple scalar has to be an axis-aligned space in scalar space.},
+  doi       = {10.1109/UncertaintyVisualization63963.2024.00010},
+}
+
+@InProceedings{Sisneros2024,
+  author    = {Robert Sisneros and Tushar Athawale and David Pugmire and Kenneth Moreland},
+  booktitle = {Proceedings IEEE Workshop on Uncertainty Visualization},
+  title     = {An Entropy-Based Test and Development Framework for Uncertainty Modeling in Level-Set Visualizations},
+  year      = {2024},
+  month     = oct,
+  pages     = {78--83},
+  abstract  = {We present a simple comparative framework for testing and developing uncertainty modeling in uncertain marching cubes implementations. The selection of a model to represent the probability distribution of uncertain values directly influences the memory use, run time, and accuracy of an uncertainty visualization algorithm. We use an entropy calculation directly on ensemble data to establish an expected result and then compare the entropy from various probability models, including uniform, Gaussian, histogram, and quantile models. Our results verify that models matching the distribution of the ensemble indeed match the entropy. We further show that fewer bins in nonparametric histogram models are more effective whereas large numbers of bins in quantile models approach data accuracy.},
+  comment   = {A framework for  developing and testing uncertainty algorithms by considering the probability of all Marching Cubes cases.},
+  doi       = {10.1109/UncertaintyVisualization63963.2024.00015},
+}
+
+@InProceedings{Hammer2024,
+  author    = {Hammer, James and Hobson, Tanner and Pugmire, David and Klasky, Scott and Moreland, Kenneth and Huang, Jian},
+  booktitle = {IEEE 20th International Conference on e-Science (e-Science)},
+  title     = {A Personalized {AI} Assistant For Intuition-Driven Visual Explorations},
+  year      = {2024},
+  month     = sep,
+  doi       = {10.1109/e-Science62913.2024.10678681},
+}
+
+@InProceedings{Pugmire2024b,
+  author    = {David Pugmire and Kenneth Moreland and Tushar M. Athawale and James Hammer and Jian Huang},
+  booktitle = {Proceedings IEEE 20th International Conference on e-Science},
+  title     = {Top Research Challenges and Opportunities for Near Real-Time Extreme-Scale Visualization of Scientific Data},
+  year      = {2024},
+  month     = sep,
+  abstract  = {The rapid advancement in scientific simulations and experimental facilities has resulted in the generation of vast amounts of data at unprecedented scales. The analysis and visualization of large amounts of data is a challenge in and of itself, but the requirements for timeliness significantly magnify these difficulties. Near real-time visualization is critical to monitor and analyze the data produced by these large facilities, but current production tools are not well-suited to these requirements. In this position paper, we share our perspective on some of the challenges, and thus, opportunities for research that stand in the way of near-real-time visualization of large scientific data.},
+  doi       = {10.1109/e-Science62913.2024.10678727},
+}
+
+@InProceedings{Pugmire2024a,
+  author    = {David Pugmire and Jong Y. Choi and Scott Klasky and Kenneth Moreland and Eric Suchyta and Tushar M. Athawale and Zhe Wang and Choong-Seock Chang and Seung-Hoe Ku and Robert Hager},
+  booktitle = {VisGap - The Gap between Visualization Research and Visualization Software},
+  title     = {Performance Improvements of {Poincar\'{e}} Analysis for Exascale Fusion Simulations},
+  year      = {2024},
+  month     = may,
+  abstract  = {Understanding the time-varying magnetic field in a fusion device is critical for the successful design and construction of clean-burning fusion power plants. Poincaré analysis provides a powerful method for the visualization of magnetic fields in fusion devices. However, Poincaré plots can be very computationally expensive making it impractical, for example, to generate these plots in situ during a simulation. In this short paper, we describe a collaboration among computer science and physics researchers to develop a new Poincaré tool that provides a significant reduction in the time to generate analysis results.},
+  comment   = {Discussion of the use of VTK-m to greatly improve the performance of Poincaré plots for fusion analysis.},
+  doi       = {10.2312/visgap.20241120},
+}
+
+@InProceedings{Tsalikis2024,
+  author    = {Spiros Tsalikis and Will Schroeder and Daniel Szafir and Kenneth Moreland},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)},
+  title     = {An Accelerated Clip Algorithm for Unstructured Meshes: A Batch-Driven Approach},
+  year      = {2024},
+  month     = may,
+  abstract  = {The clip technique is a popular method for visualizing complex structures and phenomena within 3D unstructured meshes. Meshes can be clipped by specifying a scalar isovalue to produce an output unstructured mesh with its external surface as the isovalue. Similar to isocontouring, the clipping process relies on scalar data associated with the mesh points, including scalar data generated by implicit functions such as planes, boxes, and spheres, which facilitates the visualization of results interior to the grid. In this paper, we introduce a novel batch-driven parallel algorithm based on a sequential clip algorithm designed for high-quality results in partial volume extraction. Our algorithm comprises five passes, each progressively processing data to generate the resulting clipped unstructured mesh. The novelty lies in the use of fixed-size batches of points and cells, which enable rapid workload trimming and parallel processing, leading to a significantly improved memory footprint and run-time performance compared to the original version. On a 32-core CPU, the proposed batch-driven parallel algorithm demonstrates a run-time speed-up of up to 32.6x and a memory footprint reduction of up to 4.37x compared to the existing sequential algorithm. The software is currently available under an open-source license in the VTK visualization system.},
+  comment   = {Uses batching and other tricks to make the clipping algorithm faster.},
+  doi       = {10.2312/pgv.20241130},
+}
+
+@InProceedings{Wang2023,
+  author    = {Zhe Wang and Tushar M. Athawale and Kenneth Moreland and Jieyang Chen and Chris R. Johnson and David Pugmire},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)},
+  title     = {{FunMC$^2$}: A Filter for Uncertainty Visualization of Marching Cubes on Multi-Core Devices},
+  year      = {2023},
+  month     = may,
+  abstract  = {Visualization is an important tool for scientists to extract understanding from complex scientific data. Scientists need to understand the uncertainty inherent in all scientific data in order to interpret the data correctly. Uncertainty visualization has been an active and growing area of research to address this challenge. Algorithms for uncertainty visualization can be expensive, and research efforts have been focused mainly on structured grid types. Further, support for uncertainty visualization in production tools is limited. In this paper, we adapt an algorithm for computing key metrics for visualizing uncertainty in Marching Cubes (MC) to multi-core devices and present the design, implementation, and evaluation for a Filter for uncertainty visualization of Marching Cubes on Multi-Core devices (FunMC2). FunMC2 accelerates the uncertainty visualization of MC significantly, and it is portable across multi-core CPUs and GPUs. Evaluation results show that FunMC2 based on OpenMP runs around 11× to 41× faster on multi-core CPUs than the corresponding serial version using one CPU core. FunMC2 based on a single GPU is around 5× to 9× faster than FunMC2 running by OpenMP. Moreover, FunMC2 is flexible enough to process ensemble data with both structured and unstructured mesh types. Furthermore, we demonstrate that FunMC2 can be seamlessly integrated as a plugin into ParaView, a production visualization tool for post-processing.},
+  comment   = {Contour uncertainty fields implemented in VTK-m.},
+  doi       = {10.2312/pgv.20231081},
+}
+
+@InCollection{Moreland2022:InSitu,
+  author    = {Kenneth Moreland and Andrew C. Bauer and Berk Geveci and Patrick O'Leary and Brad Whitlock},
+  booktitle = {In Situ Visualization for Computational Science},
+  publisher = {Springer},
+  title     = {Leveraging Production Visualization Tools In Situ},
+  year      = {2022},
+  editor    = {Hank Childs and Janine C. Bennett and Christoph Garth},
+  isbn      = {978-3-030-81626-1},
+  pages     = {205--231},
+  abstract  = {The visualization community has invested decades of research and development into producing large-scale production visualization tools. Although in situ is a paradigm shift for large-scale visualization, much of the same algorithms and operations apply regardless of whether the visualization is run post hoc or in situ. Thus, there is a great benefit to taking the large-scale code originally designed for post hoc use and leveraging it for use in situ. This chapter describes two in situ libraries, Libsim and Catalyst, that are based on mature visualization tools, VisIt and ParaView, respectively. Because they are based on fully-featured visualization packages, they each provide a wealth of features. For each of these systems we outline how the simulation and visualization software are coupled, what the runtime behavior and communication between these components are, and how the underlying implementation works. We also provide use cases demonstrating the systems in action. Both of these in situ libraries, as well as the underlying products they are based on, are made freely available as open-source products. The overviews in this chapter provide a toehold to the practical application of in situ visualization.},
+  comment   = {A book chapter that describes both VisIt Libsim and ParaView Catalyst as the production tool solutions for in situ visualization.},
+  doi       = {10.1007/978-3-030-81627-8\_10},
+}
+
+@InProceedings{Ayachit2021,
+  author    = {Ayachit, Utkarsh and Bauer, Andrew C. and Boeckel, Ben and Geveci, Berk and Moreland, Kenneth and O'Leary, Patrick and Osika, Tom},
+  booktitle = {High Performance Computing},
+  title     = {Catalyst Revised: Rethinking the ParaView in Situ Analysis and Visualization {API}},
+  year      = {2021},
+  month     = jun,
+  pages     = {484--494},
+  abstract  = {As in situ analysis goes mainstream, ease of development, deployment, and maintenance becomes essential, perhaps more so than raw capabilities. In this paper, we present the design and implementation of Catalyst, an API for in situ analysis using ParaView, which we refactored with these objectives in mind. Our implementation combines design ideas from in situ frameworks and HPC tools, like Ascent and MPICH.},
+  comment   = {A document describing the Catalyst 2 in situ library. This version takes a lot of cues from Ascent's use of Conduit to specify data types. It also borrows from MPI's ABI compatibility.},
+  doi       = {10.1007/978-3-030-90539-2\_33},
+}
+
+@InProceedings{Sane2021,
+  author    = {Sudhanshu Sane and Abhishek Yenpure and Roxana Bujack and Matthew Larsen and Kenneth Moreland and Christoph Garth and Chris R. Johnson and Hank Childs},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization (EGPGV)},
+  title     = {Scalable In Situ Computation of {Lagrangian} Representations via Local Flow Maps},
+  year      = {2021},
+  month     = jun,
+  note      = {Winner best paper},
+  abstract  = {In situ computation of Lagrangian flow maps to enable post hoc time-varying vector field analysis has recently become an active area of research. However, the current literature is largely limited to theoretical settings and lacks a solution to address scalability of the technique in distributed memory. To improve scalability, we propose and evaluate the benefits and limitations of a simple, yet novel, performance optimization. Our proposed optimization is a communication-free model resulting in local Lagrangian flow maps, requiring no message passing or synchronization between processes, intrinsically improving scalability, and thereby reducing overall execution time and alleviating the encumbrance placed on simulation codes from communication overheads. To evaluate our approach, we computed Lagrangian flow maps for four time-varying simulation vector fields and investigated how execution time and reconstruction accuracy are impacted by the number of GPUs per compute node, the total number of compute nodes, particles per rank, and storage intervals. Our study consisted of experiments computing Lagrangian flow maps with up to 67M particle trajectories over 500 cycles and used as many as 2048 GPUs across 512 compute nodes. In all, our study contributes an evaluation of a communication-free model as well as a scalability study of computing distributed Lagrangian flow maps at scale using in situ infrastructure on a modern supercomputer.},
+  comment   = {Computes the flow intervals for Lagrangian flow map representation in situ. However, to speed up the computation, all communication is disabled. Instead, when a flow interval leaves the local domain, that interval is dropped. It is then reconstructed post hoc using simple interpolation. This speeds up the computation in situ quite a bit but introduces some error.},
+  doi       = {10.2312/pgv.20211040},
+}
+
+@InProceedings{Lipinksi2021,
+  author    = {Lipinksi, Riley and Moreland, Kenneth and Papka, Michael E. and Marrinan, Thomas},
+  booktitle = {2021 IEEE 11th Symposium on Large Data Analysis and Visualization (LDAV)},
+  title     = {{GPU}-based Image Compression for Efficient Compositing in Distributed Rendering Applications},
+  year      = {2021},
+  pages     = {43--52},
+  doi       = {10.1109/LDAV53230.2021.00012},
+}
+
+@InProceedings{Yenpure2019,
+  author    = {Abhishek Yenpure and Hank Childs and Kenneth Moreland},
+  title     = {Efficient Point Merging Using Data Parallel Techniques},
+  booktitle = {Eurographics Symposium on Parallel Graphics and VIsualization (EGPGV)},
+  year      = {2019},
+  month     = jun,
+  abstract  = {We study the problem of merging three-dimensional points that are nearby or coincident. We introduce a fast, efficient approach that uses data parallel techniques for execution in various shared-memory environments. Our technique incorporates a heuristic for efficiently clustering spatially close points together, which is one reason our method performs well against other methods. We then compare our approach against methods of a widely-used scientific visualization library accompanied by a performance study that shows our approach works well with different kinds of parallel hardware (many-core CPUs and NVIDIA GPUs) and data sets of various sizes.},
+  comment   = {A highly parallel algorithm for grouping points by position in 3-space.},
+  doi       = {10.2312/pgv.20191112},
+  url       = {http://www.kennethmoreland.com/topology-threading#EGPGV2019},
+}
+
+@InProceedings{Moreland2018,
+  author    = {Kenneth Moreland},
+  title     = {Comparing Binary-Swap Algorithms for Odd Factors of Processes},
+  booktitle = {Proceedings of the 8th IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2018},
+  month     = oct,
+  abstract  = {A key component of most large-scale rendering systems is a parallel image compositing algorithm, and the most commonly used compositing algorithms are binary swap and its variants. Although shown to be very efficient, one of the classic limitations of binary swap is that it only works on a number of processes that is a perfect power of 2. Multiple variations of binary swap have been independently introduced to overcome this limitation and handle process counts that have factors that are not 2. To date, few of these approaches have been directly compared against each other, making it unclear which approach is best. This paper presents a fresh implementation of each of these methods using a common software framework to make them directly comparable. These methods to run binary swap with odd factors are directly compared. The results show that some simple compositing approaches work as well or better than more complex algorithms that are more difficult to implement.},
+  comment   = {A paper that compares several versions of binary-swap. (To be honest, the main reason was to compare 2-3 swap with other versions of binary swap that use different methods for dealing with non-powers of 2.)},
+  doi       = {10.1109/LDAV.2018.8739210},
+  url       = {http://www.kennethmoreland.com/scalable-rendering/#LDAV2018},
+}
+
+@InProceedings{Lessley2017:Duplicate,
+  author    = {Brenton Lessley and Kenneth Moreland and Matthew Larsen and Hank Childs},
+  title     = {Techniques for Data-Parallel Searching for Duplicate Elements},
+  booktitle = {IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2017},
+  month     = oct,
+  abstract  = {We study effective shared-memory, data-parallel techniques for searching for duplicate elements. We consider several data-parallel approaches, and how hash function, machine architecture, and data set can affect performance. We conclude that most choices of algorithm and hash function are problematic for general usage. However, we demonstrate that the choice of the Hash-Fight algorithm with the FNV1a hash function has consistently good performance over all configurations.},
+  comment   = {Compares the performance of identifying and extracting external faces in a mesh by using hash fighting versus sorting indices of the mesh. Hash fighting is almost always a top performer.},
+  doi       = {10.1109/LDAV.2017.8231845},
+}
+
+@InProceedings{Larsen2016,
+  author    = {Matthew Larsen and Kenneth Moreland and Chris Johnson and Hank Childs},
+  title     = {Optimizing Multi-Image Sort-Last Parallel Rendering},
+  booktitle = {Proceedings of the IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  year      = {2016},
+  month     = oct,
+  abstract  = {Sort-last parallel rendering can be improved by considering the rendering of multiple images at a time. Most parallel rendering algorithms consider the generation of only a single image. This makes sense when performing interactive rendering where the parameters of each rendering are not known until the previous rendering completes. However, in situ visualization often generates multiple images that do not need to be created sequentially. In this paper we present a simple and effective approach to improving parallel image generation throughput by amortizing the load and overhead among multiple image renders. Additionally, we validate our approach by conducting a performance study exploring the achievable speed-ups in a variety of image-based in situ use cases and rendering workloads. On average, our approach shows a 1.5 to 3.7 fold improvement in performance, and in some cases, shows a 10 fold improvement.},
+  comment   = {Provides some optimizations for rendering multiple images in parallel at once. The intension is to use this in situ when you are going to write several predescribed images such as for Cinema.},
+  doi       = {10.1109/LDAV.2016.7874308},
+  url       = {http://www.sci.utah.edu/publications/Lar2016a/LDAV-Paper-2016.pdf},
+}
+
+@InProceedings{Moreland2016:HVEI,
+  author    = {Kenneth Moreland},
+  booktitle = {Proceedings of Human Vision and Electronic Imaging (HVEI)},
+  title     = {Why We Use Bad Color Maps and What You Can Do About It},
+  year      = {2016},
+  month     = feb,
+  abstract  = {We know the rainbow color map is terrible, and it is emphatically reviled by the visualization community, yet its use continues to persist. Why do we continue to use a this perceptual encoding with so many known flaws? Instead of focusing on why we should not use rainbow colors, this position statement explores the rational for why we do pick these colors despite their flaws. Often the decision is influenced by a lack of knowledge, but even experts that know better sometimes choose poorly. A larger issue is the expedience that we have inadvertently made the rainbow color map become. Knowing why the rainbow color map is used will help us move away from it. Education is good, but clearly not sufficient. We gain traction by making sensible color alternatives more convenient. It is not feasible to force a color map on users. Our goal is to supplant the rainbow color map as a common standard, and we will find that even those wedded to it will migrate away.},
+  doi       = {10.2352/ISSN.2470-1173.2016.16.HVEI-133},
+}
+
+@InProceedings{Ayachit2015,
+  author    = {Utkarsh Ayachit and Andrew Bauer and Berk Geveci and Patrick O'Leary and Kenneth Moreland and Nathan Fabian and Jeffrey Mauldin},
+  title     = {ParaView Catalyst: Enabling In Situ Data Analysis and Visualization},
+  booktitle = {Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization (ISAV 2015)},
+  year      = {2015},
+  pages     = {25--29},
+  month     = nov,
+  abstract  = {Computer simulations are growing in sophistication and producing results of ever greater fidelity. This trend has been enabled by advances in numerical methods and increasing computing power. Yet these advances come with several costs including massive increases in data size, difficulties examining output data, challenges in configuring simulation runs, and difficulty debugging running codes. Interactive visualization tools, like ParaView, have been used for post-processing of simulation results. However, the increasing data sizes, and limited storage and bandwidth make high fidelity post-processing impractical. In situ analysis is recognized as one of the ways to address these challenges. In situ analysis moves some of the post-processing tasks in line with the simulation code thus short circuiting the need to communicate the data between the simulation and analysis via storage. ParaView Catalyst is a data processing and visualization library that enables in situ analysis and visualization. Built on and designed to interoperate with the standard visualization toolkit VTK and the ParaView application, Catalyst enables simulations to intelligently perform analysis, generate relevant output data, and visualize results concurrent with a running simulation. In this paper, we provide an overview of the Catalyst framework and some of the success stories.},
+  comment   = {A paper describing the Catalyst in situ library. Although this paper is short, it has a nice description of Catalyst along with several examples.},
+  doi       = {10.1145/2828612.2828624},
+}
+
+@Article{Moreland2015:SFI,
+  author   = {Kenneth Moreland and Matthew Larsen and Hank Childs},
+  journal  = {Supercomputing Frontiers and Innovations},
+  title    = {Visualization for Exascale: Portable Performance is Critical},
+  year     = {2015},
+  month    = nov,
+  number   = {3},
+  volume   = {2},
+  abstract = {Researchers face a daunting task to provide scientific visualization capabilities for exascale computing. Of the many fundamental changes we are seeing in HPC systems, one of the most profound is a reliance on new processor types optimized for execution bandwidth over latency hiding. Multiple vendors create such accelerator processors, each with significantly different features and performance characteristics. To address these visualization needs across multiple platforms, we are embracing the use of data parallel primitives that encapsulate highly efficient parallel algorithms that can be used as building blocks for conglomerate visualization algorithms. We can achieve performance portability by optimizing this small set of data parallel primitives whose tuning conveys to the conglomerates.},
+  comment  = {A short introductory paper on the benefits of using data parallel primitives to implement visualization algorithms on multi and many core processors. Also describes how these are implemented in VTK-m.},
+  doi      = {10.14529/jsfi150306},
+  url      = {http://dx.doi.org/10.14529/jsfi150306},
+}
+
+@InProceedings{Miller2014,
+  author    = {Robert Miller and Kenneth Moreland and Kwan-Liu Ma},
+  booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},
+  title     = {Finely-Threaded History-Based Topology Computation},
+  year      = {2014},
+  month     = jun,
+  abstract  = {Graphics and visualization pipelines often make use of highly parallelized algorithms which transform an input mesh into an output mesh. One example is Marching Cubes, which transforms a voxel grid into a triangle mesh approximation of an isosurface. These techniques often discard the topological connectivity of the output mesh, and instead produce a 'soup' of disconnected geometric elements. Calculations that require local neighborhood, such as surface curvature, cannot be performed on such outputs without first reconstructing its topology. We present a novel method for reconstructing topological information across several kinds of mesh transformations, which we demonstrate with GPU and OpenMP implementations. Our approach makes use of input topological elements for efficient location of coincident elements in the output. We provide performance data for the technique for isosurface generation, tetrahedralization, subdivision, and dual mesh generation, and demonstrate its use in visualization pipelines containing further computations of local curvature and mesh coarsening.},
+  comment   = {A general pattern to join coincident components created independently by finely decomposed threads. The technique is demonstrated with marching cubes, cell subdivision, and face-centered tetrahedralization. The paper also demonstrates a coarsening technique for marching cubes for free.},
+  doi       = {10.2312/pgv.20141083},
+  url       = {http://www.sandia.gov/~kmorel/documents/TopologyThreading.pdf},
+}
+
+@InProceedings{Moreland2013:UltraVis,
+  author    = {Kenneth Moreland and Berk Geveci and Kwan-Liu Ma and Robert Maynard},
+  booktitle = {Proceedings of Ultrascale Visualization Workshop},
+  title     = {A Classification of Scientific Visualization Algorithms for Massive Threading},
+  year      = {2013},
+  month     = nov,
+  abstract  = {As the number of cores in processors increase and accelerator architectures
+are becoming more common, an ever greater number of threads is required to
+achieve full processor utilization. Our current parallel scientific
+visualization codes rely on partitioning data to achieve parallel
+processing, but this approach will not scale as we approach massive
+threading in which work is distributed in such a fine level that each
+thread is responsible for a minute portion of data. In this paper we
+characterize the challenges of refactoring our current visualization
+algorithms by considering the finest portion of work each performs and
+examining the domain of input data, overlaps of output domains, and
+interdependencies among work instances. We divide our visualization
+algorithms into eight categories, each containing algorithms with the same
+interdependencies. By focusing our research efforts to solving these
+categorial challenges rather than this legion of individual algorithms, we
+can make attainable advancement for extreme computing.},
+  comment   = {Classifies all (well, most) of the filters in ParaView into catagories based on how they break up data, how they map input to output, and what collective work is done. This paper is meant to serve a basis for the worklet types implemented in Dax.},
+  doi       = {10.1145/2535571.2535591},
+  url       = {http://dx.doi.org/10.1145/2535571.2535591},
+}
+
+@InBook{Ayachit2013,
+  chapter   = {The ParaView Visualization Application},
+  pages     = {383--400},
+  title     = {High Performance Visualization: Enabling Extreme Scale Insight},
+  publisher = {CRC Press},
+  year      = {2013},
+  author    = {Utkarsh Ayachit and Berk Geveci and Kenneth Moreland and John Patchett and Jim Ahrens},
+  editor    = {E. Wes Bethel and Hank Childs and Charles Hansen},
+  isbn      = {978-1-4398-7572-8},
+  comment   = {A brief overview of ParaView, its parallel processing, its interface, its scripting, it's plugin ability, it's 'coprocessing' abilities (what we called in situ before catalyst), it's early web abilities, and some examples in use.},
+}
+
+@InBook{Moreland2013,
+  author    = {Kenneth Moreland},
+  chapter   = {IceT},
+  editor    = {E. Wes Bethel and Hank Childs and Charles Hansen},
+  pages     = {373--382},
+  publisher = {CRC Press},
+  title     = {High Performance Visualization: Enabling Extreme Scale Insight},
+  year      = {2013},
+  isbn      = {978-1-4398-7572-8},
+  comment   = {An overview of IceT and its capabilities for sort-last parallel image compositing for rendering.},
+}
+
+@InProceedings{Moreland2012:PDAC,
+  author    = {Kenneth Moreland and Brad King and Robert Maynard and Kwan-Liu Ma},
+  booktitle = {2012 SC Companion (Petascale Data Analytics: Challenges and Opportunities)},
+  title     = {Flexible Analysis Software for Emerging Architectures},
+  year      = {2012},
+  month     = nov,
+  pages     = {821--826},
+  abstract  = {We are on the threshold of a transformative change in the basic architecture of high-performance computing. The use of accelerator processors, characterized by large core counts, shared but asymmetrical memory, and heavy thread loading, is quickly becoming the norm in high performance computing. These accelerators represent significant challenges in updating our existing base of software. An intrinsic problem with this transition is a fundamental programming shift from message passing processes to much more fine thread scheduling with memory sharing. Another problem is the lack of stability in accelerator implementation; processor and compiler technology is currently changing rapidly. In this paper we describe our approach to address these two immediate problems with respect to scientific analysis and visualization algorithms. Our approach to accelerator programming forms the basis of the Dax toolkit, a framework to build data analysis and visualization algorithms applicable to exascale computing.},
+  comment   = {A high level description of the Dax toolkit and more detailed descriptions of some features that allow it to flex to different applications and algorithms.  It describes how the device adapter allows the framework to be ported across architectures, how the array handle can mange different data layouts, and meta template programming magic allows you to define different algorithm signatures in worklets.  The paper also provides some test runs of the threshold algorithm and compares that with VTK and PISTON as well as running on multiple architectures.},
+  doi       = {10.1109/SC.Companion.2012.115},
+  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.115},
+}
+
+@InProceedings{Moreland2012:LDAV,
+  author    = {Kenneth Moreland},
+  title     = {Redirecting Research in Large-Format Displays for Visualization},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  year      = {2012},
+  pages     = {91--95},
+  month     = oct,
+  abstract  = {Large-format displays, in particular tiled displays, remain actively used and researched today after almost two decades since their conception. Many government, academic, and commercial entities have invested considerably in the construction and use of large-format displays. During this time we have developed new applications but have also discovered faulty assumptions. This position paper evaluates the most important lessons learned from early and recent research in large-format displays. Each lesson suggests a direction for future research, which generally takes the form of a more user- and application-centric focus.},
+  comment   = {A somewhat critical review of large-format displays and suggestions on how to best direct future research.},
+  doi       = {10.1109/LDAV.2012.6378981},
+  url       = {http://dx.doi.org/10.1109/LDAV.2012.6378981},
+}
+
+@InProceedings{Moreland2011:PDAC,
+  author    = {Kenneth Moreland and Ron Oldfield and Pat Marion and Sebastien Jourdain and Norbert Podhorszki and Venkatram Vishwanath and Nathan Fabian and Ciprian Docan and Manish Parashar and Mark Hereld and Michael E. Papka and Scott Klasky},
+  title     = {Examples of {\it In Transit} Visualization},
+  booktitle = {Petascale Data Analytics: Challenges and Opportunities (PDAC-11)},
+  year      = {2011},
+  month     = nov,
+  comment   = {A summary of several projects using the in transit method of in situ visualization.},
+}
+
+@InProceedings{Fabian2011,
+  author    = {Nathan Fabian and Kenneth Moreland and David Thompson and Andrew C. Bauer and Pat Marion and Berk Geveci and Michel Rasquin and Kenneth E. Jansen},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  title     = {The {ParaView} Coprocessing Library: A Scalable, General Purpose In Situ Visualization Library},
+  year      = {2011},
+  month     = oct,
+  pages     = {89--96},
+  abstract  = {As high performance computing approaches exascale, CPU capability far outpaces disk write speed, and in situ visualization becomes an essential part of an analyst's workflow. In this paper, we describe the ParaView Coprocessing Library, a framework for in situ visualization and analysis coprocessing. We describe how coprocessing algorithms (building on many from VTK) can be linked and executed directly from within a scientific simulation or other applications that need visualization and analysis. We also describe how the ParaView Coprocessing Library can write out partially processed, compressed, or extracted data readable by a traditional visualization application for interactive post-processing. Finally, we will demonstrate the library's scalability in a number of real-world scenarios.},
+  comment   = {Document describing the ParaView Coprocessing library that allows you to use ParaView parallel services in situ with simulations. This is an early description of the Catalyst library before it was called the Catalyst library.},
+  doi       = {10.1109/LDAV.2011.6092322},
+}
+
+@InProceedings{Moreland2011:LDAV,
+  author    = {Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
+  title     = {Dax Toolkit: A Proposed Framework for Data Analysis and Visualization at Extreme Scale},
+  booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  year      = {2011},
+  pages     = {97--104},
+  month     = oct,
+  comment   = {Description of the Dax toolkit, a framework for building algorithms for GPU computers and, later, exascale computers.},
+  doi       = {10.1109/LDAV.2011.6092323},
+  url       = {http://dx.doi.org/10.1109/LDAV.2011.6092323},
+}
+
+@InProceedings{Klasky2011,
+  author    = {Scott Klasky and others},
+  title     = {In Situ Data Processing for Extreme Scale Computing},
+  booktitle = {Proceedings of SciDAC 2011},
+  year      = {2011},
+  month     = jul,
+  comment   = {A petascale-era paper on in situ visualization and data processing.  Actually mostly focused on in transit visualization using the ADIOS IO transport mechanism to couple codes together.},
+}
+
+@InProceedings{Moreland2009,
+  author    = {Kenneth Moreland},
+  title     = {Diverging Color Maps for Scientific Visualization},
+  booktitle = {Advances in Visual Computing (Proceedings of the 5th International Symposium on Visual Computing)},
+  year      = {2009},
+  volume    = {5876},
+  pages     = {92--103},
+  month     = dec,
+  abstract  = {One of the most fundamental features of scientific visualization is the process of mapping scalar values to colors. This process allows us to view scalar fields by coloring surfaces and volumes. Unfortunately, the majority of scientific visualization tools still use a color map that is famous for its ineffectiveness: the rainbow color map. This color map, which naively sweeps through the most saturated colors, is well known for its ability to obscure data, introduce artifacts, and confuse users. Although many alternate color maps have been proposed, none have achieved widespread adoption by the visualization community for scientific visualization. This paper explores the use of diverging color maps (sometimes also called ratio, bipolar, or double-ended color maps) for use in scientific visualization, provides a diverging color map that generally performs well in scientific visualization applications, and presents an algorithm that allows users to easily generate their own customized color maps.},
+  comment   = {A paper that proposes using diverging color maps as a default for colors in scientific visualization. Also provides a technique for semi-automatically creating "rounded" color maps so as to not highlight the center point.},
+  doi       = {10.1007/978-3-642-10520-3\_9},
+  url       = {http://www.kennethmoreland.com/color-maps/},
+}
+
+@Article{Ma2009:SciDACReview,
+  author  = {Kwan-Liu Ma and Chaoli Wang and Hongfeng Yu and Kenneth Moreland and Jian Huang and Rob Ross},
+  title   = {Next-Generation Visualization Technologies: Enabling Discoveries at Extreme Scale},
+  journal = {SciDAC Review},
+  year    = {2009},
+  number  = {12},
+  pages   = {12--21},
+  month   = {Spring},
+  comment = {Among other things, highlights the importance of in situ visualization for immediate, near, and far analysis needs.},
+}
+
+@Article{Ross2008,
+  author  = {R B Ross and T Peterka and H-W Shen and Y Hong and K-L Ma and H Yu and K Moreland},
+  journal = {Journal of Physics: Conference Series},
+  title   = {Visualization and parallel {I/O} at extreme scale},
+  year    = {2008},
+  month   = jul,
+  number  = {012099},
+  volume  = {125},
+  comment = {Discusses challenges of visualization at petascale and exascale.  Argues that I/O is beginning to dominate.},
+  doi     = {10.1088/1742-6596/125/1/012099},
+  url     = {http://dx.doi.org/10.1088/1742-6596/125/1/012099},
+}
+
+@Article{Ma2007,
+  author   = {Kwan-Liu Ma and Robert Ross and Jian Huang and Greg Humphreys and Nelson Max and Kenneth Moreland and John D. Owens and Han-Wei Shen},
+  journal  = {Journal of Physics: Conference Series},
+  title    = {Ultra-Scale Visualization: Research and Education},
+  year     = {2007},
+  month    = jun,
+  number   = {012088},
+  volume   = {78},
+  abstract = {Understanding the science behind large-scale simulations and high-throughput experiments requires extracting meaning from data sets of hundreds of terabytes or more. Visualization is the most intuitive means for scientists to understand data at this scale, and the most effective way to communicate their findings with others. Even though visualization technology has matured over the past twenty years, it is still limited by the extent and scale of the data that it can be applied to, and also by the functionalities that were mostly designed for single-user, single-variable, and single-space investigation. The Institute for Ultra-Scale Visualization (IUSV), funded by the DOE SciDAC-2 program, has the mission to advance visualization technologies to enable knowledge discovery and dissemination for peta-scale applications. By working with the SciDAC application projects, Centers for Enabling Technology, and other Institutes, IUSV aims to lead the research innovation that can create new visualization capabilities needed for gleaning insights from data at petascale and beyond to solve forefront scientific problems. This paper outlines what we see as some of the biggest research challenges facing the visualization community, and how we can approach education and outreach to put successful research in the hands of scientists.},
+  doi      = {10.1088/1742-6596/78/1/012088},
+}
+
+@InProceedings{Moreland2007,
+  author    = {Kenneth Moreland and Lisa Avila and Lee Ann Fisk},
+  title     = {Parallel Unstructured Volume Rendering in ParaView},
+  booktitle = {Visualization and Data Analysis 2007, Proceedings of SPIE-IS\&T Electronic Imaging},
+  year      = {2007},
+  pages     = {64950F-1--12},
+  month     = jan,
+  comment   = {Performs parallel unstructured volume rendering by building a k-d tree of the geometry, redistributing the geometry based on that k-d tree and clipping by the boundaries, then using that k-d tree for visibility sorting in a sort-last image composite.},
+}
+
+@InProceedings{Cedilnik2006,
+  author    = {Andy Cedilnik and Berk Geveci and Kenneth Moreland and James Ahrens and Jean Farve},
+  title     = {Remote Large Data Visualization in the {ParaView} Framework},
+  booktitle = {Eurographics Parallel Graphics and Visualization 2006},
+  year      = {2006},
+  pages     = {163--170},
+  month     = may,
+  comment   = {Mostly describes the client-server architecture of ParaView.  Also addresses the ParaView proxy system and how the rendering subsystem (such as IceT) is chosen.},
+}
+
+@InProceedings{Moreland2004:VolVis,
+  author    = {Kenneth Moreland and Edward Angel},
+  booktitle = {IEEE Symposium on Volume Visualization and Graphics},
+  title     = {A fast high accuracy volume renderer for unstructured data},
+  year      = {2004},
+  month     = oct,
+  pages     = {9--16},
+  doi       = {10.1109/SVVG.2004.2},
+}
+
+@InProceedings{Moreland2003,
+  author    = {Kenneth Moreland and David Thompson},
+  title     = {From Cluster to Wall with {VTK}},
+  booktitle = {Proceedings of IEEE Symposium on Parallel and Large-Data Visualization and Graphics},
+  year      = {2003},
+  pages     = {25--31},
+  month     = oct,
+  comment   = {Describes how to do parallel rendering in VTK using sort-last parallel rendering (specifically with IceT) and sort-first parallel rendering with Chromium.  Also much discussion on driving tiled displays.},
+}
+
+@InProceedings{Moreland2003:FFT,
+  author    = {Kenneth Moreland and Edward Angel},
+  booktitle = {SIGGRAPH/Eurographics Workshop on Graphics Hardware 2003 Proceedings},
+  title     = {{The FFT on a GPU}},
+  year      = {2003},
+  month     = jul,
+  pages     = {112--119},
+  abstract  = {The Fourier transform is a well known and widely used tool in many scientific and engineering fields. The Fourier transform is essential for many image processing techniques, including filtering, manipulation, correction, and compression. As such, the computer graphics community could benefit greatly from such a tool if it were part of the graphics pipeline. As of late, computer graphics hardware has become amazingly cheap, powerful, and flexible. This paper describes how to utilize the current generation of cards to perform the fast Fourier transform (FFT) directly on the cards. We demonstrate a system that can synthesize an image by conventional means, perform the FFT, filter the image, and finally apply the inverse FFT in well under 1 second for a 512 by 512 image. This work paves the way for performing complicated, real-time image processing as part of the rendering pipeline.},
+  comment   = {Stick a flag in the ground as the first paper to implement the FFT on a GPU.},
+}
+
+@InProceedings{Wylie2002,
+  author    = {Brian Wylie and Kenneth Moreland and Lee Ann Fisk and Patricia Crossno},
+  booktitle = {Proceedings of IEEE Volume Visualization and Graphics Symposium},
+  title     = {Tetrahedral Projection using Vertex Shaders},
+  year      = {2002},
+  month     = oct,
+  pages     = {7--12},
+  abstract  = {Projective methods for volume rendering currently represent the best approach for interactive visualization of unstructured data sets. We present a technique for tetrahedral projection using the programmable vertex shaders on current generation commodity graphics cards. The technique is based on Shirley and Tuchman's Projected Tetrahedra (PT) algorithm and allows tetrahedral elements to be volume scan converted within the graphics processing unit. Our technique requires no pre-processing of the data and no additional data structures. Our initial implementation allows interactive viewing of large unstructured datasets on a desktop personal computer.},
+  comment   = {Implementation of the GATOR algorithm. First implementation that I know of that uses programable graphics cards to directly render unstructured polyhedral elements.},
+}
+
+@InProceedings{Moreland2001,
+  author    = {Kenneth Moreland and Brian Wylie and Constantine Pavlakos},
+  title     = {Sort-Last Parallel Rendering for Viewing Extremely Large Data Sets on Tile Displays},
+  booktitle = {Proceedings of the IEEE 2001 Symposium on Parallel and Large-Data Visualization and Graphics},
+  year      = {2001},
+  pages     = {85--92},
+  month     = {October},
+  comment   = {Initial publication of the tiled display sort-last image compositing algorithms that form the basis for IceT.},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: saveOrderConfig:specified;year;true;month;true;author;false;}

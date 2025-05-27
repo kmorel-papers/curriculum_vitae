@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+
+import sys
+
+# Note, this requires bibtexparser 2.0 or better.
+import bibtexparser
+import bibtexparser.middlewares
+
+if (len(sys.argv) != 3):
+  print(f'USAGE: {sys.argv[0]} <input>.bib <output>.tex')
+  exit(1)
+
+input_file = sys.argv[1]
+output_tex = sys.argv[2]
+
+layers = [
+  bibtexparser.middlewares.SeparateCoAuthors(),
+  bibtexparser.middlewares.SplitNameParts(),
+  bibtexparser.middlewares.MonthLongStringMiddleware(),
+  #bibtexparser.middlewares.LatexDecodingMiddleware(),
+]
+
+bibdata = bibtexparser.parse_file(input_file, append_middleware=layers)
+
+def write_name(file, bibname):
+  name = ' '.join(bibname.first)
+  if bibname.von:
+    name += ' ' + ' '.join(bibname.von)
+  name += ' ' + ' '.join(bibname.last)
+  if bibname.jr:
+    name += ' ' + ' '.join(bibname.jr)
+  if (len(bibname.first) > 0) and (bibname.first[0][0] == 'K') and (bibname.last == ['Moreland']):
+    file.write(f'\\textbf{{{name}}}')
+  else:
+    file.write(name)
+
+def write_authors(file, authors):
+  file.write('  ')
+  if len(authors) == 1:
+    write_name(file, authors[0])
+  elif len(authors) == 2:
+    write_name(file, authors[0])
+    if (authors[1].last == ['others']):
+      file.write(', \\emph{et al}')
+    else:
+      file.write(' and ')
+      write_name(file, authors[1])
+  else:
+    for name in authors[:-1]:
+      write_name(file, name)
+      file.write(', ')
+    if (authors[-1].last == ['others']):
+      file.write('\\emph{et al}')
+    else:
+      file.write('and ')
+      write_name(file, authors[-1])
+  file.write('.\n')
+
+outf = open(output_tex, 'w')
+
+outf.write('\\begin{enumerate}[label={[\\arabic*]}, left=0pt]\n')
+for entry in bibdata.entries:
+  outf.write(f'\\item  % {entry.key}\n')
+  if 'author' in entry:
+    write_authors(outf, entry['author'])
+  if 'chapter' in entry:
+    outf.write(f'  {entry["chapter"]}')
+  if (entry.entry_type == 'book') or (entry.entry_type == 'phdthesis'):
+    outf.write(f'  \\emph{{{entry["title"]}}}.\n')
+  elif entry.entry_type == 'inbook':
+    outf.write(f'  \\emph{{{entry["title"]}}}, ')
+  else:
+    outf.write(f'  {entry["title"]}.\n')
+  if 'journal' in entry:
+    outf.write(f'  \\emph{{{entry["journal"]}}}, ')
+  elif 'booktitle' in entry:
+    outf.write(f'  In \\emph{{{entry["booktitle"]}}}, ')
+  elif 'venue' in entry:
+    outf.write(f'  \\emph{{{entry["venue"]}}}, ')
+  if entry.entry_type == 'techreport':
+    outf.write('Technical Report ')
+  if entry.entry_type == 'phdthesis':
+    outf.write(f'PhD thesis, {entry["school"]}, ')
+  if 'publisher' in entry:
+    outf.write(f'{entry["publisher"]}, ')
+  if 'number' in entry:
+    outf.write(f'{entry["number"]}, ')
+  if 'institution' in entry:
+    outf.write(f'{entry["institution"]}, ')
+  if 'howpublished' in entry:
+    outf.write(f'\\emph{{{entry["howpublished"]}}}, ')
+  if 'volume' in entry:
+    outf.write(f'{entry["volume"]}')
+    if 'number' in entry:
+      outf.write(f'({entry["number"]})')
+    if 'pages' in entry:
+      outf.write(f':{entry["pages"]}')
+    outf.write(', ')
+  elif 'pages' in entry:
+    outf.write(f'pages {entry['pages']}')
+    outf.write(', ')
+  if 'month' in entry:
+    outf.write(f'{entry["month"]} ')
+    if 'day' in entry:
+      outf.write(f'{entry["day"]}, ')
+  outf.write(f'{entry["year"]}.\n')
+  if 'note' in entry:
+    outf.write(f'{entry["note"]}.')
+  if 'doi' in entry:
+    outf.write(f'  doi:{entry["doi"]}.\n')
+  if 'isbn' in entry:
+    outf.write(f'  ISBN:{entry["isbn"]}.\n')
+outf.write('\\end{enumerate}')

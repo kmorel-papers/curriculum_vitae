@@ -10,9 +10,39 @@ MARK_AS_ADVANCED(
 
 INCLUDE(UseLATEX.cmake)
 
-ADD_LATEX_DOCUMENT(curriculum_vitae.tex
-  BIBFILES publications.bib
+find_package(Python)
 
-  # Because using bibunit package
-  MULTIBIB_NEWCITES phd journal workshop nopeer poster
+function(add_parse_bib bib_type)
+  add_custom_command(
+    OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/${bib_type}.tex
+    COMMAND ${Python_EXECUTABLE}
+      ${CMAKE_CURRENT_SOURCE_DIR}/parse-bib.py
+      ${CMAKE_CURRENT_SOURCE_DIR}/${bib_type}.bib
+      ${CMAKE_CURRENT_SOURCE_DIR}/${bib_type}.tex
+    DEPENDS
+      ${CMAKE_CURRENT_SOURCE_DIR}/${bib_type}.bib
+      ${CMAKE_CURRENT_SOURCE_DIR}/parse-bib.py
+  )
+endfunction()
+
+set(pub_lists
+  phd
+  journal
+  workshop
+  nopeer
+  poster
+  presentation
+  panel
+  )
+
+if (Python_FOUND)
+  foreach(bibfile IN LISTS pub_lists)
+    add_parse_bib(${bibfile})
+  endforeach()
+endif()
+
+list(TRANSFORM pub_lists APPEND ".tex")
+
+ADD_LATEX_DOCUMENT(curriculum_vitae.tex
+  INPUTS ${pub_lists}
   )
