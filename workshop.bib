@@ -123,14 +123,14 @@
 
 @InProceedings{Yenpure2019,
   author    = {Abhishek Yenpure and Hank Childs and Kenneth Moreland},
-  title     = {Efficient Point Merging Using Data Parallel Techniques},
   booktitle = {Eurographics Symposium on Parallel Graphics and VIsualization (EGPGV)},
+  title     = {Efficient Point Merging Using Data Parallel Techniques},
   year      = {2019},
   month     = jun,
   abstract  = {We study the problem of merging three-dimensional points that are nearby or coincident. We introduce a fast, efficient approach that uses data parallel techniques for execution in various shared-memory environments. Our technique incorporates a heuristic for efficiently clustering spatially close points together, which is one reason our method performs well against other methods. We then compare our approach against methods of a widely-used scientific visualization library accompanied by a performance study that shows our approach works well with different kinds of parallel hardware (many-core CPUs and NVIDIA GPUs) and data sets of various sizes.},
   comment   = {A highly parallel algorithm for grouping points by position in 3-space.},
   doi       = {10.2312/pgv.20191112},
-  url       = {http://www.kennethmoreland.com/topology-threading#EGPGV2019},
+  homeurl   = {/topology-threading#efficient-point-merging-using-data-parallel-techniques},
 }
 
 @InProceedings{Moreland2018,
@@ -147,13 +147,14 @@
 
 @InProceedings{Lessley2017:Duplicate,
   author    = {Brenton Lessley and Kenneth Moreland and Matthew Larsen and Hank Childs},
-  title     = {Techniques for Data-Parallel Searching for Duplicate Elements},
   booktitle = {IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  title     = {Techniques for Data-Parallel Searching for Duplicate Elements},
   year      = {2017},
   month     = oct,
   abstract  = {We study effective shared-memory, data-parallel techniques for searching for duplicate elements. We consider several data-parallel approaches, and how hash function, machine architecture, and data set can affect performance. We conclude that most choices of algorithm and hash function are problematic for general usage. However, we demonstrate that the choice of the Hash-Fight algorithm with the FNV1a hash function has consistently good performance over all configurations.},
   comment   = {Compares the performance of identifying and extracting external faces in a mesh by using hash fighting versus sorting indices of the mesh. Hash fighting is almost always a top performer.},
   doi       = {10.1109/LDAV.2017.8231845},
+  homeurl   = {/topology-threading/#techniques-for-data-parallel-searching-for-duplicate-elements},
 }
 
 @InProceedings{Larsen2016,
@@ -214,7 +215,7 @@
   abstract  = {Graphics and visualization pipelines often make use of highly parallelized algorithms which transform an input mesh into an output mesh. One example is Marching Cubes, which transforms a voxel grid into a triangle mesh approximation of an isosurface. These techniques often discard the topological connectivity of the output mesh, and instead produce a 'soup' of disconnected geometric elements. Calculations that require local neighborhood, such as surface curvature, cannot be performed on such outputs without first reconstructing its topology. We present a novel method for reconstructing topological information across several kinds of mesh transformations, which we demonstrate with GPU and OpenMP implementations. Our approach makes use of input topological elements for efficient location of coincident elements in the output. We provide performance data for the technique for isosurface generation, tetrahedralization, subdivision, and dual mesh generation, and demonstrate its use in visualization pipelines containing further computations of local curvature and mesh coarsening.},
   comment   = {A general pattern to join coincident components created independently by finely decomposed threads. The technique is demonstrated with marching cubes, cell subdivision, and face-centered tetrahedralization. The paper also demonstrates a coarsening technique for marching cubes for free.},
   doi       = {10.2312/pgv.20141083},
-  url       = {http://www.sandia.gov/~kmorel/documents/TopologyThreading.pdf},
+  homeurl   = {/topology-threading/#finely-threaded-history-based-topology-computation},
 }
 
 @InProceedings{Moreland2013:UltraVis,
