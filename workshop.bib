@@ -160,13 +160,14 @@
 
 @InProceedings{Larsen2016,
   author    = {Matthew Larsen and Kenneth Moreland and Chris Johnson and Hank Childs},
-  title     = {Optimizing Multi-Image Sort-Last Parallel Rendering},
   booktitle = {Proceedings of the IEEE Symposium on Large Data Analysis and Visualization (LDAV)},
+  title     = {Optimizing Multi-Image Sort-Last Parallel Rendering},
   year      = {2016},
   month     = oct,
   abstract  = {Sort-last parallel rendering can be improved by considering the rendering of multiple images at a time. Most parallel rendering algorithms consider the generation of only a single image. This makes sense when performing interactive rendering where the parameters of each rendering are not known until the previous rendering completes. However, in situ visualization often generates multiple images that do not need to be created sequentially. In this paper we present a simple and effective approach to improving parallel image generation throughput by amortizing the load and overhead among multiple image renders. Additionally, we validate our approach by conducting a performance study exploring the achievable speed-ups in a variety of image-based in situ use cases and rendering workloads. On average, our approach shows a 1.5 to 3.7 fold improvement in performance, and in some cases, shows a 10 fold improvement.},
   comment   = {Provides some optimizations for rendering multiple images in parallel at once. The intension is to use this in situ when you are going to write several predescribed images such as for Cinema.},
   doi       = {10.1109/LDAV.2016.7874308},
+  homeurl   = {/ldav2016/},
   url       = {http://www.sci.utah.edu/publications/Lar2016a/LDAV-Paper-2016.pdf},
 }
 
