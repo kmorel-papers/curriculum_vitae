@@ -98,6 +98,7 @@
   abstract  = {As in situ analysis goes mainstream, ease of development, deployment, and maintenance becomes essential, perhaps more so than raw capabilities. In this paper, we present the design and implementation of Catalyst, an API for in situ analysis using ParaView, which we refactored with these objectives in mind. Our implementation combines design ideas from in situ frameworks and HPC tools, like Ascent and MPICH.},
   comment   = {A document describing the Catalyst 2 in situ library. This version takes a lot of cues from Ascent's use of Conduit to specify data types. It also borrows from MPI's ABI compatibility.},
   doi       = {10.1007/978-3-030-90539-2\_33},
+  homeurl   = {/documents/catalyst-revised.pdf},
 }
 
 @InProceedings{Sane2021,
@@ -110,6 +111,7 @@
   abstract  = {In situ computation of Lagrangian flow maps to enable post hoc time-varying vector field analysis has recently become an active area of research. However, the current literature is largely limited to theoretical settings and lacks a solution to address scalability of the technique in distributed memory. To improve scalability, we propose and evaluate the benefits and limitations of a simple, yet novel, performance optimization. Our proposed optimization is a communication-free model resulting in local Lagrangian flow maps, requiring no message passing or synchronization between processes, intrinsically improving scalability, and thereby reducing overall execution time and alleviating the encumbrance placed on simulation codes from communication overheads. To evaluate our approach, we computed Lagrangian flow maps for four time-varying simulation vector fields and investigated how execution time and reconstruction accuracy are impacted by the number of GPUs per compute node, the total number of compute nodes, particles per rank, and storage intervals. Our study consisted of experiments computing Lagrangian flow maps with up to 67M particle trajectories over 500 cycles and used as many as 2048 GPUs across 512 compute nodes. In all, our study contributes an evaluation of a communication-free model as well as a scalability study of computing distributed Lagrangian flow maps at scale using in situ infrastructure on a modern supercomputer.},
   comment   = {Computes the flow intervals for Lagrangian flow map representation in situ. However, to speed up the computation, all communication is disabled. Instead, when a flow interval leaves the local domain, that interval is dropped. It is then reconstructed post hoc using simple interpolation. This speeds up the computation in situ quite a bit but introduces some error.},
   doi       = {10.2312/pgv.20211040},
+  homeurl   = {/documents/local-flow-maps-2021.pdf},
 }
 
 @InProceedings{Lipinksi2021,
@@ -184,14 +186,15 @@
 
 @InProceedings{Ayachit2015,
   author    = {Utkarsh Ayachit and Andrew Bauer and Berk Geveci and Patrick O'Leary and Kenneth Moreland and Nathan Fabian and Jeffrey Mauldin},
-  title     = {ParaView Catalyst: Enabling In Situ Data Analysis and Visualization},
   booktitle = {Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization (ISAV 2015)},
+  title     = {ParaView Catalyst: Enabling In Situ Data Analysis and Visualization},
   year      = {2015},
-  pages     = {25--29},
   month     = nov,
+  pages     = {25--29},
   abstract  = {Computer simulations are growing in sophistication and producing results of ever greater fidelity. This trend has been enabled by advances in numerical methods and increasing computing power. Yet these advances come with several costs including massive increases in data size, difficulties examining output data, challenges in configuring simulation runs, and difficulty debugging running codes. Interactive visualization tools, like ParaView, have been used for post-processing of simulation results. However, the increasing data sizes, and limited storage and bandwidth make high fidelity post-processing impractical. In situ analysis is recognized as one of the ways to address these challenges. In situ analysis moves some of the post-processing tasks in line with the simulation code thus short circuiting the need to communicate the data between the simulation and analysis via storage. ParaView Catalyst is a data processing and visualization library that enables in situ analysis and visualization. Built on and designed to interoperate with the standard visualization toolkit VTK and the ParaView application, Catalyst enables simulations to intelligently perform analysis, generate relevant output data, and visualize results concurrent with a running simulation. In this paper, we provide an overview of the Catalyst framework and some of the success stories.},
   comment   = {A paper describing the Catalyst in situ library. Although this paper is short, it has a nice description of Catalyst along with several examples.},
   doi       = {10.1145/2828612.2828624},
+  url       = {https://dl.acm.org/doi/10.1145/2828612.2828624?cid=81100570201},
 }
 
 @Article{Moreland2015:SFI,
@@ -205,7 +208,7 @@
   abstract = {Researchers face a daunting task to provide scientific visualization capabilities for exascale computing. Of the many fundamental changes we are seeing in HPC systems, one of the most profound is a reliance on new processor types optimized for execution bandwidth over latency hiding. Multiple vendors create such accelerator processors, each with significantly different features and performance characteristics. To address these visualization needs across multiple platforms, we are embracing the use of data parallel primitives that encapsulate highly efficient parallel algorithms that can be used as building blocks for conglomerate visualization algorithms. We can achieve performance portability by optimizing this small set of data parallel primitives whose tuning conveys to the conglomerates.},
   comment  = {A short introductory paper on the benefits of using data parallel primitives to implement visualization algorithms on multi and many core processors. Also describes how these are implemented in VTK-m.},
   doi      = {10.14529/jsfi150306},
-  url      = {http://dx.doi.org/10.14529/jsfi150306},
+  homeurl  = {/documents/SCFrontiers2015.pdf},
 }
 
 @InProceedings{Miller2014,
@@ -243,7 +246,7 @@ categorial challenges rather than this legion of individual algorithms, we
 can make attainable advancement for extreme computing.},
   comment   = {Classifies all (well, most) of the filters in ParaView into catagories based on how they break up data, how they map input to output, and what collective work is done. This paper is meant to serve a basis for the worklet types implemented in Dax.},
   doi       = {10.1145/2535571.2535591},
-  url       = {http://dx.doi.org/10.1145/2535571.2535591},
+  url       = {https://dl.acm.org/doi/10.1145/2535571.2535591?cid=81100570201},
 }
 
 @InBook{Ayachit2013,
@@ -285,24 +288,25 @@ can make attainable advancement for extreme computing.},
 
 @InProceedings{Moreland2012:LDAV,
   author    = {Kenneth Moreland},
-  title     = {Redirecting Research in Large-Format Displays for Visualization},
   booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  title     = {Redirecting Research in Large-Format Displays for Visualization},
   year      = {2012},
-  pages     = {91--95},
   month     = oct,
+  pages     = {91--95},
   abstract  = {Large-format displays, in particular tiled displays, remain actively used and researched today after almost two decades since their conception. Many government, academic, and commercial entities have invested considerably in the construction and use of large-format displays. During this time we have developed new applications but have also discovered faulty assumptions. This position paper evaluates the most important lessons learned from early and recent research in large-format displays. Each lesson suggests a direction for future research, which generally takes the form of a more user- and application-centric focus.},
   comment   = {A somewhat critical review of large-format displays and suggestions on how to best direct future research.},
   doi       = {10.1109/LDAV.2012.6378981},
-  url       = {http://dx.doi.org/10.1109/LDAV.2012.6378981},
+  homeurl   = {/documents/LargeFormatDisplays.pdf},
 }
 
 @InProceedings{Moreland2011:PDAC,
   author    = {Kenneth Moreland and Ron Oldfield and Pat Marion and Sebastien Jourdain and Norbert Podhorszki and Venkatram Vishwanath and Nathan Fabian and Ciprian Docan and Manish Parashar and Mark Hereld and Michael E. Papka and Scott Klasky},
-  title     = {Examples of {\it In Transit} Visualization},
   booktitle = {Petascale Data Analytics: Challenges and Opportunities (PDAC-11)},
+  title     = {Examples of {\it In Transit} Visualization},
   year      = {2011},
   month     = nov,
   comment   = {A summary of several projects using the in transit method of in situ visualization.},
+  url       = {https://dl.acm.org/doi/10.1145/2110205.2110207?cid=81100570201},
 }
 
 @InProceedings{Fabian2011,
@@ -315,27 +319,29 @@ can make attainable advancement for extreme computing.},
   abstract  = {As high performance computing approaches exascale, CPU capability far outpaces disk write speed, and in situ visualization becomes an essential part of an analyst's workflow. In this paper, we describe the ParaView Coprocessing Library, a framework for in situ visualization and analysis coprocessing. We describe how coprocessing algorithms (building on many from VTK) can be linked and executed directly from within a scientific simulation or other applications that need visualization and analysis. We also describe how the ParaView Coprocessing Library can write out partially processed, compressed, or extracted data readable by a traditional visualization application for interactive post-processing. Finally, we will demonstrate the library's scalability in a number of real-world scenarios.},
   comment   = {Document describing the ParaView Coprocessing library that allows you to use ParaView parallel services in situ with simulations. This is an early description of the Catalyst library before it was called the Catalyst library.},
   doi       = {10.1109/LDAV.2011.6092322},
+  homeurl   = {/documents/InSituLDAV2011.pdf},
 }
 
 @InProceedings{Moreland2011:LDAV,
   author    = {Kenneth Moreland and Utkarsh Ayachit and Berk Geveci and Kwan-Liu Ma},
-  title     = {Dax Toolkit: A Proposed Framework for Data Analysis and Visualization at Extreme Scale},
   booktitle = {Proceedings of the IEEE Symposium on Large-Scale Data Analysis and Visualization},
+  title     = {Dax Toolkit: A Proposed Framework for Data Analysis and Visualization at Extreme Scale},
   year      = {2011},
-  pages     = {97--104},
   month     = oct,
+  pages     = {97--104},
   comment   = {Description of the Dax toolkit, a framework for building algorithms for GPU computers and, later, exascale computers.},
   doi       = {10.1109/LDAV.2011.6092323},
-  url       = {http://dx.doi.org/10.1109/LDAV.2011.6092323},
+  homeurl   = {/documents/DaxLDAV2011.pdf},
 }
 
 @InProceedings{Klasky2011,
   author    = {Scott Klasky and others},
-  title     = {In Situ Data Processing for Extreme Scale Computing},
   booktitle = {Proceedings of SciDAC 2011},
+  title     = {In Situ Data Processing for Extreme Scale Computing},
   year      = {2011},
   month     = jul,
   comment   = {A petascale-era paper on in situ visualization and data processing.  Actually mostly focused on in transit visualization using the ADIOS IO transport mechanism to couple codes together.},
+  homeurl   = {/documents/InSituSciDAC2011.pdf},
 }
 
 @InProceedings{Moreland2009,
@@ -354,13 +360,14 @@ can make attainable advancement for extreme computing.},
 
 @Article{Ma2009:SciDACReview,
   author  = {Kwan-Liu Ma and Chaoli Wang and Hongfeng Yu and Kenneth Moreland and Jian Huang and Rob Ross},
-  title   = {Next-Generation Visualization Technologies: Enabling Discoveries at Extreme Scale},
   journal = {SciDAC Review},
+  title   = {Next-Generation Visualization Technologies: Enabling Discoveries at Extreme Scale},
   year    = {2009},
+  month   = {Spring},
   number  = {12},
   pages   = {12--21},
-  month   = {Spring},
   comment = {Among other things, highlights the importance of in situ visualization for immediate, near, and far analysis needs.},
+  homeurl = {/documents/SciDACSpring2009.pdf},
 }
 
 @Article{Ross2008,
@@ -373,7 +380,7 @@ can make attainable advancement for extreme computing.},
   volume  = {125},
   comment = {Discusses challenges of visualization at petascale and exascale.  Argues that I/O is beginning to dominate.},
   doi     = {10.1088/1742-6596/125/1/012099},
-  url     = {http://dx.doi.org/10.1088/1742-6596/125/1/012099},
+  homeurl = {/documents/SciDAC08-2.pdf},
 }
 
 @Article{Ma2007,
@@ -386,26 +393,29 @@ can make attainable advancement for extreme computing.},
   volume   = {78},
   abstract = {Understanding the science behind large-scale simulations and high-throughput experiments requires extracting meaning from data sets of hundreds of terabytes or more. Visualization is the most intuitive means for scientists to understand data at this scale, and the most effective way to communicate their findings with others. Even though visualization technology has matured over the past twenty years, it is still limited by the extent and scale of the data that it can be applied to, and also by the functionalities that were mostly designed for single-user, single-variable, and single-space investigation. The Institute for Ultra-Scale Visualization (IUSV), funded by the DOE SciDAC-2 program, has the mission to advance visualization technologies to enable knowledge discovery and dissemination for peta-scale applications. By working with the SciDAC application projects, Centers for Enabling Technology, and other Institutes, IUSV aims to lead the research innovation that can create new visualization capabilities needed for gleaning insights from data at petascale and beyond to solve forefront scientific problems. This paper outlines what we see as some of the biggest research challenges facing the visualization community, and how we can approach education and outreach to put successful research in the hands of scientists.},
   doi      = {10.1088/1742-6596/78/1/012088},
+  homeurl  = {/documents/UltraVis07.pdf},
 }
 
 @InProceedings{Moreland2007,
   author    = {Kenneth Moreland and Lisa Avila and Lee Ann Fisk},
-  title     = {Parallel Unstructured Volume Rendering in ParaView},
   booktitle = {Visualization and Data Analysis 2007, Proceedings of SPIE-IS\&T Electronic Imaging},
+  title     = {Parallel Unstructured Volume Rendering in ParaView},
   year      = {2007},
-  pages     = {64950F-1--12},
   month     = jan,
+  pages     = {64950F-1--12},
   comment   = {Performs parallel unstructured volume rendering by building a k-d tree of the geometry, redistributing the geometry based on that k-d tree and clipping by the boundaries, then using that k-d tree for visibility sorting in a sort-last image composite.},
+  homeurl   = {/documents/ParallelVolRen.pdf},
 }
 
 @InProceedings{Cedilnik2006,
   author    = {Andy Cedilnik and Berk Geveci and Kenneth Moreland and James Ahrens and Jean Farve},
-  title     = {Remote Large Data Visualization in the {ParaView} Framework},
   booktitle = {Eurographics Parallel Graphics and Visualization},
+  title     = {Remote Large Data Visualization in the {ParaView} Framework},
   year      = {2006},
-  pages     = {163--170},
   month     = may,
+  pages     = {163--170},
   comment   = {Mostly describes the client-server architecture of ParaView.  Also addresses the ParaView proxy system and how the rendering subsystem (such as IceT) is chosen.},
+  homeurl   = {/documents/EGPGV2006Paper.pdf},
 }
 
 @InProceedings{Moreland2004:VolVis,
@@ -421,12 +431,13 @@ can make attainable advancement for extreme computing.},
 
 @InProceedings{Moreland2003,
   author    = {Kenneth Moreland and David Thompson},
-  title     = {From Cluster to Wall with {VTK}},
   booktitle = {Proceedings of IEEE Symposium on Parallel and Large-Data Visualization and Graphics},
+  title     = {From Cluster to Wall with {VTK}},
   year      = {2003},
-  pages     = {25--31},
   month     = oct,
+  pages     = {25--31},
   comment   = {Describes how to do parallel rendering in VTK using sort-last parallel rendering (specifically with IceT) and sort-first parallel rendering with Chromium.  Also much discussion on driving tiled displays.},
+  homeurl   = {/documents/vtk_c2w.pdf},
 }
 
 @InProceedings{Moreland2003:FFT,

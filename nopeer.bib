@@ -52,6 +52,7 @@
   year        = {2022},
   month       = sep,
   number      = {ORNL/LTR-2022/415},
+  homeurl     = {/documents/novel-hardware-ornl-report.pdf},
 }
 
 @TechReport{VTKmUsersGuide18,
@@ -70,6 +71,7 @@
   year        = {2022},
   month       = aug,
   number      = {ORNL/LTR-2022/412},
+  homeurl     = {/documents/data-reduction-ornl-report.pdf},
 }
 
 @TechReport{VTKmUsersGuide17,
@@ -143,8 +145,8 @@
 
 @TechReport{Bourgeois2018,
   author      = {Daniel Bourgeois and Michael Wolf and Kenneth Moreland},
-  title       = {Isosurface Visualization Miniapplication},
   institution = {Sandia National Laboratories},
+  title       = {Isosurface Visualization Miniapplication},
   year        = {2018},
   number      = {SAND2018-2780O},
   abstract    = {Scientific simulations often make use of increasinly massive, heterogeneous high performance
@@ -157,6 +159,7 @@ miniIsosurface  was  explicitly  designed  to  provide  software  developers  an
 avenue to explore performance characteristics before full-scale development takes place.  Implementations
 inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   comment     = {Describes the isosurface miniapp.},
+  homeurl     = {/documents/miniIsosurface.pdf},
   url         = {https://cfwebprod.sandia.gov/cfdocs/CompResearch/docs/proceedings/ccr17.pdf#page=141},
 }
 
@@ -165,6 +168,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   institution = {Sandia National Laboratories},
   title       = {A Need for Better Management of Heterogenous HPC Resources},
   year        = {2018},
+  homeurl     = {/documents/HeteroResourceManage.pdf},
 }
 
 @TechReport{ExascaleASCRReport,
@@ -220,6 +224,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   month       = dec,
   note        = {CR Summer Proceedings},
   number      = {SAND 2015-3829 O},
+  homeurl     = {/documents/CCR2014.pdf},
 }
 
 @TechReport{Moreland2014:DaxFinal,
@@ -229,16 +234,18 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   year        = {2014},
   month       = jan,
   number      = {SAND 2014-0047},
+  homeurl     = {/documents/DaxReport2013.pdf},
 }
 
 @TechReport{Rogers2013,
   author      = {David Rogers and Kenneth Moreland and Ron Oldfield and Nathan Fabian},
-  title       = {Data Co-Processing for Extreme Scale Analysis Level {II} {ASC} Milestone (4745)},
   institution = {Sandia National Laboratories},
+  title       = {Data Co-Processing for Extreme Scale Analysis Level {II} {ASC} Milestone (4745)},
   year        = {2013},
   number      = {SAND2013-1122},
   abstract    = {Exascale supercomputing will embody many revolutionary changes in the hardware and software of high-performance computing. A particularly pressing issue is gaining insight into the science behind the exascale computations. Power and I/O speed con- straints will fundamentally change current visualization and analysis workflows. A traditional post-processing workflow involves storing simulation results to disk and later retrieving them for visualization and data analysis. However, at exascale, scien- tists and analysts will need a range of options for moving data to persistent storage, as the current offline or post-processing pipelines will not be able to capture the data necessary for data analysis of these extreme scale simulations. This Milestone explores two alternate workflows, characterized as in situ and in transit, and compares them. We find each to have its own merits and faults, and we provide information to help pick the best option for a particular use.},
   comment     = {Our report for the ASC II milestone for large scale in situ processing with CTH. [Oldfield2014] is a follow-up publication and a better reference.},
+  homeurl     = {/documents/MilestoneFY13.pdf},
 }
 
 @TechReport{Moreland2012:TR,
@@ -249,19 +256,20 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   month       = dec,
   number      = {SAND 2012-10796P},
   type        = {techreport},
+  homeurl     = {/documents/ModelsWhitepaper.pdf},
 }
 
 @InProceedings{Moreland2012:Ultravis,
   author    = {Kenneth Moreland},
-  title     = {{Oh, \$\#*@! Exascale!} {The} Effect of Emerging Architectures on Scientific Discovery},
   booktitle = {2012 SC Companion (Proceedings of the Ultrascale Visualization Workshop)},
+  title     = {{Oh, \$\#*@! Exascale!} {The} Effect of Emerging Architectures on Scientific Discovery},
   year      = {2012},
-  pages     = {224--231},
   month     = nov,
+  pages     = {224--231},
   abstract  = {The predictions for exascale computing are dire. Although we have benefited from a consistent supercomputer architecture design, even across manufacturers, for well over a decade, recent trends indicate that future high-performance computers will have different hardware structure and programming models to which software must adapt. This paper provides an informal discussion on the ways in which changes in high-performance computing architecture will profoundly affect the scalability of our current generation of scientific visualization and analysis codes and how we must adapt our applications, workflows, and attitudes to continue our success at exascale computing.},
   comment   = {A position paper describing why exascale (or extreme scale) represents fundamental challenges to visualization (and other HPC applications).  It describes in most detail issues with large concurrency and capturing results information.},
   doi       = {10.1109/SC.Companion.2012.38},
-  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.38},
+  homeurl   = {/documents/OhShExascale.pdf},
 }
 
 @InProceedings{Sewell2012,
@@ -274,7 +282,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   abstract  = {This paper surveys the four software frameworks being developed as part of the visualization pillar of the SDAV (Scalable Data Management, Analysis, and Visualization) Institute, one of the SciDAC (Scientific Discovery through Advanced Computing) Institutes established by the ASCR (Advanced Scientific Computing Research) Program of the U.S. Department of Energy. These frameworks include EAVL (Extreme-scale Analysis and Visualization Library), DAX (Data Analysis at Extreme), DIY (Do It Yourself), and PISTON. The objective of these frameworks is to facilitate the adaptation of visualization and analysis algorithms to take advantage of the available parallelism in emerging multi-core and many-core hardware architectures, in anticipation of the need for such algorithms to be run in-situ with LCF (leadership-class facilities) simulation codes on supercomputers.},
   comment   = {Describes four frameworks addressing large-scale HPC visualization problems.  These are EAVL, Dax, DIY, and PISTON.},
   doi       = {10.1109/SC.Companion.2012.36},
-  url       = {http://dx.doi.org/10.1109/SC.Companion.2012.36},
+  homeurl   = {/documents/UltraVis2012.pdf},
 }
 
 @TechReport{Barrett2012,
@@ -285,6 +293,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   month       = mar,
   number      = {SAND 2012-1750},
   type        = {techreport},
+  homeurl     = {/documents/SAND2012-1750.pdf},
 }
 
 @TechReport{IceT,
@@ -299,55 +308,58 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
 
 @Misc{ScientificDiscoveryExascale2011,
   author       = {Sean Ahern and Arie Shoshani and Kwan-Liu Ma and others},
-  title        = {Scientific Discovery at the Exascale},
   howpublished = {Report from the DOE ASCR 2011 Workshop on Exascale Data Management, Analysis, and Visualization},
   month        = feb,
+  title        = {Scientific Discovery at the Exascale},
   year         = {2011},
   comment      = {Workshop report on upcoming visualization challenges at exascale.  Big challenges include overcoming lower relative I/O rates through various more advanced I/O technologies such as in situ computations.  Also includes discussion on upcoming algorithmic challenges.},
+  homeurl      = {/documents/Exascale-ASCR-Analysis.pdf},
   url          = {https://science.osti.gov/-/media/ascr/pdf/program-documents/docs/Exascale-ASCR-Analysis.pdf},
 }
 
 @TechReport{Moreland2010,
   author      = {Kenneth Moreland and Nathan Fabian and Pat Marion and Berk Geveci},
-  title       = {Visualization on Supercomputing Platform Level {II} {ASC} Milestone {(3537-1B)} Results from {Sandia}},
   institution = {Sandia National Laboratories},
+  title       = {Visualization on Supercomputing Platform Level {II} {ASC} Milestone {(3537-1B)} Results from {Sandia}},
   year        = {2010},
-  number      = {SAND 2010-6118},
   month       = {September},
+  number      = {SAND 2010-6118},
   comment     = {A technical report for a project that ran ParaView on up to 8K cores.},
+  homeurl     = {/documents/MilestoneFY10Sandia.pdf},
 }
 
 @TechReport{Ice2009,
   author      = {Lisa Ice and Nathan Fabian and Kenneth D. Moreland and Janine C. Bennett and David C. Thompson and David B. Karelitz and W. Alan Scott},
-  title       = {Scalable Analysis Tools for Sensitivity Analysis and {UQ} (3160) Results},
   institution = {Sandia National Laboratories},
+  title       = {Scalable Analysis Tools for Sensitivity Analysis and {UQ} (3160) Results},
   year        = {2009},
-  number      = {2009-6032},
   month       = {September},
+  number      = {2009-6032},
   abstract    = {The 9/30/2009 ASC Level 2 Scalable Analysis Tools for Sensitivity Analysis and UQ (Milestone 3160) contains feature recognition capability required by the user community for certain verification and validation tasks focused around sensitivity analysis and uncertainty quantification (UQ). These feature recognition capabilities include crater detection, characterization, and analysis from CTH simulation data; the ability to call fragment and crater identification code from within a CTH simulation; and the ability to output fragments in a geometric format that includes data values over the fragments. The feature recognition capabilities were tested extensively on sample and actual simulations. In addition, a number of stretch criteria were met including the ability to visualize CTH tracer particles and the ability to visualize output from within an S3D simulation.},
   comment     = {Milestone report for work in building algorithms that, for example, find craters in CTH data.},
-  url         = {http://www.sandia.gov/~kmorel/documents/MilestoneUQ2009.pdf},
+  homeurl     = {/documents/MilestoneUQ2009.pdf},
 }
 
 @TechReport{Thompson2009,
   author      = {David Thompson and Nathan D. Fabian and Kenneth D. Moreland and Lisa G. Ice},
-  title       = {Design Issues for Performing {\textit In Situ} Analysis of Simulation Data},
   institution = {Sandia National Laboratories},
+  title       = {Design Issues for Performing {\textit In Situ} Analysis of Simulation Data},
   year        = {2009},
   number      = {SAND2009-2014},
   comment     = {A theoretical analysis of the costs and benefits of in situ visualization.},
-  url         = {http://www.sandia.gov/~kmorel/documents/SAND2009-2014.pdf},
+  homeurl     = {/documents/SAND2009-2014.pdf},
 }
 
 @InProceedings{Moreland2008:UltraVis,
   author    = {Kenneth Moreland and C. Charles Law and Lisa Ice and David Karelitz},
-  title     = {Analysis of Fragmentation in Shock Physics Simulation},
   booktitle = {Proceedings of the 2008 Workshop on Ultrascale Visualization},
+  title     = {Analysis of Fragmentation in Shock Physics Simulation},
   year      = {2008},
-  pages     = {40-46},
   month     = {November},
+  pages     = {40-46},
   comment   = {Describes extracting fragment surfaces from CTH data, which is an AMR-based Eulerian volume-fragment shock-physics code.},
   doi       = {10.1109/ULTRAVIS.2008.5154062},
+  homeurl   = {/documents/SC08UltravisWorkshop.pdf},
 }
 
 @TechReport{Karelitz2008,
@@ -357,6 +369,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   year        = {2008},
   month       = sep,
   number      = {SAND 2008-6183},
+  homeurl     = {/documents/VVMilestone2008.pdf},
 }
 
 @InProceedings{Moreland2008:CUG,
@@ -384,6 +397,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   month       = oct,
   number      = {SAND 2007-6307},
   type        = {techreport},
+  homeurl     = {/documents/LDRD2006.pdf},
 }
 
 @TechReport{Karelitz2007,
@@ -394,6 +408,7 @@ inside of miniIsosurface take advantage of MPI, OpenMP and GPU.},
   month       = sep,
   number      = {SAND 2007-6006},
   type        = {techreport},
+  homeurl     = {/documents/VVMilestone2007.pdf},
 }
 
 @Article{Moreland2006:KWS,
