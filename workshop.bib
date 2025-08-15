@@ -8,6 +8,7 @@
   abstract  = {Uncertainty visualization is an emerging research topic in data visualization because neglecting uncertainty in visualization can lead to inaccurate assessments. In this paper, we study the propagation of multivariate data uncertainty in visualization. Although there have been a few advancements in probabilistic uncertainty visualization of multivariate data, three critical challenges remain to be addressed. First, the state-of-the-art probabilistic uncertainty visualization framework is limited to bivariate data (two variables). Second, existing uncertainty visualization algorithms use computationally intensive techniques and lack support for cross-platform portability. Third, as a consequence of the computational expense, integration into production visualization tools is impractical. In this work, we address all three issues and make a threefold contribution. First, we take a step to generalize the state-of-the-art probabilistic framework for bivariate data to multivariate data with an arbitrary number of variables. Second, through utilization of VTK-m's shared-memory parallelism and cross-platform compatibility features, we demonstrate acceleration of multivariate uncertainty visualization on different many-core architectures, including OpenMP and AMD GPUs. Third, we demonstrate the integration of our algorithms with the ParaView software. We demonstrate the utility of our algorithms through experiments on multivariate simulation data with three and four variables.},
   comment   = {Computing uncertain fiber surfaces. A limitation of this work is that the selection of multiple scalar has to be an axis-aligned space in scalar space.},
   doi       = {10.1109/UncertaintyVisualization63963.2024.00010},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCviukuIwhlsuGE2zYYDA?e=NyaWVZ},
 }
 
 @InProceedings{Sisneros2024,
@@ -20,6 +21,7 @@
   abstract  = {We present a simple comparative framework for testing and developing uncertainty modeling in uncertain marching cubes implementations. The selection of a model to represent the probability distribution of uncertain values directly influences the memory use, run time, and accuracy of an uncertainty visualization algorithm. We use an entropy calculation directly on ensemble data to establish an expected result and then compare the entropy from various probability models, including uniform, Gaussian, histogram, and quantile models. Our results verify that models matching the distribution of the ensemble indeed match the entropy. We further show that fewer bins in nonparametric histogram models are more effective whereas large numbers of bins in quantile models approach data accuracy.},
   comment   = {A framework for  developing and testing uncertainty algorithms by considering the probability of all Marching Cubes cases.},
   doi       = {10.1109/UncertaintyVisualization63963.2024.00015},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCviuktKEo_4PooYDe9_g?e=fTqo0t},
 }
 
 @InProceedings{Hammer2024,
@@ -29,6 +31,7 @@
   year      = {2024},
   month     = sep,
   doi       = {10.1109/e-Science62913.2024.10678681},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCviukrSrjXhf7ThZQHlA?e=KGgiMV},
 }
 
 @InProceedings{Pugmire2024b,
@@ -39,6 +42,7 @@
   month     = sep,
   abstract  = {The rapid advancement in scientific simulations and experimental facilities has resulted in the generation of vast amounts of data at unprecedented scales. The analysis and visualization of large amounts of data is a challenge in and of itself, but the requirements for timeliness significantly magnify these difficulties. Near real-time visualization is critical to monitor and analyze the data produced by these large facilities, but current production tools are not well-suited to these requirements. In this position paper, we share our perspective on some of the challenges, and thus, opportunities for research that stand in the way of near-real-time visualization of large scientific data.},
   doi       = {10.1109/e-Science62913.2024.10678727},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCviukvgCdO_4lS2hAwhg?e=qN5fTP},
 }
 
 @InProceedings{Pugmire2024a,
@@ -50,6 +54,7 @@
   abstract  = {Understanding the time-varying magnetic field in a fusion device is critical for the successful design and construction of clean-burning fusion power plants. Poincaré analysis provides a powerful method for the visualization of magnetic fields in fusion devices. However, Poincaré plots can be very computationally expensive making it impractical, for example, to generate these plots in situ during a simulation. In this short paper, we describe a collaboration among computer science and physics researchers to develop a new Poincaré tool that provides a significant reduction in the time to generate analysis results.},
   comment   = {Discussion of the use of VTK-m to greatly improve the performance of Poincaré plots for fusion analysis.},
   doi       = {10.2312/visgap.20241120},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCvisxW5IaWdlQHVpWGLQ?e=6viZ6e},
 }
 
 @InProceedings{Tsalikis2024,
@@ -61,6 +66,7 @@
   abstract  = {The clip technique is a popular method for visualizing complex structures and phenomena within 3D unstructured meshes. Meshes can be clipped by specifying a scalar isovalue to produce an output unstructured mesh with its external surface as the isovalue. Similar to isocontouring, the clipping process relies on scalar data associated with the mesh points, including scalar data generated by implicit functions such as planes, boxes, and spheres, which facilitates the visualization of results interior to the grid. In this paper, we introduce a novel batch-driven parallel algorithm based on a sequential clip algorithm designed for high-quality results in partial volume extraction. Our algorithm comprises five passes, each progressively processing data to generate the resulting clipped unstructured mesh. The novelty lies in the use of fixed-size batches of points and cells, which enable rapid workload trimming and parallel processing, leading to a significantly improved memory footprint and run-time performance compared to the original version. On a 32-core CPU, the proposed batch-driven parallel algorithm demonstrates a run-time speed-up of up to 32.6x and a memory footprint reduction of up to 4.37x compared to the existing sequential algorithm. The software is currently available under an open-source license in the VTK visualization system.},
   comment   = {Uses batching and other tricks to make the clipping algorithm faster.},
   doi       = {10.2312/pgv.20241130},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCvisxNiZWBBq7YTgl_8A?e=nklSr5},
 }
 
 @InProceedings{Wang2023,
@@ -72,6 +78,7 @@
   abstract  = {Visualization is an important tool for scientists to extract understanding from complex scientific data. Scientists need to understand the uncertainty inherent in all scientific data in order to interpret the data correctly. Uncertainty visualization has been an active and growing area of research to address this challenge. Algorithms for uncertainty visualization can be expensive, and research efforts have been focused mainly on structured grid types. Further, support for uncertainty visualization in production tools is limited. In this paper, we adapt an algorithm for computing key metrics for visualizing uncertainty in Marching Cubes (MC) to multi-core devices and present the design, implementation, and evaluation for a Filter for uncertainty visualization of Marching Cubes on Multi-Core devices (FunMC2). FunMC2 accelerates the uncertainty visualization of MC significantly, and it is portable across multi-core CPUs and GPUs. Evaluation results show that FunMC2 based on OpenMP runs around 11× to 41× faster on multi-core CPUs than the corresponding serial version using one CPU core. FunMC2 based on a single GPU is around 5× to 9× faster than FunMC2 running by OpenMP. Moreover, FunMC2 is flexible enough to process ensemble data with both structured and unstructured mesh types. Furthermore, we demonstrate that FunMC2 can be seamlessly integrated as a plugin into ParaView, a production visualization tool for post-processing.},
   comment   = {Contour uncertainty fields implemented in VTK-m.},
   doi       = {10.2312/pgv.20231081},
+  homeurl   = {https://1drv.ms/b/c/afd0e9b2332ffee6/Eeb-LzOy6dAggK9VOgIAAAABccsNb8aiFSF86bnwz9Z4bg?e=wfV3J2},
 }
 
 @InCollection{Moreland2022:InSitu,
@@ -86,6 +93,7 @@
   abstract  = {The visualization community has invested decades of research and development into producing large-scale production visualization tools. Although in situ is a paradigm shift for large-scale visualization, much of the same algorithms and operations apply regardless of whether the visualization is run post hoc or in situ. Thus, there is a great benefit to taking the large-scale code originally designed for post hoc use and leveraging it for use in situ. This chapter describes two in situ libraries, Libsim and Catalyst, that are based on mature visualization tools, VisIt and ParaView, respectively. Because they are based on fully-featured visualization packages, they each provide a wealth of features. For each of these systems we outline how the simulation and visualization software are coupled, what the runtime behavior and communication between these components are, and how the underlying implementation works. We also provide use cases demonstrating the systems in action. Both of these in situ libraries, as well as the underlying products they are based on, are made freely available as open-source products. The overviews in this chapter provide a toehold to the practical application of in situ visualization.},
   comment   = {A book chapter that describes both VisIt Libsim and ParaView Catalyst as the production tool solutions for in situ visualization.},
   doi       = {10.1007/978-3-030-81627-8\_10},
+  homeurl   = {https://1drv.ms/b/s!Aub-LzOy6dCvh6J7d3oR-fMiNPIzRw?e=Zg6N2z},
 }
 
 @InProceedings{Ayachit2021,
@@ -194,7 +202,7 @@
   abstract  = {Computer simulations are growing in sophistication and producing results of ever greater fidelity. This trend has been enabled by advances in numerical methods and increasing computing power. Yet these advances come with several costs including massive increases in data size, difficulties examining output data, challenges in configuring simulation runs, and difficulty debugging running codes. Interactive visualization tools, like ParaView, have been used for post-processing of simulation results. However, the increasing data sizes, and limited storage and bandwidth make high fidelity post-processing impractical. In situ analysis is recognized as one of the ways to address these challenges. In situ analysis moves some of the post-processing tasks in line with the simulation code thus short circuiting the need to communicate the data between the simulation and analysis via storage. ParaView Catalyst is a data processing and visualization library that enables in situ analysis and visualization. Built on and designed to interoperate with the standard visualization toolkit VTK and the ParaView application, Catalyst enables simulations to intelligently perform analysis, generate relevant output data, and visualize results concurrent with a running simulation. In this paper, we provide an overview of the Catalyst framework and some of the success stories.},
   comment   = {A paper describing the Catalyst in situ library. Although this paper is short, it has a nice description of Catalyst along with several examples.},
   doi       = {10.1145/2828612.2828624},
-  url       = {https://dl.acm.org/doi/10.1145/2828612.2828624?cid=81100570201},
+  homeurl   = {https://dl.acm.org/doi/10.1145/2828612.2828624?cid=81100570201},
 }
 
 @Article{Moreland2015:SFI,
@@ -246,7 +254,7 @@ categorial challenges rather than this legion of individual algorithms, we
 can make attainable advancement for extreme computing.},
   comment   = {Classifies all (well, most) of the filters in ParaView into catagories based on how they break up data, how they map input to output, and what collective work is done. This paper is meant to serve a basis for the worklet types implemented in Dax.},
   doi       = {10.1145/2535571.2535591},
-  url       = {https://dl.acm.org/doi/10.1145/2535571.2535591?cid=81100570201},
+  homeurl   = {https://dl.acm.org/doi/10.1145/2535571.2535591?cid=81100570201},
 }
 
 @InBook{Ayachit2013,
@@ -306,7 +314,8 @@ can make attainable advancement for extreme computing.},
   year      = {2011},
   month     = nov,
   comment   = {A summary of several projects using the in transit method of in situ visualization.},
-  url       = {https://dl.acm.org/doi/10.1145/2110205.2110207?cid=81100570201},
+  doi       = {10.1145/2110205.2110207},
+  homeurl   = {https://dl.acm.org/doi/10.1145/2110205.2110207?cid=81100570201},
 }
 
 @InProceedings{Fabian2011,
@@ -404,6 +413,7 @@ can make attainable advancement for extreme computing.},
   month     = jan,
   pages     = {64950F-1--12},
   comment   = {Performs parallel unstructured volume rendering by building a k-d tree of the geometry, redistributing the geometry based on that k-d tree and clipping by the boundaries, then using that k-d tree for visibility sorting in a sort-last image composite.},
+  doi       = {10.1117/12.704533},
   homeurl   = {/documents/ParallelVolRen.pdf},
 }
 
@@ -415,6 +425,7 @@ can make attainable advancement for extreme computing.},
   month     = may,
   pages     = {163--170},
   comment   = {Mostly describes the client-server architecture of ParaView.  Also addresses the ParaView proxy system and how the rendering subsystem (such as IceT) is chosen.},
+  doi       = {10.2312/EGPGV/EGPGV06/163-170},
   homeurl   = {/documents/EGPGV2006Paper.pdf},
 }
 
@@ -437,6 +448,7 @@ can make attainable advancement for extreme computing.},
   month     = oct,
   pages     = {25--31},
   comment   = {Describes how to do parallel rendering in VTK using sort-last parallel rendering (specifically with IceT) and sort-first parallel rendering with Chromium.  Also much discussion on driving tiled displays.},
+  doi       = {10.1109/PVGS.2003.1249039},
   homeurl   = {/documents/vtk_c2w.pdf},
 }
 
