@@ -10,6 +10,7 @@
   abstract = {This paper presents a novel end-to-end framework for closed-form computation and visualization of critical point uncertainty in 2D uncertain scalar fields. Critical points are fundamental topological descriptors used in the visualization and analysis of scalar fields. The uncertainty inherent in data (e.g., observational and experimental data, approximations in simulations, and compression), however, creates uncertainty regarding critical point positions. Uncertainty in critical point positions, therefore, cannot be ignored, given their impact on downstream data analysis tasks. In this work, we study uncertainty in critical points as a function of uncertainty in data modeled with probability distributions. Although Monte Carlo (MC) sampling techniques have been used in prior studies to quantify critical point uncertainty, they are often expensive and are infrequently used in production-quality visualization software. We, therefore, propose a new end-to-end framework to address these challenges that comprises a threefold contribution. First, we derive the critical point uncertainty in closed form, which is more accurate and efficient than the conventional MC sampling methods. Specifically, we provide the closed-form and semianalytical (a mix of closed-form and MC methods) solutions for parametric (e.g., uniform, Epanechnikov) and nonparametric models (e.g., histograms) with finite support. Second, we accelerate critical point probability computations using a parallel implementation with the VTK-m library, which is platform portable. Finally, we demonstrate the integration of our implementation with the ParaView software system to demonstrate near-real-time results for real datasets.},
   comment  = {An algorithm to determine the probable location of critical points in a field with uncertainty. This is done by looking at the possible values at each point and determining the probabity of any condition that leads to a critical point in the cell. A limitation of this work is that it only works on independent values.},
   doi      = {10.1109/TVCG.2024.3456393},
+  homeurl  = {https://1drv.ms/b/s!Aub-LzOy6dCviukwdJqdmg66TYBJVw?e=fjc3Lf},
 }
 
 @Article{Moreland2024:IJHPCA,
@@ -22,6 +23,7 @@
   pages   = {508--526},
   volume  = {38},
   doi     = {10.1177/10943420241270969},
+  homeurl = {https://1drv.ms/b/s!Aub-LzOy6dCvith_zp2BwGnUgsAhYQ?e=b2PSyK},
 }
 
 @Article{Samsel2024,
@@ -34,6 +36,7 @@
   pages   = {150--160},
   volume  = {44},
   doi     = {10.1109/MCG.2024.3383137},
+  homeurl = {https://1drv.ms/b/s!Aub-LzOy6dCvitkA32iJZCpkRqay2g?e=Iysa1r},
 }
 
 @Article{Moreland2021,
@@ -47,6 +50,7 @@
   abstract = {Scientific visualization software increasingly needs to support many-core architectures. However, development time is a significant challenge due to the breadth and diversity of both visualization algorithms and architectures. With this work, we introduce a development environment for visualization algorithms on many-core devices that extends the traditional data-parallel primitive (DPP) approach with several existing constructs and an important new construct: meta-DPPs. We refer to our approach as MCD3 --- Meta-DPPs, Convenience routines, Data management, DPPs, and Devices. The twin goals of MCD3 are to reduce developer time and to deliver efficient performance on many-core architectures, and our evaluation considers both of these goals. For development time, we study 57 algorithms implemented in the VTK-m software library and determine that MCD3 leads to significant savings. For efficient performance, we survey ten studies looking at individual algorithms and determine that the MCD3 hardware-agnostic approach leads to performance comparable to hardware-specific approaches: sometimes better, sometimes worse, and better in the aggregate. In total, we find that MCD3 is an effective approach for scientific visualization libraries to support many-core architectures.},
   comment  = {Paper that describes how VTK-m simplifies development of visualization algorithms. It did a code analysis to see how much code was actually using the abstract structures made. It also provided a small literature review of papers that compared VTK-m to equivalent algorithms developed for specific hardware and showed that VTK-m generally performed as well (sometimes better).},
   doi      = {10.1016/j.parco.2021.102834},
+  homeurl  = {https://1drv.ms/b/s!Aub-LzOy6dCvhot_Mo_dMI2h5AWWhQ?e=htBrzJ},
 }
 
 @Article{Moreland2020:SIAM,
@@ -157,14 +161,15 @@
 
 @InProceedings{Oldfield2014,
   author    = {Ron A. Oldfield and Kenneth Moreland and Nathan Fabian and David Rogers},
-  title     = {Evaluation of Methods to Integrate Analysis into a Large-Scale Shock Physics Code},
   booktitle = {Proceedings of the 28th ACM international Conference on Supercomputing (ICS '14)},
+  title     = {Evaluation of Methods to Integrate Analysis into a Large-Scale Shock Physics Code},
   year      = {2014},
-  pages     = {83--92},
   month     = {June},
+  pages     = {83--92},
   abstract  = {Exascale supercomputing will embody many revolutionary changes in the hardware and software of high-performance computing. For example, projected limitations in power and I/O-system performance will fundamentally change visualization and analysis workflows. A traditional post-processing workflow involves storing simulation results to disk and later retrieving them for visualization and data analysis; however, at Exascale, post-processing approaches will not be able to capture the volume or granularity of data necessary for analysis of these extreme-scale simulations. As an alternative, researchers are exploring ways to integrate analysis and simulation without using the storage system. In situ and in transit are two options, but there has not been an adequate evaluation of these approaches to identify strengths, weaknesses, and trade-offs at large scale. This paper provides a detailed performance and scaling analysis of a large-scale shock physics code using traditional post-processsing, in situ, and in transit analysis to detect material fragments from a simulated explosion.},
   comment   = {Follow up paper for the studies given in the technical report of [Rogers2013]. A publication of our work for the ASC II milestone for large scale in situ processing with CTH.},
   doi       = {10.1145/2597652.2597668},
+  homeurl   = {https://dl.acm.org/doi/10.1145/2597652.2597668?cid=81100570201},
 }
 
 @InProceedings{Tchoua2013,
