@@ -39,10 +39,21 @@ if (Python_FOUND)
   foreach(bibfile IN LISTS pub_lists)
     add_parse_bib(${bibfile})
   endforeach()
+
+  add_custom_command(
+    OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/professional-activities.tex
+    COMMAND ${Python_EXECUTABLE}
+      ${CMAKE_CURRENT_SOURCE_DIR}/yaml2activities.py
+      ${CMAKE_CURRENT_SOURCE_DIR}/professional-activities.yaml
+      ${CMAKE_CURRENT_SOURCE_DIR}/professional-activities.tex
+    DEPENDS
+      ${CMAKE_CURRENT_SOURCE_DIR}/professional-activities.yaml
+      ${CMAKE_CURRENT_SOURCE_DIR}/yaml2activities.py
+    )
 endif()
 
 list(TRANSFORM pub_lists APPEND ".tex")
 
 ADD_LATEX_DOCUMENT(curriculum_vitae.tex
-  INPUTS ${pub_lists}
+  INPUTS ${pub_lists} professional-activities.tex
   )
