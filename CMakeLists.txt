@@ -30,6 +30,8 @@ set(pub_lists
   journal
   workshop
   nopeer
+  invited-talk
+  tutorial
   poster
   presentation
   panel
