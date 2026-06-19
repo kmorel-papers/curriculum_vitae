@@ -83,18 +83,16 @@ for entry in bibdata.entries:
     outf.write(f'  In \\emph{{{entry["booktitle"]}}}, ')
   elif 'venue' in entry:
     outf.write(f'  \\emph{{{entry["venue"]}}}, ')
-  if entry.entry_type == 'techreport':
-    outf.write('Technical Report ')
   if entry.entry_type == 'phdthesis':
     outf.write(f'PhD thesis, {entry["school"]}, ')
   if 'publisher' in entry:
     outf.write(f'{entry["publisher"]}, ')
-  if 'number' in entry:
-    outf.write(f'{entry["number"]}, ')
   if 'institution' in entry:
     outf.write(f'{entry["institution"]}, ')
   if 'howpublished' in entry:
     outf.write(f'\\emph{{{entry["howpublished"]}}}, ')
+  if entry.entry_type == 'techreport':
+    outf.write('Technical Report ')
   if 'volume' in entry:
     outf.write(f'{entry["volume"]}')
     if 'number' in entry:
@@ -102,9 +100,12 @@ for entry in bibdata.entries:
     if 'pages' in entry:
       outf.write(f':{entry["pages"]}')
     outf.write(', ')
-  elif 'pages' in entry:
-    outf.write(f'pages {entry['pages']}')
-    outf.write(', ')
+  else:
+    if 'number' in entry:
+      outf.write(f'{entry["number"]}, ')
+    if 'pages' in entry:
+      outf.write(f'pages {entry['pages']}')
+      outf.write(', ')
   if 'month' in entry:
     outf.write(f'{entry["month"]} ')
     if 'day' in entry:
