@@ -11,7 +11,19 @@
   homeurl = {https://1drv.ms/b/c/afd0e9b2332ffee6/IQBz-cOz9IltRaQlmeGriZjVAZfrriwLZpu3UwJFj5Di3oA?e=5VJG8d},
 }
 
-@Article{Tsalikis2026,
+@Article{Tsalikis2026:clip,
+  author   = {Tsalikis, Spiros and Schroeder, Will and Szafir, Daniel and Moreland, Kenneth},
+  journal  = {Computer Graphics Forum},
+  title    = {An Accelerated Clip Algorithm for Unstructured Meshes: A Batch-Driven Approach Using Data-Parallel Primitives},
+  year     = {2026},
+  month    = jun,
+  note     = {Preprint},
+  abstract = {Abstract The clip technique is a widely used method for visualizing complex structures in 3D unstructured meshes. Similar to isocontouring, clipping relies on scalar data associated with the mesh points—including values produced by implicit functions such as planes, boxes and spheres—that, when compared to a given scalar isovalue, visually reveals internal mesh features that would otherwise be hidden. In this paper, we present a novel batch-driven algorithm derived from a sequential clip algorithm for high-quality partial volume extraction. Our method consists of six passes, each progressively processing data to produce the final clipped unstructured mesh. The key innovation is the use of fixed-size batches of points and cells, which enable rapid workload trimming and parallel processing using data-parallel primitives, resulting in significantly reduced memory footprint and faster run times compared to both VTK's sequential and Viskores' approaches. Our method achieves 3.7x and 34.7x run-time speed-ups on 1 and 128 CPU threads, respectively, and 13.9x on the GPU, while reducing memory-footprint by up to 4.5x on the CPU and 12.9\$\times\$ on the GPU. The software is currently available under an open-source license in the VTK and Viskores visualization systems.},
+  doi      = {10.1111/cgf.70552},
+  homeurl  = {https://1drv.ms/b/c/afd0e9b2332ffee6/IQBUBjZQKNObRIuaAhaEHpV9AZtFGSX3djFoVrG4dZh_jpw?e=WMlTbs},
+}
+
+@Article{Tsalikis2026:ext-faces,
   author  = {Tsalikis, Spiros and Schroeder, Will and Szafir, Daniel and Moreland, Kenneth},
   journal = {IEEE Transactions on Visualization and Computer Graphics},
   title   = {Memory-Aware External Facelist Calculation: A Data-Parallel Atomic Hash Counting Approach},
@@ -38,15 +50,17 @@
 }
 
 @Article{Ahrens2025,
-  author  = {Ahrens, James and Childs, Hank and Moreland, Kenneth},
-  journal = {IEEE Computer Graphics and Applications},
-  title   = {The Origins of the ParaView and VisIt Scientific Visualization Tools},
-  year    = {2025},
-  month   = sep,
-  number  = {5},
-  pages   = {127--137},
-  volume  = {45},
-  doi     = {10.1109/MCG.2025.3595349},
+  author    = {Ahrens, James and Childs, Hank and Moreland, Kenneth},
+  journal   = {IEEE Computer Graphics and Applications},
+  title     = {The Origins of the ParaView and VisIt Scientific Visualization Tools},
+  year      = {2025},
+  month     = sep,
+  number    = {5},
+  pages     = {127--137},
+  volume    = {45},
+  doi       = {10.1109/MCG.2025.3595349},
+  homeurl   = {https://1drv.ms/b/c/afd0e9b2332ffee6/IQCdYsfmXDFYRqtSKfRjNHgpAduCUp5WhT__E9Mhuwmp1_Q?e=k5Emkp},
+  slidesurl = {https://1drv.ms/p/c/afd0e9b2332ffee6/IQDA0xjZm9ooT5uWhuE2Olr_AXqfEqmE1KLR5ot0IKRnvqs?e=7Pm879},
 }
 
 @Article{Wang2025:assignment,
