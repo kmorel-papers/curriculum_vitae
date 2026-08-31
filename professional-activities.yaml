@@ -19,6 +19,19 @@
 
 - category: Steering Committee Member
   activities:
+    - name: In Situ AI, Analysis and Visualization (ISAV)
+      years:
+        2025: https://isav-workshop.github.io/2025/
+        2026: https://isav-workshop.github.io/2026/
+    - name: Workshop on In Situ Visualization (WOIV)
+      years:
+        2018: https://woiv.gitlab.io/woiv18/
+        2021: https://woiv.gitlab.io/woiv21/
+        2022: https://woiv.gitlab.io/woiv22/
+        2023: https://woiv.gitlab.io/woiv23/
+        2024: https://woiv.gitlab.io/woiv24/
+        2025: https://woiv.gitlab.io/woiv25/
+        2026: https://woiv.gitlab.io/woiv26/
     - name: IEEE Symposium on Large Data Analysis and Visualization (LDAV)
       years:
         2020: https://ldav.io/2020/
@@ -34,15 +47,6 @@
         2022: https://dav.lbl.gov/events/ISAV2022/
         2023: https://isav-workshop.github.io/2023/
         2024: https://isav-workshop.github.io/2024/
-        2025: https://isav-workshop.github.io/2025/
-    - name: Workshop on In Situ Visualization (WOIV)
-      years:
-        2018: https://woiv.gitlab.io/woiv18/
-        2021: https://woiv.gitlab.io/woiv21/
-        2022: https://woiv.gitlab.io/woiv22/
-        2023: https://woiv.gitlab.io/woiv23/
-        2024: https://woiv.gitlab.io/woiv24/
-        2025: https://woiv.gitlab.io/woiv25/
     - name: International Symposium on Visual Computing (ISVC)
       years:
         2020:
@@ -91,9 +95,13 @@
 
 - category: Program Committee Member
   activities:
-    - name: IEEE VIS
+    - name: International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing)
       years:
-        2023: https://ieeevis.org/year/2023/welcome
+        2012 (papers): http://sc12.supercomputing.org/
+        2013 (papers): http://sc13.supercomputing.org/
+        2023 (papers): http://sc23.supercomputing.org/
+        2025 (papers, tutorials, e-Posters): http://sc25.supercomputing.org/
+        2026 (papers, tutorials, e-Posters): http://sc26.supercomputing.org/
     - name: EuroVis
       years:
         2016: https://www.cs.rug.nl/jbi/eurovis2016/
@@ -102,6 +110,18 @@
         2021: https://eurovis21.ifi.uzh.ch/
         2022: https://conferences.eg.org/eurovis2022/
         2023: https://conferences.eg.org/eurovis2023/
+        2025: https://www.eurovis2025.lu/
+        2026: https://eurovis.org.uk/
+    - name: HPC Asia
+      years:
+        2027: https://hpcasia2027.org/
+    - name: Conference on Computer Graphics, Interaction and Visualization Theory and Applications (GRIVAPP)
+      years:
+        2027: https://grivapp.scitevents.org/
+    - name: IEEE VIS
+      years:
+        2023: https://ieeevis.org/year/2023/welcome
+        2024: https://ieeevis.org/year/2024/welcome
     - name: Scientific Visualization & Data Analytics Showcase, Supercomputing
       years:
         2017: https://sc17.supercomputing.org/submitters/scientific-visualization-showcase/index.html
@@ -170,10 +190,6 @@
       years:
         2013: http://vis.cs.ucdavis.edu/Ultravis13/
         2014: http://vis.cs.ucdavis.edu/Ultravis14/
-    - name: International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing)
-      years:
-        2012: http://sc12.supercomputing.org/
-        2013: http://sc13.supercomputing.org/
     - name: "Big Data Analytics: Challenges and Opportunities"
       years:
         2012: http://sc12.supercomputing.org/schedule/event_detail.php-evid=wksp132.html
@@ -226,6 +242,9 @@
 
 - category: Miscellaneous
   activities:
+    - name: HPSF Technical Advisory Committee member
+      years:
+        2025--Present: https://hpsf.io/
     - name: Best Reviewer Award
       years:
         EuroVis 2022: https://conferences.eg.org/eurovis2022/best-paper-and-best-reviewer-awards/
